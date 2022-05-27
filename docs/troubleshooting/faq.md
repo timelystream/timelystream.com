@@ -1,69 +1,26 @@
 ---
-title: FAQ
-description: FAQ for QuestDB troubleshooting.
+title: Frequently Asked Questions
 ---
 
-The following document contains common hardware and software configuration
-issues met when running QuestDB, as well as solutions to them.
 
-## Why is ILP data not immediately available?
+### Who makes DuckDB?
+DuckDB is maintained by [Dr. Mark Raasveldt](https://mytherin.github.io) & [Dr. Hannes Mühleisen](https://hannes.muehleisen.org) along with [many other contributors](https://github.com/duckdb/duckdb/graphs/contributors) from all over the world. Mark and Hannes have set up the [DuckDB Foundation](https://duckdb.org/foundation/) that collects donations and funds development and maintenance of DuckDB. Mark and Hannes are also co-founders of [DuckDB Labs](https://www.duckdblabs.com), which provides commercial services around DuckDB. Several other DuckDB contributors are also affiliated with DuckDB Labs.  
+DuckDB's initial development took place at the [Database Architectures Group](https://www.cwi.nl/research/groups/database-architectures) at the [Centrum Wiskunde & Informatica (CWI)](https://www.cwi.nl) in Amsterdam, The Netherlands. 
 
-InfluxDB line protocol (ILP) does not commit data on single lines or when the
-sender disconnects, but instead uses a number of rules to break incoming data
-into commit batches. This results in data not being visible in `SELECT` queries
-immediately after being received. Refer to
-[InfluxDB line protocol](/docs/reference/api/ilp/tcp-receiver#commit-strategy)
-guide to understand these rules.
+### Why call it DuckDB?
+Ducks are amazing animals. They can fly, walk and swim. They can also live off pretty much everything. They are quite resilient to environmental challenges. A duck's song will bring people back from the dead and [inspires database research](https://static1.squarespace.com/static/51f8f4aae4b0cdf15da554e1/57023acae321408302d6b936/5973b537bebafb04b9520c3d/1500755312736/11_Wilbur_buiten_DQ1C0104.jpg?format=1000w). They are thus the perfect mascot for a versatile and resilient data management system. Also the logo designs itself.
 
-## How do I update or delete a row?
+### Where do I find the DuckDB Logo?
+You can download the DuckDB Logo here: <br/> • Web: [png](/images/logo-dl/DuckDB_Logo.png) / [jpg](/images/logo-dl/DuckDB_Logo.jpg) <br/>  • Print: [svg](/images/logo-dl/DuckDB_Logo.svg) / [pdf](/images/logo-dl/DuckDB_Logo.pdf) <br/><br/>The DuckDB logo & website were designed by [Jonathan Auch](http://jonathan-auch.de) & [Max Wohlleber](https://maxwohlleber.de).
 
-See our guide on [modifying data](/docs/guides/modifying-data).
+### How can I expand the DuckDB website?
+The DuckDB Website is hosted by GitHub pages, its repository is [here](
+https://github.com/duckdb/duckdb-web). Pull requests to fix issues or generally expand the documentation section are very welcome.
 
-## Why do I get `table busy` error messages when inserting data over PostgreSQL wire protocol?
+### I benchmarked DuckDB and its slower than \[some other system\]
+In a departure from traditional academic systems research practise, we have at first focused our attention on correctness, not raw performance. So it is entirely possible DuckDB is slower than some other, more mature system at this point. That being said, we are now confident DuckDB produces correct query results, and are actively working to make it fast, too. So publishing benchmark numbers from the current preview releases is certainly interesting, but should not be taken as the definitive results on what the DuckDB architecture can or cannot do.
 
-You may get `table busy [reason=insert]` or similar errors when running `INSERT`
-statements concurrently on the same table. This means that the table is locked
-by inserts issued from another SQL connection or other client protocols for data
-import, like ILP over TCP or CSV over HTTP. To reduce the chances of getting
-this error, try using auto-commit to keep the transaction as short as possible.
+### Does DuckDB use SIMD
+DuckDB does not use *explicit SIMD* instructions because they greatly complicate portability and compilation. Instead, DuckDB uses *implicit SIMD*, where we go to great lengths to write our C++ code in such a way that the compiler can *auto-generate SIMD instructions* for the specific hardware. As an example why this is a good idea, porting DuckDB to the new Apple M1 architecture took 10 minutes.
 
-We're also considering adding automatic insert retries on the database side, but
-for now, it is safe to handle this error on the client side and retry the
-insert.
 
-## Why do I see `could not open read-write` messages when creating a table or inserting rows?
-
-Log messages may appear like the following:
-
-```
-2022-02-01T13:40:11.336011Z I i.q.c.l.t.LineTcpMeasurementScheduler could not create table [tableName=cpu, ex=could not open read-write
-...
-io.questdb.cairo.CairoException: [24] could not open read-only [file=/root/.questdb/db/cpu/service.k]
-```
-
-The machine may have insufficient limits for the maximum number of open files.
-Try checking the `ulimit` value on your machine. Refer to
-[capacity planning](/docs/operations/capacity-planning#maximum-open-files) page
-for more details.
-
-## Why do I see `errno=12` mmap messages in the server logs?
-
-Log messages may appear like the following:
-
-```
-2022-02-01T13:40:10.636014Z E i.q.c.l.t.LineTcpConnectionContext [8655] could not process line data [table=test_table, msg=could not mmap  [size=248, offset=0, fd=1766, memUsed=314809894008, fileLen=8192], errno=12]
-```
-
-The machine may have insufficient limits of memory map areas a process may have.
-Try checking and increasing the `vm.max_map_count` value on your machine. Refer
-to
-[capacity planning](/docs/operations/capacity-planning#max-virtual-memory-areas-limit)
-page for more details.
-
-## How do I avoid duplicate rows with identical fields?
-
-We have an open
-[feature request to optionally de-duplicate rows](https://github.com/questdb/roadmap/issues/3)
-inserted with identical fields. Until then, you need to
-[modify the data](/docs/guides/modifying-data) after it's inserted and use a
-`GROUP BY` query to identify duplicates.
