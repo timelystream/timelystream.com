@@ -1,0 +1,168 @@
+[build]
+  base = "/"
+  command = "yarn build"
+  publish = "build"
+
+[[plugins]]
+  package = "netlify-plugin-cache"
+  [plugins.inputs]
+    paths = [
+      "node_modules/.cache",
+    ]
+
+[[redirects]]
+  from = "/getstarted"
+  to = "/get-questdb"
+
+[[redirects]]
+  from = "/get-started"
+  to = "/get-questdb"
+
+[[redirects]]
+  from = "/docs/reference/web-console"
+  to = "/docs/develop/web-console"
+
+[[redirects]]
+  from = "/docs/develop/authenticate"
+  to = "/docs/reference/api/ilp/authenticate"
+
+[[redirects]]
+  from = "/docs/reference/client/grafana"
+  to = "/docs/third-party-tools/grafana"
+
+[[redirects]]
+    from = "/docs/guides/aws-official-ami"
+    to = "/docs/deployment/aws-official-ami"
+
+[[redirects]]
+    from = "/docs/guides/digitalocean"
+    to = "/docs/deployment/digitalocean"
+
+[[redirects]]
+    from = "/docs/guides/google-cloud-platform"
+    to = "/docs/deployment/google-cloud-platform"
+
+[[redirects]]
+    from = "/docs/guides/kubernetes"
+    to = "/docs/deployment/kubernetes"
+
+[[redirects]]
+  from = "/blog/2020/12/10/building-a-garbage-free-network-stack-for-kafka-streams"
+  to = "/blog/2020/12/10/garbage-free-stack-for-kafka-streams"
+
+[[redirects]]
+  from = "/blog/2020/12/10/non-blocking-io-without-garbage-collection"
+  to = "/blog/2020/12/10/garbage-free-stack-for-kafka-streams"
+
+[[redirects]]
+  from = "/blog/2020/12/10/building-a-garbage-free-network-stack-for-kafka-streams"
+  to = "/blog/2020/12/10/non-blocking-io-without-garbage-collection"
+
+[[redirects]]
+  from = "/blog/2020/10/19/grafana-tutorial"
+  to = "/tutorial/2020/10/19/grafana"
+
+[[redirects]]
+  from = "/blog/2020/06/05/iot-on-questdb"
+  to = "/tutorial/2020/06/05/iot-on-questdb"
+
+[[redirects]]
+  from = "/blog/2020/06/15/python-questdb-tutorial"
+  to = "/tutorial/2020/06/15/python-questdb-tutorial"
+
+[[redirects]]
+  from = "/blog/2020/07/22/influxdb-lp-on-tcp"
+  to = "/tutorial/2020/07/22/influxdb-lp-on-tcp"
+
+[[redirects]]
+  from = "/blog/2020/08/25/questitto"
+  to = "/tutorial/2020/08/25/questitto"
+
+[[redirects]]
+  from = "/blog/2020/11/26/http-server-contribution"
+  to = "/blog/2020/11/16/http-server-contribution"
+
+[[redirects]]
+  from = "/blog/2020/11/16/why-timeseries-data"
+  to = "/blog/2020/11/26/why-timeseries-data"
+
+[[redirects]]
+  from = "/docs/reference/client/cli"
+  to = "/docs/reference/command-line-options"
+
+[[redirects]]
+  from = "/docs/reference/client/web-console"
+  to = "/docs/reference/web-console"
+
+[[redirects]]
+  from = "/docs/guides/hysteresis"
+  to = "/docs/guides/out-of-order-commit-lag"
+
+[[redirects]]
+  from = "/tutorial/2021/09/05/telegraf-and-questdb-for-storing-metrics-in-a-timeseries-database"
+  to = "/tutorial/2021/07/09/telegraf-and-questdb-for-storing-metrics-in-a-timeseries-database"
+
+[[redirects]]
+  from = "/blog/2021/09/13/release-6-0-5"
+  to = "/blog/2021/09/13/release-6-0-5-geospatial-data"
+
+[[redirects]]
+  from = "/blog/2021/07/16/release-6-0-4"
+  to = "/blog/2021/07/16/release-6-0-4-prometheus-metrics"
+
+[[redirects]]
+  from = "/careers/head-of-talent/"
+  to = "/careers/people-and-talent-acquisition/"
+
+[[redirects]]
+  from = "/careers/backend-software-engineer/"
+  to = "/careers/core-database-engineer/"
+
+[[redirects]]
+  from = "/case-study/innova/"
+  to = "/case-study/turk-telekom/"
+
+[[redirects]]
+  from = "/developer-in-test"
+  to = "/careers"
+
+[[redirects]]
+  from = "/people-and-talent-acquisition"
+  to = "/careers"
+
+[[redirects]]
+  from = "/docs/reference/sql/latest-by"
+  to = "/docs/reference/sql/latest-on"
+
+[[redirects]]
+  from = "/docs/reference/api/influxdb"
+  to = "/docs/reference/api/ilp/overview"
+
+[[redirects]]
+  from = "/docs/guides/influxdb-line-protocol"
+  to = "/docs/reference/api/ilp/overview"
+
+[[redirects]]
+  from = "/docs/faq/troubleshooting"
+  to = "/docs/troubleshooting/faq"
+
+# Deleted pages, redirected to closest equivalent.
+[[redirects]]
+    from = "/docs/guides/aws-packer"
+    to = "/docs/deployment/aws-official-ami"
+
+[[redirects]]
+    from = "/docs/operations/deployment"
+    to = "/docs/deployment/aws-official-ami"
+
+[[redirects]]
+    from = "/blog/2022/04/12/query-live-crypto-trades-with-sql-in-real-time"
+    to = "/blog/2022/04/12/demo-live-crypto-data-streamed-with-questdb-and-grafana"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
+    X-XSS-Protection = "0"
+    X-Content-Type-Options = "nosniff"
+    Content-Security-Policy = "frame-src 'self' app.netlify.com *.questdb.io;"
