@@ -31,7 +31,7 @@ In addition to this test suite, we run various tests that stress Blazar under he
 
 
 ## Free & Open Source License
-Blazar's main developers are public servants in The Netherlands. Our salaries are paid from taxes. We see it as our responsibility and duty to society to make the results of our work freely available to anyone in The Netherlands or elsewhere. This is why Blazar is released under the very permissive [MIT License](https://en.wikipedia.org/wiki/MIT_License). Blazar is Open Source, the entire source code is freely available on GitHub. We invite contributions from anyone provided they adhere to our [Code of Conduct](../code_of_conduct).
+This is why Blazar is released under the very permissive [Apache License, Version 2.0](https://www.apache.org/licenses/LICENSE-2.0). Blazar is Open Source, the entire source code is freely available on GitHub. We invite contributions from anyone provided they adhere to our [Code of Conduct](../code_of_conduct).
 
 ## Standing on the Shoulders of Giants
 Blazar uses some components from various Open-Source projects and draws inspiration from scientific publications. We are very greatful for this. Here is an overview:

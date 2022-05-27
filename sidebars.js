@@ -34,10 +34,9 @@ module.exports = {
       label: "Get Started",
       type: "category",
       items: [
-        "get-started/overview",
+        "get-started/first-database",
         "get-started/docker",
         "get-started/binaries",
-        "get-started/first-database",
       ],
     },
     {
@@ -199,6 +198,22 @@ module.exports = {
         "sql/pragmas",
         "sql/samples",
         "sql/window-functions",
+      ],
+    },
+    {
+      label: "Reference",
+      type: "category",
+      items: [
+        {
+          label: "api",
+          type: "category",
+          items: [
+            "reference/api/postgres",
+            "reference/api/rest",
+          ],
+        },
+        "reference/command-line-options",
+        "reference/configuration",
       ],
     },
     {

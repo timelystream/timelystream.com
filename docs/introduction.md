@@ -131,25 +131,6 @@ properties that can be used to customize QuestDB.
 The [data types](/docs/reference/sql/datatypes) page lists the datatypes that
 can be used in QuestDB.
 
-### Functions
-
-- [Aggregate](/docs/reference/function/aggregation)
-- [Boolean](/docs/reference/function/boolean)
-- [Conditional](/docs/reference/function/conditional)
-- [Date and time](/docs/reference/function/date-time)
-- [Meta](/docs/reference/function/meta)
-- [Numeric](/docs/reference/function/numeric)
-- [Random value generator](/docs/reference/function/random-value-generator)
-- [Row generator](/docs/reference/function/row-generator)
-- [Spatial](/docs/reference/function/spatial)
-- [Text](/docs/reference/function/text)
-- [Timestamp generator](/docs/reference/function/timestamp-generator)
-- [Timestamp](/docs/reference/function/timestamp)
-
-### Operators
-
-- [Bitwise](/docs/reference/operators/bitwise)
-- [Spatial](/docs/reference/operators/spatial)
 
 ### SQL
 
