@@ -1,7 +1,5 @@
 ---
-layout: docu
 title: Parquet Import
-selected: Parquet Import
 ---
 
 ## How to load a Parquet file into a table

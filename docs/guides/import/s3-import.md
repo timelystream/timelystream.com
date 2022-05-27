@@ -1,7 +1,5 @@
 ---
-layout: docu
 title: S3 Import
-selected: S3 Parquet Import
 ---
 
 ## How to load a Parquet file directly from S3

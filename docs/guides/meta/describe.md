@@ -1,7 +1,5 @@
 ---
-layout: docu
 title: Describe
-selected: Describe
 ---
 
 ## How to view the schema of the result of a query

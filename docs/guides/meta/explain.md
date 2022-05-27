@@ -1,7 +1,5 @@
 ---
-layout: docu
 title: Explain
-selected: Explain
 ---
 
 ## How to view the query plan of a query

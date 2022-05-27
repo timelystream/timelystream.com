@@ -205,4 +205,4 @@ following channels:
 - [Raise an issue on GitHub]({@githubUrl@}/issues)
 - [Join the Community Slack]({@slackUrl@})
 - [QuestDB on Stack Overflow]({@stackoverflowUrl@})
-- or send us an email at [hello@questdb.io](mailto:hello@questdb.io)
+- or send us an email at [hello@timelystream.com](mailto:hello@timelystream.com)

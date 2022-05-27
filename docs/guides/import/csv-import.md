@@ -1,7 +1,5 @@
 ---
-layout: docu
 title: CSV Import
-selected: CSV Import
 ---
 
 ## How to load a CSV file into a table

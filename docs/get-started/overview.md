@@ -1,18 +1,18 @@
 ---
-title: Get started with QuestDB via Homebrew (macOS)
-sidebar_label: Homebrew
+title: Get started with Blazar via Homebrew (macOS)
+sidebar_label: Overview
 description:
-  A short guide for getting started with installing and running QuestDB via
+  A short guide for getting started with installing and running Blazar via
   Homebrew on macOS.
 ---
 
-Each software release of QuestDB is distributed via the
+Each software release of Blazar is distributed via the
 [Homebrew](https://brew.sh/) package manager.
 
 ## Install Homebrew
 
 Users who already have Homebrew installed may skip this section and proceed to
-[Install QuestDB](#install-questdb). Otherwise, Homebrew can be installed by
+[Install Blazar](#install-blazar). Otherwise, Homebrew can be installed by
 running the official
 [installation script](https://github.com/Homebrew/install/blob/master/install.sh)
 via bash:
@@ -22,32 +22,32 @@ via bash:
 "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 ```
 
-## Install QuestDB
+## Install Blazar
 
-To install QuestDB via Homebrew, run the following command:
+To install Blazar via Homebrew, run the following command:
 
 ```shell
-brew install questdb
+brew install blazar
 ```
 
-On macOS, the root directory of QuestDB including
+On macOS, the root directory of Blazar including
 [server configuration](/docs/reference/configuration) files are located in the
 following directory:
 
 ```bash
-/usr/local/var/questdb
+/usr/local/var/blazar
 ├── conf
 ├── db
 ├── log
 └── public
 ```
 
-## Uninstall QuestDB
+## Uninstall Blazar
 
-To remove QuestDB, use Homebrew's `uninstall` command:
+To remove Blazar, use Homebrew's `uninstall` command:
 
 ```shell
-questdb uninstall
+blazar uninstall
 ```
 
 ## Troubleshooting Homebrew issues
@@ -69,6 +69,6 @@ brew doctor
 
 ## Next steps
 
-Once you installed the QuestDB with Homebrew, you can navigate to our
+Once you installed the Blazar with Homebrew, you can navigate to our
 [command-line options](/docs/reference/command-line-options) page to learn more
 about its usage.

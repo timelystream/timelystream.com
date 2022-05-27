@@ -1,7 +1,5 @@
 ---
-layout: docu
 title: Parquet Export
-selected: Parquet Export
 ---
 
 ## How to export a table to a Parquet file

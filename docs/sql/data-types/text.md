@@ -1,7 +1,7 @@
 ---
 title: Text Types
 ---
-In DuckDB, strings can be stored in the `VARCHAR` field.
+In Blazar, strings can be stored in the `VARCHAR` field.
 
 | Name | Aliases | Description |
 |:---|:---|:---|

@@ -1,20 +1,20 @@
 ---
 title: List of OS error codes
 description:
-  List of OS error codes that may be reported by QuestDB running on Linux and
+  List of OS error codes that may be reported by Blazar running on Linux and
   Windows.
 ---
 
 The following document contains a partial list of Operating System (OS) error
-codes that can be reported when running QuestDB and brief descriptions for them.
+codes that can be reported when running Blazar and brief descriptions for them.
 
 ## Where to find error codes
 
-QuestDB includes OS error codes into the `[<code>]` part of the exception
+Blazar includes OS error codes into the `[<code>]` part of the exception
 message written to the error logs:
 
 ```
-io.questdb.cairo.CairoException: [24] could not open read-only [file=/root/.questdb/db/cpu/service.k]
+io.blazar.cairo.CairoException: [24] could not open read-only [file=/root/.blazar/db/cpu/service.k]
 ```
 
 The above message reports error code 24 which is "Too many open files" on Linux.

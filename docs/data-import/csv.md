@@ -4,7 +4,7 @@ title: CSV Loading
 
 CSV loading is a very common, and yet surprisingly tricky, task. While CSVs seem simple on the surface, there are a lot of inconsistencies found within CSV files that can make loading them a challenge. CSV files exist with different delimiters, they can contain quoted values, have an optional header row (or even multiple!) or even be completely deformed. The CSV reader needs to cope with all of these different situations.
 
-The DuckDB CSV reader can automatically infer which configuration flags to use by analyzing the CSV file. This will work correctly in most situations, and should be the first option attempted. In rare situations where the CSV reader cannot figure out the correct configuration it is possible to manually configure the CSV reader to correctly parse the CSV file.
+The Blazar CSV reader can automatically infer which configuration flags to use by analyzing the CSV file. This will work correctly in most situations, and should be the first option attempted. In rare situations where the CSV reader cannot figure out the correct configuration it is possible to manually configure the CSV reader to correctly parse the CSV file.
 
 We use the following CSV file in our examples (keep in mind that you can also use **compressed** CSV files in the following examples, e.g. a **gzipped** file such as `test.csv.gz` will work just fine):
 

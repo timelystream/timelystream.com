@@ -1,7 +1,5 @@
 ---
-layout: docu
 title: CSV Export
-selected: CSV Export
 ---
 
 ## How to export a table to a CSV file

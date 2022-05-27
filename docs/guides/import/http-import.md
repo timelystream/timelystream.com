@@ -1,7 +1,5 @@
 ---
-layout: docu
 title: HTTP Import
-selected: HTTP Parquet Import
 ---
 
 ## How to load a Parquet file directly from HTTP(s)

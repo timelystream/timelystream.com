@@ -1,7 +1,5 @@
 ---
-layout: docu
 title: Summarize
-selected: Summarize
 ---
 
 ## How to quickly get a feel for a dataset using summarize

@@ -17,7 +17,7 @@ The pre-release Python client can be installed using `--pre`;
 pip install duckdb --upgrade --pre
 ```
 
-The Python client can be installed from source from the `tools/pythonpkg` directory in the DuckDB github repository.
+The Python client can be installed from source from the `tools/pythonpkg` directory in the Blazar github repository.
 
 ```sh
 cd tools/pythonpkg

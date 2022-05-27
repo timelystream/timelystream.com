@@ -2,10 +2,10 @@
 title: Copy
 ---
 
-`COPY` moves data between DuckDB tables and external Comma Separated Value (CSV) files.
+`COPY` moves data between Blazar tables and external Comma Separated Value (CSV) files.
 
 # CSV Import
-`COPY ... FROM` imports data into DuckDB from an external CSV file into an existing table. The data is appended to whatever data is in the table already. The amount of columns inside the file must match the amount of columns in the table `table_name`, and the contents of the columns must be convertible to the column types of the table. In case this is not possible, an error will be thrown.
+`COPY ... FROM` imports data into Blazar from an external CSV file into an existing table. The data is appended to whatever data is in the table already. The amount of columns inside the file must match the amount of columns in the table `table_name`, and the contents of the columns must be convertible to the column types of the table. In case this is not possible, an error will be thrown.
 
 If a list of columns is specified, `COPY` will only copy the data in the specified columns from the file. If there are any columns in the table that are not in the column list, `COPY ... FROM` will insert the default values for those columns
 
@@ -26,7 +26,7 @@ COPY category(name) FROM 'names.csv';
 <div id="rrdiagram1"></div>
 
 # CSV Export
-`COPY ... TO` exports data from DuckDB to an external CSV file. It has mostly the same set of options as `COPY ... FROM`, however, in the case of `COPY ... TO` the options specify how the CSV file should be written to disk. Any CSV file created by `COPY ... TO` can be copied back into the database by using `COPY ... FROM` with the same set of options.
+`COPY ... TO` exports data from Blazar to an external CSV file. It has mostly the same set of options as `COPY ... FROM`, however, in the case of `COPY ... TO` the options specify how the CSV file should be written to disk. Any CSV file created by `COPY ... TO` can be copied back into the database by using `COPY ... FROM` with the same set of options.
 
 The `COPY ... TO` function can be called specifying either a table name, or a query. When a table name is specified, the contents of the entire table will be written into the resulting CSV file. When a query is specified, the query is executed and the result of the query is written to the resulting file.
 
@@ -71,4 +71,4 @@ COPY (SELECT 42 AS a, 'hello' AS b) TO 'query.csv' WITH (HEADER 1, DELIMITER ','
 >
 > The CSV format has no standard way to distinguish a NULL value from an empty string. You can use `FORCE_NOT_NULL` to prevent `NULL` input comparisons for specific columns.
 >
-> In CSV format, all characters are significant. A quoted value surrounded by white space, or any characters other than `DELIMITER`, will include those characters. This can cause errors if you import data from a system that pads CSV lines with white space out to some fixed width. If such a situation arises you might need to preprocess the CSV file to remove the trailing white space, before importing the data into DuckDB.
+> In CSV format, all characters are significant. A quoted value surrounded by white space, or any characters other than `DELIMITER`, will include those characters. This can cause errors if you import data from a system that pads CSV lines with white space out to some fixed width. If such a situation arises you might need to preprocess the CSV file to remove the trailing white space, before importing the data into Blazar.
