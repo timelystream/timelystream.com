@@ -60,7 +60,7 @@ native to QuestDB's SQL Engine:
 
 <p>
 
-  ```questdb-sql title="Latest BTC and ETH prices"
+  ```blazar-sql title="Latest BTC and ETH prices"
   SELECT * FROM trades
   WHERE symbol in ('BTC-USD', 'ETH-USD')
   LATEST ON timestamp PARTITION BY symbol;
@@ -85,7 +85,7 @@ aggregates time series data into homogeneous time chunks:
 
 <p>
 
-  ```questdb-sql title="Candle chart with 15-minute intervals"
+  ```blazar-sql title="Candle chart with 15-minute intervals"
   SELECT 
       timestamp,
       first(price) AS open,
@@ -118,7 +118,7 @@ again, we downsample the dataset using `SAMPLE BY`.
 
 <p>
 
-  ```questdb-sql title="Volume-weighted average price"
+  ```blazar-sql title="Volume-weighted average price"
   SELECT 
       timestamp,
       sum(price * amount) / sum(amount) AS vwap_price,
@@ -147,7 +147,7 @@ price of ETH-USD to get the implied BTC/ETH rate.
 
 <p>
 
-  ```questdb-sql title="Implied BTC-ETH exchange rate"
+  ```blazar-sql title="Implied BTC-ETH exchange rate"
   WITH btc AS (
       SELECT timestamp, price
       FROM trades

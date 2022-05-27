@@ -277,7 +277,7 @@ We generated two test files using our
 and exported the results to CSV. We then imported the CSV individually in the
 databases.
 
-```questdb-sql
+```blazar-sql
 SELECT rnd_double() FROM long_sequence(1_000_000_000l); -- non null
 SELECT rnd_double(2) FROM long_sequence(1_000_000_000l); -- with nulls
 ```

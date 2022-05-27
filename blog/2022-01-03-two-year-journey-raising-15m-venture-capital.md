@@ -164,10 +164,10 @@ Find more about us<sup>[5]</sup> and our open roles<sup>[6]</sup>.
   {" "}
 </iframe>
 
-[1]: https://demo.questdb.io/
+[1]: https://demo.timelystream.com/
 [2]: https://news.ycombinator.com/item?id=23616878
 [3]: https://news.ycombinator.com/item?id=23975807
 [4]:
   https://www.reddit.com/r/programming/comments/nao3ts/how_we_achieved_write_speeds_of_14_million_rows/
-[5]: https://questdb.io/about-us/
-[6]: https://questdb.io/careers/
+[5]: https://timelystream.com/about-us/
+[6]: https://timelystream.com/careers/

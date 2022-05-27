@@ -38,7 +38,7 @@ these sensors.
 
 Let's start by creating the `sensors` table:
 
-```questdb-sql
+```blazar-sql
 CREATE TABLE sensors (ID LONG, make STRING, city STRING);
 ```
 
@@ -49,7 +49,7 @@ For more information about this statement, please refer to the
 
 Let's populate our `sensors` table with procedurally-generated data:
 
-```questdb-sql title="Insert as SELECT"
+```blazar-sql title="Insert as SELECT"
 INSERT INTO sensors
     SELECT
         x ID, --increasing integer
@@ -69,7 +69,7 @@ Our `sensors` table now contains 10,000 randomly-generated sensor values of
 different makes and in various cities. Use this command to view the table:
 
 
-```questdb-sql
+```blazar-sql
 'sensors';
 ```
 
@@ -86,7 +86,7 @@ It should look like the table below:
 Let's now create some sensor readings. In this case, we will create the table
 and generate the data at the same time:
 
-```questdb-sql title="Create table as"
+```blazar-sql title="Create table as"
 CREATE TABLE readings
 AS(
     SELECT
@@ -123,13 +123,13 @@ The generated data will look like the following:
 Let's select all records from the `readings` table (note that `SELECT * FROM` is
 optional in QuestDB):
 
-```questdb-sql
+```blazar-sql
 readings;
 ```
 
 Let's also select the `count` of records from `readings`:
 
-```questdb-sql
+```blazar-sql
 SELECT count() FROM readings;
 ```
 
@@ -139,7 +139,7 @@ SELECT count() FROM readings;
 
 and the average reading:
 
-```questdb-sql
+```blazar-sql
 SELECT avg(temp) FROM readings;
 ```
 
@@ -150,7 +150,7 @@ SELECT avg(temp) FROM readings;
 We can now use the `sensors` table alongside the `readings` table to get more
 interesting results using a `JOIN`:
 
-```questdb-sql
+```blazar-sql
 SELECT *
 FROM readings
 JOIN(
@@ -170,7 +170,7 @@ The results should look like the table below:
 |5  |2019-10-17T00:00:00.200000Z|19.336660059029|3200    |3200  |Honeywell|San Francisco|
 |6  |2019-10-17T00:00:01.100000Z|20.946643576954|4053    |4053  |Honeywell|Miami        |
 
-```questdb-sql title="Aggregation keyed by city"
+```blazar-sql title="Aggregation keyed by city"
 SELECT city, max(temp)
 FROM readings
 JOIN(
@@ -189,7 +189,7 @@ The results should look like the table below:
 |Chicago      |22.999991705861|
 |Boston       |22.999999233377|
 
-```questdb-sql title="Aggregation by hourly time buckets"
+```blazar-sql title="Aggregation by hourly time buckets"
 SELECT ts, city, make, avg(temp)
 FROM readings timestamp(ts)
 JOIN
@@ -220,7 +220,7 @@ pages.
 We can now clean up the demo data by using `DROP TABLE` SQL. Be careful using
 this statement as QuestDB cannot recover data that is deleted in this way:
 
-```questdb-sql
+```blazar-sql
 DROP TABLE readings;
 DROP TABLE sensors;
 ```

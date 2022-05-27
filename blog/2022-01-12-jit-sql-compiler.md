@@ -44,14 +44,14 @@ It can often happen that analytical queries run by users end up performing a
 full scan over a table or, at least, over some of its partitions. Here is an
 example of such a query:
 
-```questdb-sql
+```blazar-sql
 SELECT *
 FROM trips
 WHERE pickup_datetime IN ('2009-01') AND total_amount > 150;
 ```
 
 The above query returns relatively expensive trips within one month from 10+
-years of taxi data available on our [live demo](https://demo.questdb.io/). To
+years of taxi data available on our [live demo](https://demo.timelystream.com/). To
 execute this query, QuestDB has to scan 13.5 million rows. This means that the
 database has to do many sequential reads from the column files and apply the
 filter expression (think, `WHERE` clause) to each value. There is a good chance
@@ -69,7 +69,7 @@ we will cover.
 ## Pre-JIT filtering
 
 As you may already know, QuestDB has a
-[column-based storage model](https://questdb.io/docs/concept/storage-model).
+[column-based storage model](https://timelystream.com/docs/concept/storage-model).
 Data is stored in tables, with each column stored in its own file. For read-only
 queries, columns with fixed-size data types are read by translating the record
 number into an offset in the column file by a simple bit shift. The offset is
@@ -123,7 +123,7 @@ literal) and `DoubleColumn` (the `total_amount` column) are its operand
 functions. Notice that the `pickup_datetime IN ('2009-01')` part of the query is
 not present in the filter since QuestDB is smart enough to apply the predicate
 for the
-[designated timestamp](https://questdb.io/docs/concept/designated-timestamp/)
+[designated timestamp](https://timelystream.com/docs/concept/designated-timestamp/)
 column (`pickup_datetime`) to the underlying data frame cursor and remove it
 from the filter tree.
 
@@ -236,7 +236,7 @@ drive running Ubuntu 20.04 and OpenJDK 17.0.1.
 
 We start with the query from our example:
 
-```questdb-sql
+```blazar-sql
 SELECT *
 FROM trips
 WHERE pickup_datetime IN ('2009-01') AND total_amount > 150;
@@ -273,7 +273,7 @@ predicate and run a query for trips with a total amount over a value for a
 single passenger across all years. This means a full table scan of 1.6 billion
 rows in total.
 
-```questdb-sql
+```blazar-sql
 SELECT count(), max(total_amount), avg(total_amount)
 FROM trips
 WHERE total_amount > 150 AND passenger_count = 1;
@@ -303,7 +303,7 @@ potential optimizations in the JIT compiler.
 
 We encourage our users to try out the SQL JIT compiler feature on their
 development QuestDB instances and provide feedback in our
-[Slack Community](https://slack.questdb.io/). JIT compiler is also enabled on
-our [live demo](https://demo.questdb.io/), so you may want to run some queries
+[Slack Community](https://slack.timelystream.com/). JIT compiler is also enabled on
+our [live demo](https://demo.timelystream.com/), so you may want to run some queries
 there. And, of course, open-source contributions to our
 [project on GitHub](https://github.com/questdb/questdb) are more than welcome.

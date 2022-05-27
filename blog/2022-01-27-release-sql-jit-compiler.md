@@ -49,7 +49,7 @@ with simple arithmetic expressions used to filter the data.
 
 To give you an impression on the performance improvements, let's consider the
 following query on the `trips` table that we use in our
-[live demo](https://demo.questdb.io/):
+[live demo](https://demo.timelystream.com/):
 
 ```sql
 SELECT count(), max(total_amount), avg(total_amount)
@@ -93,7 +93,7 @@ something similar to this message:
 ```
 
 For more information on the JIT compiler, refer to this
-[blog post](https://questdb.io/blog/2022/01/12/jit-sql-compiler).
+[blog post](https://timelystream.com/blog/2022/01/12/jit-sql-compiler).
 
 ## New LATEST BY syntax and improvements
 

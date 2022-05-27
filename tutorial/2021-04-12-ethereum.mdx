@@ -95,7 +95,7 @@ docker run -p 9000:9000 -p 8812:8812 questdb/questdb
 
 Navigate to the web console at localhost:9000 and create tables for `blocks`:
 
-```questdb-sql
+```blazar-sql
 create table blocks
 (
   timestamp string,
@@ -121,7 +121,7 @@ create table blocks
 
 and for `token_transfers`:
 
-```questdb-sql
+```blazar-sql
 create table token_transfers
 (
   token_address symbol,
@@ -227,7 +227,7 @@ string fields with a date format as timestamps. For example, pulling data from
 the `blocks` table using `timestamp` type can be done on-the-fly using this
 query:
 
-```questdb-sql
+```blazar-sql
 SELECT to_timestamp(timestamp, 'yyyy-MM-dd HH:mm:ss') AS time,
         number,
         miner,

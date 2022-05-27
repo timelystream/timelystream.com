@@ -199,7 +199,7 @@ main()
 To check if the data is committed in chronological order, I can run the
 [isOrdered](/docs/reference/function/boolean) function in a query:
 
-```questdb-sql
+```blazar-sql
 SELECT isOrdered(timestamp) is_ts_ordered FROM crypto
 ```
 
@@ -231,7 +231,7 @@ docker run -p 8812:8812 -p 9000:9000 -p 9009:9009 \
   -e QDB_CAIRO_COMMIT_LAG=20000 questdb/questdb
 ```
 
-```questdb-sql
+```blazar-sql
 -- via SQL
 ALTER TABLE crypto SET PARAM maxUncommittedRows = 10000
 ```

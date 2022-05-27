@@ -42,7 +42,7 @@ For example a given `argument` might have various behaviors depending on value
 
 #### Basic usage
 
-```questdb-sql title="Example description - Scalar result"
+```blazar-sql title="Example description - Scalar result"
 SELECT function_name(arg1,arg2) FROM table;
 ```
 
@@ -52,7 +52,7 @@ SELECT function_name(arg1,arg2) FROM table;
 
 #### With optional arguments
 
-```questdb-sql title="Example description - Table result"
+```blazar-sql title="Example description - Table result"
 SELECT function_name(arg1,arg2,opt1) FROM table;
 ```
 
@@ -63,7 +63,7 @@ SELECT function_name(arg1,arg2,opt1) FROM table;
 
 #### With null
 
-```questdb-sql title="Example description - Series result"
+```blazar-sql title="Example description - Series result"
 SELECT function_name(arg1,arg2) FROM table;
 ```
 
@@ -104,7 +104,7 @@ used to.
 
 #### Basic usage
 
-```questdb-sql title="Example description - Scalar result"
+```blazar-sql title="Example description - Scalar result"
 SELECT function_name(arg1,arg2) FROM table;
 ```
 
@@ -114,7 +114,7 @@ SELECT function_name(arg1,arg2) FROM table;
 
 #### With optional arguments
 
-```questdb-sql title="Example description - Table result"
+```blazar-sql title="Example description - Table result"
 SELECT function_name(arg1,arg2) FROM table;
 ```
 
@@ -125,7 +125,7 @@ SELECT function_name(arg1,arg2) FROM table;
 
 #### With null
 
-```questdb-sql title="Example description - Series result"
+```blazar-sql title="Example description - Series result"
 SELECT function_name(arg1,arg2) FROM table;
 ```
 

@@ -27,7 +27,7 @@ that have spatial and time components.
 <!--truncate-->
 
 We shipped an initial implementation with software release version 6.0.5, and
-we've updated [our demo instance](https://demo.questdb.io/) so anyone can test
+we've updated [our demo instance](https://demo.timelystream.com/) so anyone can test
 these features out. To help with running queries on this sort of data, we've
 included an example data set which simulates 250,000 moving objects, and we've
 provided examples in the SQL editor to demo common types of queries.
@@ -144,7 +144,7 @@ inefficient for both storage and value comparison, so we chose to add geohash
 literals. The literal syntax that we use has the format of a single `#` hash
 prefixing the geohash value for chars and two `##` hashes for binary:
 
-```questdb-sql
+```blazar-sql
 -- Create two geohash columns with different precision
 CREATE TABLE geo_data (g5c geohash(5c), g29b geohash(29b));
 -- Inserting geohash literals
@@ -168,7 +168,7 @@ this by including a suffix in the format `/{bits}` where `bits` is the number of
 bits from 1-60. This way, you can choose specific binary column precision for
 storage, but the values passed around use char notation with lower precision:
 
-```questdb-sql
+```blazar-sql
 -- insert a 5-bit geohash into a 4 bit column
 INSERT INTO my_geo_data VALUES(#a/4)
 -- insert a 20-bit geohash into an 18 bit column
@@ -211,7 +211,7 @@ use the `last(lat)` function here, we avoid lifting all data from the disk for
 the `lat` column, but instead read the row ID based on the timestamp index and
 instead pick the last value within our aggregate bucket:
 
-```questdb-sql
+```blazar-sql
 SELECT time, last(lat) lat, last(lon) lon, geo6 FROM pos
 WHERE id = 'YWPCEGICTJSGGBRIJCQVLJ'
 SAMPLE BY 15m;
@@ -223,7 +223,7 @@ geohashes is equal to or within another geohash. This operator works on
 `LATEST BY` queries on indexed columns, the `device_id` column in this snippet,
 for example:
 
-```questdb-sql
+```blazar-sql
 SELECT * FROM pos LATEST BY id
 WHERE geo6 within(#ezz, #u33d8);
 ```
@@ -234,7 +234,7 @@ time and space. The query performance of slicing time and space in this way
 should be fast enough to power real-time mapping tools which make use of UI
 sliders to jog through slices of time:
 
-```questdb-sql
+```blazar-sql
 SELECT * FROM pos LATEST BY id
 WHERE geo6 within(#wtq)
 AND time < '2021-09-19T00:00:00.000000Z';
@@ -351,6 +351,6 @@ you can try directly on our live demo or via our latest releases.
 ---
 
 If you have have feedback or questions about this article, feel free ask in our
-[Slack Community](https://slack.questdb.io/) or browse the
+[Slack Community](https://slack.timelystream.com/) or browse the
 [project on GitHub](https://github.com/questdb/questdb) where we welcome
 contributions of all kinds.

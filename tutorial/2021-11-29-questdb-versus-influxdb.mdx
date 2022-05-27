@@ -84,7 +84,7 @@ including additional types such as date, char, and binary. In QuestDB, it's also
 possible to add indexes and to existing columns in tables, which can be done
 directly through SQL:
 
-```questdb-sql
+```blazar-sql
 ALTER TABLE sensors ALTER COLUMN firmware ADD INDEX;
 ```
 
@@ -182,7 +182,7 @@ from(bucket:"example-bucket")
 
 Consider that the Flux query above can be written in SQL as follows:
 
-```questdb-sql
+```blazar-sql
 SELECT avg(cpu), avg(cpu-total) FROM 'example-bucket'
 WHERE timestamp > dateadd('h', -1, now())
 SAMPLE BY 1m

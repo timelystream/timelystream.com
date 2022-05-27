@@ -137,7 +137,7 @@ To verify if data is arriving in QuestDB:
 1. Navigate to [localhost:9000](http://localhost:9000)
 2. Run the following query:
 
-```questdb-sql
+```blazar-sql
 SELECT * FROM stock_prices;
 ```
 
@@ -253,7 +253,7 @@ queries we're interested in:
 2. In the **Query** panel, click the pencil icon or click **Edit SQL**
 3. Paste the following example query
 
-```questdb-sql
+```blazar-sql
 SELECT createdDatetime time,
        round(avg(stockPrice),2) avgPrice
 FROM stock_prices

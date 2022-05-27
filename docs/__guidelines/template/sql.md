@@ -22,24 +22,24 @@ There should be many examples describing various situations.
 
 ### Basic usage
 
-```questdb-sql title="This example does that"
+```blazar-sql title="This example does that"
 SELECT a FROM b;
 ```
 
 ### Aggregations
 
-```questdb-sql title="Do something interesting"
+```blazar-sql title="Do something interesting"
 SELECT a FROM b;
 ```
 
 ### Joining tables
 
-```questdb-sql title="Something else, equally interesting"
+```blazar-sql title="Something else, equally interesting"
 SELECT a FROM b;
 ```
 
 ### With dynamic designated timestamp
 
-```questdb-sql title="This is only interesting for certain users"
+```blazar-sql title="This is only interesting for certain users"
 SELECT a FROM b;
 ```

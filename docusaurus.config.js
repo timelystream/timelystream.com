@@ -101,7 +101,7 @@ const config = {
       anonymizeIP: true,
     },
     prism: {
-      defaultLanguage: "questdb-sql",
+      defaultLanguage: "blazar-sql",
       additionalLanguages: [
         "rust",
         "csharp",

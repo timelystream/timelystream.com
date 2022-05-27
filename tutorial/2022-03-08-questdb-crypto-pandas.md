@@ -37,7 +37,7 @@ explore the dataset further.
 
 - [Crypto dataset](https://www.kaggle.com/sudalairajkumar/cryptocurrencypricehistory)
 - [Jupyter Notebook](https://jupyter.org/)
-- [QuestDB](https://questdb.io/)
+- [QuestDB](https://timelystream.com/)
 
 # Importing Data
 

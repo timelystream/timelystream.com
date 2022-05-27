@@ -55,7 +55,7 @@ to get started.
    - **QuestDB Core Project**:
      [https://github.com/questdb/questdb](https://github.com/questdb/questdb)
    - **QuestDB Documentation**:
-     [https://github.com/questdb/questdb.io](https://github.com/questdb/questdb.io)
+     [https://github.com/questdb/timelystream.com](https://github.com/questdb/timelystream.com)
    - Or, look for other open source projects labeled with `hacktoberfest` in
      their topics
 1. If you're new to the project, look for open issues labeled with
@@ -79,11 +79,11 @@ To make sure that your pull request is valid, please follow Hacktoberfest's
 Some questions might appear when you're trying to contribute to QuestDB
 projects; here are the places to get support and hints from our team:
 
-- QuestDB Community Slack: [https://slack.questdb.io](https://slack.questdb.io)
+- QuestDB Community Slack: [https://slack.timelystream.com](https://slack.timelystream.com)
 - GitHub Discussions:
   [https://github.com/questdb/questdb/discussions](https://github.com/questdb/questdb/discussions)
 - QuestDB Documentation:
-  [https://questdb.io/docs/introduction/](/docs/introduction/)
+  [https://timelystream.com/docs/introduction/](/docs/introduction/)
 
 Also, don't forget to follow us on social media to receive the latest updates:
 

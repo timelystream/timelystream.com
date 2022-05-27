@@ -61,7 +61,7 @@ QuestDB which allows storing and querying spatial data. The syntax follows the
 format `geohash(<precision>)`. The following examples show how to create tables
 with geohash types and to make basic queries by geohash:
 
-```questdb-sql title="Geohash overview"
+```blazar-sql title="Geohash overview"
 -- Create two geohash columns with different precision
 CREATE TABLE geo_data (g5c geohash(5c), g29b geohash(29b));
 -- Inserting geohash literals
@@ -75,7 +75,7 @@ evaluate if a geohash is equal to or is within a larger grid. The following
 query will return the most recent entries by device ID if the `g8c` column
 contains a geohash within `u33d`:
 
-```questdb-sql title="within operator"
+```blazar-sql title="within operator"
 SELECT * FROM geo_data LATEST BY device_id
 WHERE g8c within(#u33d);
 ```
@@ -93,7 +93,7 @@ functions has the benefit that geospatial queries are significantly faster. The
 most common types of queries which are likely to benefit from this improvement
 are those such as "last-known location" of a device or vessel:
 
-```questdb-sql title="last() example"
+```blazar-sql title="last() example"
 SELECT ts, last(g8c) FROM geo_data
 WHERE device_id = 'device_3';
 ```
@@ -104,7 +104,7 @@ To aid with rounding timestamp values, it's now possible to use
 `timestamp_floo()` and `timestamp_ceil()` functions to round up or down by a
 unit of choice:
 
-```questdb-sql
+```blazar-sql
 WITH t AS (SELECT cast('2016-02-10T16:18:22.862145Z' AS timestamp) ts)
 SELECT
   ts,

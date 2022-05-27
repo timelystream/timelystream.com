@@ -265,14 +265,14 @@ incoming data. Navigate to `http://<QUESTDB IP ADDRESS>:9000` where the
 `<QUESTDB IP ADDRESS>` is the IP address of your QuestDB droplet, and write the
 following SQL statement in the SQL editor:
 
-```questdb-sql
+```blazar-sql
 SELECT * FROM cpu
 ```
 
 This will return all data in the table for CPU metrics sent by Telegraf. We can
 easily create some aggregates like the average CPU usage per machine:
 
-```questdb-sql
+```blazar-sql
 SELECT
     host,
     avg(usage_system) cpu_average,
@@ -283,7 +283,7 @@ FROM cpu
 If we want to perform some more complex queries, we can perform JOINs across the
 three tables:
 
-```questdb-sql
+```blazar-sql
 SELECT
     cpu.host,
     avg(mem.used_percent) mem_usage_average,
@@ -299,7 +299,7 @@ ORDER BY timestamp DESC
 
 And to visualize this data, query memory usage using the following SQL:
 
-```questdb-sql
+```blazar-sql
 SELECT
     host,
     avg(mem.used_percent) usage_average,

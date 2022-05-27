@@ -114,7 +114,7 @@ It's now possible to bulk insert vales into a table via SQL. This functionality
 follows the 'multirow' `VALUES` syntax used in PostgreSQL and acts as an
 accelerator when inserting data in bulk:
 
-```questdb-sql
+```blazar-sql
 CREATE TABLE my_table(id SYMBOL index, val DOUBLE,ts TIMESTAMP)
   timestamp(ts);
 

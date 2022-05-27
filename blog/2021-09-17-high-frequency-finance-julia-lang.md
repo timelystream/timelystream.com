@@ -440,6 +440,6 @@ has shown how much more efficient things can be when you use a database.
 ---
 
 If you have have feedback or questions about this article, feel free ask in our
-[Slack Community](https://slack.questdb.io/) or browse the
+[Slack Community](https://slack.timelystream.com/) or browse the
 [project on GitHub](https://github.com/questdb/questdb) where we welcome
 contributions of all kinds.

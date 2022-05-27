@@ -245,7 +245,7 @@ before sorting and committing data. The benefit of these parameters is we can
 minimize the frequency of commits depending on the characteristics of the
 incoming data:
 
-```questdb-sql
+```blazar-sql
 alter table cpu set param commitLag=50us;
 alter table cpu set param maxUncommittedRows=10000000;
 ```
@@ -274,7 +274,7 @@ significant performance impact. For example, when creating a table, we can
 designate resources for indexed columns to know how many unique values the
 symbol column will contain, and done via capacity as follows:
 
-```questdb-sql
+```blazar-sql
 create table cpu (
   hostname symbol capacity 20000000,
   region symbol,
@@ -294,6 +294,6 @@ heap.
 This article shows how high-cardinality can quickly emerge in time series data
 in industrial IoT, monitoring, application data and many other scenarios. If you
 have have feedback or questions about this article, feel free ask in our
-[Slack Community](https://slack.questdb.io/) or browse the
+[Slack Community](https://slack.timelystream.com/) or browse the
 [project on GitHub](https://github.com/questdb/questdb) where we welcome
 contributions of all kinds.

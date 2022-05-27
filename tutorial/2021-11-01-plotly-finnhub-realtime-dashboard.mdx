@@ -115,7 +115,7 @@ We could create the database table later, but we will take this opportunity and
 create the table now since we have already started QuestDB. Connect to QuestDB's
 interactive console, and run the following SQL statement:
 
-```questdb-sql
+```blazar-sql
 CREATE TABLE
       quotes(stock_symbol SYMBOL CAPACITY 5 CACHE INDEX, -- we are in fact just checking 3
              current_price DOUBLE,

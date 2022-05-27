@@ -4,7 +4,7 @@ title: SQL code blocks
 
 ### Checklist
 
-- [ ] Use the `questdb-sql` language
+- [ ] Use the `blazar-sql` language
 - [ ] Keywords are uppercase
 - [ ] Types are uppercase
 - [ ] Column names are camelCase
@@ -23,29 +23,29 @@ title: SQL code blocks
 
 ### Examples
 
-```questdb-sql
+```blazar-sql
 SELECT * FROM tableName;
 ```
 
-```questdb-sql
+```blazar-sql
 SELECT columnName, min(columnName) FROM tableName;
 ```
 
-```questdb-sql
+```blazar-sql
 CREATE TABLE tableName(columnName TYPE, columnName TYPE) timestamp(columnName) PARTITION BY DAY;
 ```
 
-```questdb-sql
+```blazar-sql
 SELECT cast(columnName AS INT) FROM tableName;
 ```
 
-```questdb-sql
+```blazar-sql
 SELECT columnName, min(columnName)
 FROM tableName
 WHERE columnName > 3;
 ```
 
-```questdb-sql
+```blazar-sql
 SELECT
 columnName,
 min(columnName),
@@ -53,7 +53,7 @@ max(columnName)
 FROM table WHERE columnName > 3;
 ```
 
-```questdb-sql
+```blazar-sql
 CREATE TABLE tableName AS(
 ...
 );

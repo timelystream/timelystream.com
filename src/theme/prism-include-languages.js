@@ -11,7 +11,7 @@ const prismIncludeLanguages = (PrismObject) => {
     additionalLanguages.forEach((lang) => {
       require(`prismjs/components/prism-${lang}`) // eslint-disable-line
     })
-    Prism.languages["questdb-sql"] = {
+    Prism.languages["blazar-sql"] = {
       comment: {
         pattern: /(^|[^\\])(?:\/\*[\s\S]*?\*\/|(?:--|\/\/).*)/,
         lookbehind: true,

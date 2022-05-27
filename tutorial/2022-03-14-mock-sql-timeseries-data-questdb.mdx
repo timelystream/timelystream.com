@@ -138,7 +138,7 @@ generate some rows to see `long_sequence` in action.
 
 For a first query, paste the following in the SQL editor:
 
-```questdb-sql
+```blazar-sql
 SELECT x, x*x FROM long_sequence(5);
 ```
 
@@ -197,14 +197,14 @@ the same time as the random numbers are generated.
 The best practice when populating test tables is creating the table first, then
 populating and querying it. Consider the following example:
 
-```questdb-sql
+```blazar-sql
 SELECT round(a,2), a FROM (SELECT rnd_double() a FROM long_sequence(10));
 ```
 
 This would return inconsistent and ephemeral results while the approach below
 will return consistent results that are persisted as a normal database table.
 
-```questdb-sql
+```blazar-sql
 -- creating the table first
 CREATE TABLE test(val double);
 -- populating the test table
@@ -229,7 +229,7 @@ of sending the data, we will generate it directly using the web UI.
 Following the approach described above, let's create the table first. Navigate
 to the web UI and create the `diagnostics` table that you can see below.
 
-```questdb-sql
+```blazar-sql
 CREATE TABLE 'diagnostics' (
     name                     STRING,   -- identifier of the truck
     fleet                    STRING,   -- division where the truck belongs to
@@ -257,7 +257,7 @@ doing that, we are going to use four different random value generators, namely
 have different arguments and capabilities. To generate some rows, run the
 following query:
 
-```questdb-sql
+```blazar-sql
 INSERT INTO 'diagnostics' SELECT * FROM (
     SELECT
         rnd_str('truck_1234', 'truck_5678', 'truck_9123', 'truck_3210'),
@@ -295,7 +295,7 @@ To fix this issue, we need to use a timestamp sequence generator, called
 create data for testing. The timestamp is increased by providing a `steps`
 argument, which sets the step size in microseconds.
 
-```questdb-sql
+```blazar-sql
 SELECT
     timestamp_sequence(
         to_timestamp('2022-02-01T00:00:00', 'yyyy-mm-ddTHH:mm:ss'),
@@ -312,7 +312,7 @@ refactor the query we used to generate test data as follows. Before running the
 query, execute `truncate table 'diagnostics'` to clean up the previously
 generated rows.
 
-```questdb-sql
+```blazar-sql
 INSERT INTO 'diagnostics' SELECT * FROM (
     SELECT
         rnd_str('truck_1234', 'truck_5678', 'truck_9123', 'truck_3210'),

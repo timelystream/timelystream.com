@@ -75,7 +75,7 @@ on top of your system or infrastructure:
 There's now a function built-in that provides the current server version number
 and commit hash for troubleshooting. It can be run with the following command:
 
-```questdb-sql
+```blazar-sql
 SELECT build();
 ```
 
@@ -86,7 +86,7 @@ SELECT build();
 This language feature adds more flexibility in cases where `CREATE TABLE`
 queries are run and tables already exist:
 
-```questdb-sql
+```blazar-sql
 CREATE TABLE IF NOT EXISTS my_table (ts TIMESTAMP, value INT) timestamp(ts);
 ```
 

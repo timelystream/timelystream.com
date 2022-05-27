@@ -42,11 +42,11 @@ Gives a warning about something dangerous.
 | value | value |
 | value | value |
 
-### "questdb-sql" code block
+### "blazar-sql" code block
 
 Title is optional.
 
-```questdb-sql title="title"
+```blazar-sql title="title"
 SELECT * FROM users;
 ```
 
@@ -63,7 +63,7 @@ import TabItem from "@theme/TabItem"
 
 <TabItem value="sql">
 
-```questdb-sql
+```blazar-sql
 SELECT * FROM users;
 ```
 

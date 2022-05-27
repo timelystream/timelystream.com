@@ -43,7 +43,7 @@ strictly to calendar dates with optional time zones and offsets. The default
 behavior for sampling is unchanged from previous releases, and calendar
 alignment is possible through the use of the following optional keywords:
 
-```questdb-sql
+```blazar-sql
 SELECT ts, count() FROM sensors
 SAMPLE BY 1d
 ALIGN TO CALENDAR
@@ -64,7 +64,7 @@ enhancements are possible by massively parallelizing how these operations are
 executed and optimizing aggregate calculations within sampled groups. Users will
 see these improvements with the following two query types:
 
-```questdb-sql
+```blazar-sql
 -- indexed columns
 SELECT * FROM my_table LATEST BY indexed_col;
 -- indexed columns with filtering using WHERE

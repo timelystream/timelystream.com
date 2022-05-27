@@ -223,7 +223,7 @@ docker stop questdb-heartrate
 Open up the QuestDB console at (http://127.0.0.1:9000/) and create our
 `heart_rate` table:
 
-```questdb-sql
+```blazar-sql
 CREATE TABLE heart_rate(sensorID STRING, uniqueID STRING, timecollected
   TIMESTAMP, heartrate DOUBLE) timestamp(timecollected);
 ```
@@ -380,7 +380,7 @@ disabled and click **Save and Test**:
 Finally, let's create a dashboard. Add a panel to the Grafana dashboard and add
 the following SQL query:
 
-```questdb-sql
+```blazar-sql
 SELECT timecollected AS "time",
        heartrate
 FROM heart_rate

@@ -58,7 +58,7 @@ To follow with this tutorial, you'll need the following:
 
 Before we can start storing data, we'll need to get QuestDB up and running.
 Aside from running QuestDB from
-[binaries and via Docker](https://questdb.io/get-questdb/), macOS users can get
+[binaries and via Docker](https://timelystream.com/get-questdb/), macOS users can get
 started using homebrew:
 
 ```bash
@@ -66,10 +66,10 @@ brew install questdb
 ```
 
 Additional settings can be changes in the
-[server configuration](https://questdb.io/docs/reference/configuration/) file
+[server configuration](https://timelystream.com/docs/reference/configuration/) file
 located at `/usr/local/var/questdb/conf/server.conf` for the homebrew install.
 The interface we'll be using for inserting data is ILP
-([InfluxDB line protocol](https://questdb.io/docs/reference/api/ilp/overview/))
+([InfluxDB line protocol](https://timelystream.com/docs/reference/api/ilp/overview/))
 over TCP which runs on port 9009 by default. The server configuration for these
 keys looks as follows:
 
@@ -90,7 +90,7 @@ pg.select.cache.enabled=false
 
 When we've set these server configuration properties, we can start up the
 database service with
-[QuestDB's CLI](https://questdb.io/docs/reference/command-line-options/):
+[QuestDB's CLI](https://timelystream.com/docs/reference/command-line-options/):
 
 ```bash
 questdb start
@@ -164,7 +164,7 @@ editor shows the prices flowing in QuestDB:
 One important thing to note is that we didn't create a table before sending
 data. QuestDB automatically creates tables using the appropriate columns
 detected from the message. The currency identifiers are inserted as
-[symbol types](https://questdb.io/docs/concept/symbol/), and the values are
+[symbol types](https://timelystream.com/docs/concept/symbol/), and the values are
 inserted as doubles. It's also noteworthy that the record timestamp is set as
 the server time when the row was inserted and tables created from ILP ingestion
 have a default `day` partitioning. The schema looks like this:
@@ -186,7 +186,7 @@ conditions like irregular prices or flow and risk limits.
 
 This tutorial is tailored for macOS users, so we'll use Homebrew, but there are
 other options covered in the
-[QuestDB Grafana guide](https://questdb.io/docs/third-party-tools/grafana):
+[QuestDB Grafana guide](https://timelystream.com/docs/third-party-tools/grafana):
 
 ```bash
 brew install grafana
@@ -200,7 +200,7 @@ configure QuestDB:
 - Click `Add data source`
 - Choose the `PostgreSQL` plugin and configure it with the following settings:
 
-```questdb-sql
+```blazar-sql
 host: localhost:8812
 database: qdb
 user: admin
@@ -220,7 +220,7 @@ to plot:
 Paste the following query to create a time series of the bid-offer and mid
 price:
 
-```questdb-sql
+```blazar-sql
 select
   timestamp as time,
   avg(ask) as ask,

@@ -256,4 +256,4 @@ Pushing database performance higher and higher still while making it easy for
 developers to get started with our product is what motivates us every day. This
 is why we are focused on building a strong community of developers who can
 participate and improve the product through our open source distribution model.
-We hope to see you on our [Slack](https://slack.questdb.io/) channel.
+We hope to see you on our [Slack](https://slack.timelystream.com/) channel.

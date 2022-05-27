@@ -38,7 +38,7 @@ using Dates
 ```
 
 For more information about getting setup with QuestDB read their
-[get started with QuestDB](https://questdb.io/docs/get-started/docker/) guide.
+[get started with QuestDB](https://timelystream.com/docs/get-started/docker/) guide.
 
 ## Contents
 

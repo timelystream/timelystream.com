@@ -64,7 +64,7 @@ We have optimised the execution of `LATEST ON` statements over un-indexed symbol
 magnitude performance gains **without the need for indexes**. The following SQL creates a sample table containing 
 500_000 rows and then finds the latest sentiment per fiat currency: 
 
-```questdb-sql
+```blazar-sql
 CREATE TABLE sample_table AS (
     SELECT 
         rnd_symbol('Dollar', 'Euro', 'Hryvnia', 'Yuan') fiat,
