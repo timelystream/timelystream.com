@@ -5,30 +5,27 @@ description: Here, we try to explain what goals Blazar has and why and how we tr
 
 There are many database management systems (DBMS) out there. But there is [no one-size-fits all database system](http://cs.brown.edu/research/db/publications/fits_all.pdf). All take different trade-offs to better adjust to specific use cases. Blazar is no different. Here, we try to explain what goals Blazar has and why and how we try to achieve those goals through technical means. To start with, Blazar is a [relational (table-oriented) DBMS](https://en.wikipedia.org/wiki/Relational_database) that supports the [Structured Query Language (SQL)](https://en.wikipedia.org/wiki/SQL).
 
+## Traditional OLAP Systems
+To better understand the characteristics of blazar systems, we first need to understand the traditional also known as online analytical processing (OLAP), these workloads are characterized by complex, relatively long-running queries, for example, aggregation of entire tables or joins between several large tables. oLAP requires data to be imported in batches, little support for table data updates, table fields lack primary and foreign key constraints, and no transactional capabilities. There are often two major problems with time delays and inaccuracy of data.
+blazar was developed with the goal of accommodating scenarios that require **real-time** and **accurate** data analysis.
+
 ## Fast Analytical Queries
 Blazar is designed to support **analytical query workloads**, also known as [Online analytical processing (OLAP)](https://en.wikipedia.org/wiki/Online_analytical_processing). These workloads are characterized by complex, relatively long-running queries that process significant portions of the stored dataset, for example aggregations over entire tables or joins between several large tables. Changes to the data are expected to be rather large-scale as well, with several rows being appended, or large portions of tables being changed or added at the same time. 
 
 To efficiently support this workload, it is critical to reduce the amount of CPU cycles that are expended per individual value. The state of the art in data management to achieve this are either [vectorized or just-in-time query execution engines](https://www.vldb.org/pvldb/vol11/p2209-kersten.pdf). Blazar contains a **columnar-vectorized query execution engine**, where queries are still interpreted, but a large batch of values (a "vector") are processed in one operation. This greatly reduces overhead present in traditional systems such as PostgreSQL, MySQL or SQLite which process each row sequentially. Vectorized query execution leads to far better performance in OLAP queries.
 
 ## Simple Operation
-SQLite is the [world's most widely deployed DBMS](https://www.sqlite.org/mostdeployed.html). Simplicity in installation, and embedded in-process operation are central to its success. Blazar adopts these ideas of simplicity and embedded operation. 
+Blazar has **no external dependencies**, neither for compilation nor during run-time. For releases, the entire source tree of Blazar is compiled into one executor files. This greatly simplifies deployment and integration in other build processes. For building, all that is required to build Blazar is a working C++17 compiler. 
 
-Blazar has **no external dependencies**, neither for compilation nor during run-time. For releases, the entire source tree of Blazar is compiled into two files, a header and an implementation file, a so-called "amalgamation". This greatly simplifies deployment and integration in other build processes. For building, all that is required to build Blazar is a working C++11 compiler. 
-
-For Blazar, there is no DBMS server software to install, update and maintain. Blazar does not run as a separate process, but completely **embedded within a host process**. For the analytical use cases that Blazar targets, this has the additional advantage of **high-speed data transfer** to and from the database. In some cases, Blazar can process foreign data without copying. For example, the Blazar Python package can run queries directly on Pandas data without ever importing or copying any data. 
+Blazar has excellent performance and can support running in **docker containers**, **EC2**, or **physical hardware servers**.
 
 ## Feature-Rich
-Blazar provides serious data management features. There is extensive support for **complex queries** in SQL with a large function library, window functions etc. Blazar provides **transactional guarantees** (ACID properties) through our custom, bulk-optimized [Multi-Version Concurrency Control (MVCC)](https://en.wikipedia.org/wiki/Multiversion_concurrency_control). Data can be stored in persistent, **single-file databases**. Blazar supports secondary indexes to speed up queries trying to find a single table entry. 
-
-Blazar is deeply integrated into Python and R for efficient interactive data analysis. Blazar provides APIs for Java, C, C++, and others.
+Blazar provides serious data management features. There is extensive support for **complex queries** in SQL with a large function library, window functions etc. Blazar provides **transactional guarantees** (ACID properties) through our custom, bulk-optimized [Multi-Version Concurrency Control (MVCC)](https://en.wikipedia.org/wiki/Multiversion_concurrency_control). Data can be reliably stored in files. Blazar supports secondary indexes to speed up queries trying to find a single table entry. 
 
 ## Thorough Testing
-While Blazar is created by a research group, it is not intended to be a research prototype. Blazar is intended to be a stable and mature database system.
-
-To facilitate this stability, Blazar is intensively tested using [Continuous Integration](https://github.com/timelystream/blazar/actions). Blazar's test suite currently contains millions of queries, and includes queries adapted from the test suites of SQLite, PostgreSQL and MonetDB. Tests are repeated on a wide variety of platforms and compilers. Every pull request is checked against the full test setup and only merged if it passes. 
+Blazar is intensively tested using [Continuous Integration](https://github.com/timelystream/blazar/actions). Blazar's test suite currently contains millions of queries, and includes queries adapted from the test suites of SQLite, PostgreSQL and MonetDB. Tests are repeated on a wide variety of platforms and compilers. Every pull request is checked against the full test setup and only merged if it passes. 
 
 In addition to this test suite, we run various tests that stress Blazar under heavy loads. We run the [TPC-H](http://www.tpc.org/tpch/) and [TPC-DS](http://www.tpc.org/tpcds/) benchmarks, and run various tests where Blazar is used by many clients in parallel.
-
 
 ## Free & Open Source License
 This is why Blazar is released under the very permissive [Apache License, Version 2.0](https://www.apache.org/licenses/LICENSE-2.0). Blazar is Open Source, the entire source code is freely available on GitHub. We invite contributions from anyone provided they adhere to our [Code of Conduct](../code_of_conduct).

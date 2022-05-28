@@ -5,7 +5,7 @@
   "license": "Apache-2.0",
   "scripts": {
     "prestart": "tsc --project plugins/tsconfig.json",
-    "start": "docusaurus start",
+    "start": "cross-env BROWSER=none docusaurus start",
     "pre-build": "cross-env FORCE=true node scripts/optimise-images.js",
     "prebuild": "docusaurus clear && node scripts/optimise-images.js && npm run prestart",
     "build": "cross-env USE_SIMPLE_CSS_MINIFIER=true PWA_SW_CUSTOM= docusaurus build",
