@@ -25,7 +25,7 @@ import footerCss from "../css/index/footer.module.css"
 import prCss from "../css/property.module.css"
 import seCss from "../css/section.module.css"
 
-import QuestDBLogo from "../assets/img/questdb.svg"
+import QuestDBLogo from "../assets/img/blazar.svg"
 import PgLogo from "../assets/img/pages/index/integrations/pg.svg"
 import GrafanaLogo from "../assets/img/pages/index/integrations/grafana.svg"
 import KafkaLogo from "../assets/img/pages/index/integrations/kafka.svg"

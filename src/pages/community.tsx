@@ -29,7 +29,7 @@ const contribution: Contribute[] = [
   {
     image: "/img/pages/community/docs.svg",
     title: "Improve the docs",
-    url: "https://github.com/questdb/questdb.io",
+    url: "https://github.com/timelystream/timelystream.com",
     alt: "A document icon",
   },
 ]
@@ -83,7 +83,7 @@ const Community = () => {
               >
                 Join our growing community on &nbsp;
                 <a className={paCss.link_item} href={customFields.slackUrl}>
-                  QuestDB’s Slack
+                  Blazar’s Slack
                 </a>
               </p>
               <a className={paCss.link_item} href={customFields.slackUrl}>
@@ -99,10 +99,10 @@ const Community = () => {
           </div>
           <div className={`${paCss.half__section} ${paCss.section_center}`}>
             <img
-              src="/img/pages/community/slack.png"
+              src="/img/pages/community/community-slack.png"
               alt="A collage showing conversation from the QuestDB community Slack workspace with QuestDB stickers that participants receive"
               className={paCss.section_image}
-              width={500}
+              width={650}
               height={500}
             />
           </div>
@@ -116,7 +116,7 @@ const Community = () => {
           <div className={paCss.flex__section}>
             <div className={paCss.half__section}>
               <img
-                src="/img/pages/community/swag-level-1.png"
+                src="/img/pages/community/community-mouse-pad.png"
                 alt="A mug and a pack of stickers printed with the QuestDB logo"
                 className={paCss.section_image}
                 width={500}
@@ -227,7 +227,7 @@ const Community = () => {
           </div>
           <div className={`${paCss.half__section} ${paCss.section_center}`}>
             <img
-              src="/img/pages/community/questdb-shirt.png"
+              src="/img/pages/community/community-t-shirt.png"
               alt="A black t-shirt with the QuestDB logo printed on the front"
               className={paCss.section_image}
               width={500}
@@ -279,7 +279,7 @@ const Community = () => {
           </div>
           <div className={`${paCss.half__section} ${paCss.section_center}`}>
             <img
-              src="/img/pages/community/questdb-swag-mousemat.png"
+              src="/img/pages/community/community-mark-cup.png"
               alt="A pink and black water bottle, a cellphone cover and a circular mousemat printed with the QuestDB logo"
               className={paCss.section_image}
               width={500}

@@ -123,7 +123,7 @@ const config = {
       title: " ",
       logo: {
         alt: "QuestDB",
-        src: "/img/navbar/questdb.svg",
+        src: "/img/navbar/blazar.svg",
       },
       items: [
         {

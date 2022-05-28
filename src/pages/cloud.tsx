@@ -10,7 +10,7 @@ import ElasticSolutionIcon from "../assets/img/pages/cloud/elastic-solution.svg"
 import HighAvailabilityIcon from "../assets/img/pages/cloud/high-availability.svg"
 import HighPerformanceIcon from "../assets/img/pages/cloud/high-performance.svg"
 import SecurityIcon from "../assets/img/pages/cloud/security.svg"
-import ManagedQuestdbIcon from "../assets/img/pages/cloud/managed-questdb.svg"
+import ManagedQuestdbIcon from "../assets/img/pages/cloud/managed-blazar.svg"
 import AwsLogo from "../assets/img/aws.svg"
 
 import seCss from "../css/section.module.css"
