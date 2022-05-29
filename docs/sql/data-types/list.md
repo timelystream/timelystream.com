@@ -8,7 +8,7 @@ A `LIST` column can have values with different lengths, but they must all have t
 
 `LIST`s are similar to Postgres's `ARRAY` type. Blazar uses the `LIST` terminology, but some [array functions](../functions/nested#list-functions) are provided for Postgres compatibility.
 
-See the [data types overview](/docs/sql/data_types/overview) for a comparison between nested data types.
+See the [data types overview](/docs/sql/data-types/overview) for a comparison between nested data types.
 
 Lists can be created using the [`LIST_VALUE(expr, ...)`](../functions/nested#list-functions) function or the equivalent bracket notation `[expr, ...]`. The expressions can be constants or arbitrary expressions.
 

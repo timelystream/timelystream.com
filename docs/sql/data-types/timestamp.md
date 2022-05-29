@@ -79,7 +79,7 @@ ORDER BY
     name;
 ```
 
-You can also find a reference table of available time zones [here](/docs/sql/data_types/timezones).
+You can also find a reference table of available time zones [here](/docs/sql/data-types/timezones).
 
 ## Calendars
 The ICU extension also supports non-Gregorian calendars using the `Set Calendar` command.

@@ -99,8 +99,7 @@ blazar start [-d dir] [-f] [-t tag]
 
 #### Default root directory
 
-By default, Blazar's [root directory](/docs/concept/root-directory-structure)
-will be the following:
+By default, Blazar's root directory will be the following:
 
 <!-- prettier-ignore-start -->
 

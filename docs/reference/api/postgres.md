@@ -15,8 +15,7 @@ Blazar. Some features that exists for Postgres do not apply to Blazar.
 ### List of supported features
 
 - Querying (all types expect `BLOB`)
-- Prepared statements with bind parameters (check for specific libraries
-  [below](/docs/reference/api/postgres#libraries--programmatic-clients))
+- Prepared statements with bind parameters (check for specific libraries)
 - `INSERT` statements with bind parameters (same)
 - DDL execution
 - Batch inserts with `JDBC`
@@ -25,10 +24,10 @@ Blazar. Some features that exists for Postgres do not apply to Blazar.
 Examples which demonstrate how to use Postgres clients in a number of different
 languages can be found on the following pages:
 
-- [Insert data](/docs/develop/insert-data#postgresql-wire-protocol)
+- Insert data
   demonstrates how to use the parameterized queries and prepared statements to
   insert data.
-- [Query data](/docs/develop/query-data#postgresql-wire-protocol) shows how to
+- Query data shows how to
   run queries against tables.
 
 ### List of unsupported features

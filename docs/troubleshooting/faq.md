@@ -10,7 +10,7 @@ Blazar is maintained by TimelyStream, Inc. along with [many other contributors](
 Blazar flares are extremely dense sources of highly variable energy, supermassive black holes in the center of the main galaxy, sucking in matter to eject energetic particles. The accretion disk of a flare is like our physical and chemical view, the sucked-in matter is like streaming data, and the ejected energetic particles are the result of our low-latency query returns.
 
 ### Where do I find the Blazar Logo?
-You can download the Blazar Logo here: <br/> • Web: [png](/images/logo-dl/blazar-logo.png) / [jpg](/images/logo-dl/blazar-logo.jpg) <br/>  • Print: [svg](/images/logo-dl/blazar_Logo.svg) / [pdf](/images/logo-dl/blazar-Logo.pdf) <br/>
+You can download the Blazar Logo here: <br/> • Web: [png](/) / [jpg](/) <br/>  • Print: [svg](/) / [pdf](/) <br/>
 
 ### How can I expand the Blazar website?
 The Blazar Website is hosted by GitHub pages, its repository is [here](

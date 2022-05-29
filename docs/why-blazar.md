@@ -28,7 +28,7 @@ Blazar is intensively tested using [Continuous Integration](https://github.com/t
 In addition to this test suite, we run various tests that stress Blazar under heavy loads. We run the [TPC-H](http://www.tpc.org/tpch/) and [TPC-DS](http://www.tpc.org/tpcds/) benchmarks, and run various tests where Blazar is used by many clients in parallel.
 
 ## Free & Open Source License
-This is why Blazar is released under the very permissive [Apache License, Version 2.0](https://www.apache.org/licenses/LICENSE-2.0). Blazar is Open Source, the entire source code is freely available on GitHub. We invite contributions from anyone provided they adhere to our [Code of Conduct](../code_of_conduct).
+This is why Blazar is released under the very permissive [Apache License, Version 2.0](https://www.apache.org/licenses/LICENSE-2.0). Blazar is Open Source, the entire source code is freely available on GitHub. We invite contributions from anyone provided they adhere to our [Code of Conduct](../).
 
 ## Standing on the Shoulders of Giants
 Blazar uses some components from various Open-Source projects and draws inspiration from scientific publications. We are very greatful for this. Here is an overview:

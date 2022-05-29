@@ -7,7 +7,7 @@ Blazar has a number of extensions available for use. Not all of them are include
 
 ## Available extensions
  * excel
- * [full text search](./full_text_search) (named fts)
+ * [full text search](./full-text-search) (named fts)
  * httpfs
  * icu
  * [json](./json)

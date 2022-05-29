@@ -35,20 +35,9 @@ docker run -p 9000:9000 \
 | `-p`     | Port to publish to the host |
 | `-v`     | To bind mount a volume      |
 
-#### `-p` parameter
-
-This parameter will publish a port to the host, you can specify:
-
-- `-p 9000:9000` - [REST API](/docs/reference/api/rest) and
-  [Web Console](/docs/develop/web-console)
-- `-p 9009:9009` - [InfluxDB line protocol](/docs/reference/api/ilp/overview)
-- `-p 8812:8812` - [Postgres wire protocol](/docs/reference/api/postgres)
-- `-p 9003:9003` -
-  [Min health server](/docs/reference/configuration#minimal-http-server)
-
 #### -v volumes
 
-The Blazar [root_directory](/docs/concept/root-directory-structure) will be in
+The Blazar root_directory will be in
 the following location:
 
 <!-- prettier-ignore-start -->
@@ -108,8 +97,6 @@ Now that Blazar is running, you can start interacting with it:
   [REST](/docs/reference/api/rest) page
 - If you published the port `8812`, follow our
   [Postgres](/docs/reference/api/postgres) page
-- If you published the port `9009`, follow our
-  [InfluxDB](/docs/reference/api/ilp/overview) page
 
 ## Data persistence
 

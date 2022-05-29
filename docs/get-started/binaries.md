@@ -10,9 +10,7 @@ import CodeBlock from "@theme/CodeBlock"
 import InterpolateReleaseData from "../../src/components/InterpolateReleaseData"
 
 This page describes how to install and use Blazar via binaries. Blazar comes
-with a script `questdb.sh` for Linux/FreeBSD and an executable `questdb.exe` for
-Windows. If you are looking for macOS, please check our
-[Homebrew](/docs/get-started/homebrew) section.
+with a script `questdb.sh` for Linux/FreeBSD.
 
 ## Download
 

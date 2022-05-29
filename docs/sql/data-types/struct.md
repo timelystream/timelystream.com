@@ -10,7 +10,7 @@ Conceptually, a `STRUCT` column contains an ordered list of other columns called
 
 `STRUCT`s are similar to Postgres's `ROW` type. The key difference is that Blazar `STRUCT`s require the same keys in each row of a `STRUCT` column. This allows Blazar to provide significantly improved performance by fully utilizing its vectorized execution engine, and also enforces type consistency for improved correctness. Blazar includes a `row` function as a special way to produce a struct, but does not have a `ROW` data type. See an example below and the [nested functions docs](../functions/nested#struct-functions) for details.
 
-See the [data types overview](/docs/sql/data_types/overview) for a comparison between nested data types.
+See the [data types overview](/docs/sql/data-types/overview) for a comparison between nested data types.
 
 Structs can be created using the [`STRUCT_PACK(name := expr, ...)`](../functions/nested#struct-functions) function or the equivalent array notation `{'name': expr, ...}` notation. The expressions can be constants or arbitrary expressions.
 
@@ -126,8 +126,8 @@ FROM t1;
 
 ## Comparison Operators
 
-Nested types can be compared using all the [comparison operators](../expressions/comparison_operators).
-These comparisons can be used in [logical expressions](../expressions/logical_operators)
+Nested types can be compared using all the [comparison operators](../expressions/comparison-operators).
+These comparisons can be used in [logical expressions](../expressions/logical-operators)
 for both `WHERE` and `HAVING` clauses, as well as for creating [Boolean values](./boolean).
 
 The ordering is defined positionally in the same way that words can be ordered in a dictionary.

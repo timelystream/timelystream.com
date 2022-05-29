@@ -29,4 +29,4 @@ SELECT * FROM integers WHERE i > 10;
 ```
 
 ## Expressions
-See [Logical Operators](../expressions/logical_operators) and [Comparison Operators](../expressions/comparison_operators).
+See [Logical Operators](../expressions/logical-operators) and [Comparison Operators](../expressions/comparison-operators).

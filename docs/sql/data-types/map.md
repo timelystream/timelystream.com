@@ -8,7 +8,7 @@ title: Map
 
 `MAP`s must have a single type for all keys, and a single type for all values. Keys and values can be any type, and the type of the keys does not need to match the type of the values (Ex: a `MAP` of `INT`s to `VARCHAR`s). `MAP`s may also have duplicate keys. This is possible and useful because maps are ordered. `MAP`s are also more forgiving when extracting values, as they return an empty list if a key is not found rather than throwing an error as structs do.
 
-In contrast, `STRUCT`s must have string keys, but each key may have a value of a different type. `STRUCT`s may not have duplicate keys. See the [data types overview](/docs/sql/data_types/overview) for a comparison between nested data types.
+In contrast, `STRUCT`s must have string keys, but each key may have a value of a different type. `STRUCT`s may not have duplicate keys. See the [data types overview](/docs/sql/data-types/overview) for a comparison between nested data types.
 
 To construct a `MAP`, use the `map` function. Provide a list of keys as the first parameter, and a list of values for the second.
 
@@ -42,8 +42,8 @@ SELECT element_at(map([100, 5], [42, 43]),100);
 
 ## Comparison Operators
 
-Nested types can be compared using all the [comparison operators](../expressions/comparison_operators).
-These comparisons can be used in [logical expressions](../expressions/logical_operators)
+Nested types can be compared using all the [comparison operators](../expressions/comparison-operators).
+These comparisons can be used in [logical expressions](../expressions/logical-operators)
 for both `WHERE` and `HAVING` clauses, as well as for creating [Boolean values](./boolean).
 
 The ordering is defined positionally in the same way that words can be ordered in a dictionary.

@@ -17,173 +17,165 @@ methods:
 
 - [Docker](/docs/get-started/docker) for repeatable, portable and scalable
   installations
-- [Binaries](/docs/get-started/binaries) for direct downloads to run on Linux,
-  macOS or Windows
-- [Homebrew](/docs/get-started/homebrew) for running Blazar on macOS
+- [Binaries](/docs/get-started/binaries) for direct downloads to run on Linux
 
 Once Blazar is running, a guide is provided to
 [create your first database](/docs/get-started/first-database).
+
+## Data Import
+
+- [appender](/docs/data-import/appender)
+- [csv](/docs/data-import/csv)
+- [insert](/docs/data-import/insert)
+- [overview](/docs/data-import/overview)
+- [parquet](/docs/data-import/parquet)
 
 ## Develop
 
 This section describes how to connect to Blazar using a variety of tools and
 programming languages through our various network endpoints.
 
-- [Connect](/docs/develop/connect) to the database through our various
+- [profiling](/docs/develop/profiling) to the database through our various
   endpoints. Learn which protocol is best for different use cases.
-- [Insert data](/docs/develop/insert-data) using the InfluxDB Line Protocol,
+- [testing](/docs/develop/testing) using the InfluxDB Line Protocol,
   PostgreSQL wire protocol or our HTTP REST API.
-- [Query data](/docs/develop/query-data) with SQL queries via the PostgreSQL
-  Wire Protocol or exported to JSON or CSV via our HTTP REST API.
-- [Web Console](/docs/develop/web-console) for quick SQL queries, charting and
-  CSV upload/export functionality.
+
+## Extensions
+
+This section describes how to connect to Blazar using a variety of tools and
+programming languages through our various network endpoints.
+
+- [overview](/docs/extensions/overview) to the database through our various
+  endpoints. Learn which protocol is best for different use cases.
+- [full text search](/docs/extensions/full-text-search) to the database through our various
+  endpoints. Learn which protocol is best for different use cases.
+- [json](/docs/extensions/json) using the InfluxDB Line Protocol,
+  PostgreSQL wire protocol or our HTTP REST API.
 
 ## Guides
 
-- [Timestamps and time zones](/docs/guides/working-with-timestamps-timezones)
-- [Bulk CSV imports](/docs/guides/importing-data)
-- [Modifying Data](/docs/guides/modifying-data)
-- [Out-of-order commit lag](/docs/guides/out-of-order-commit-lag)
-- [Version 6.0 migration](/docs/guides/v6-migration)
+### Import
+- [csv export](/docs/guides/import/csv-export)
+- [csv import](/docs/guides/import/csv-import)
+- [http import](/docs/guides/import/http-import)
+- [parquet export](/docs/guides/import/parquet-export)
+- [parquet import](/docs/guides/import/parquet-import)
+- [s3 import](/docs/guides/import/s3-import)
 
-## Deployment
+### Meta
+- [describe](/docs/guides/meta/describe)
+- [explain analyze](/docs/guides/meta/explain-analyze)
+- [explain](/docs/guides/meta/explain)
+- [list tables](/docs/guides/meta/list-tables)
+- [summarize](/docs/guides/meta/summarize)
 
-- [AWS Marketplace AMI](/docs/deployment/aws-official-ami)
-- [Kubernetes](/docs/deployment/kubernetes)
-- [Google Cloud Platform](/docs/deployment/google-cloud-platform)
-- [DigitalOcean Droplet](/docs/deployment/digitalocean)
+### Python
+- [execute sql](/docs/guides/python/execute-sql)
+- [import arrow](/docs/guides/python/import-arrow)
+- [export arrow](/docs/guides/python/export-arrow)
+- [import pandas](/docs/guides/python/import-pandas)
+- [export pandas](/docs/guides/python/export-pandas)
+- [ibis](/docs/guides/python/ibis)
+- [install](/docs/guides/python/install)
+- [jupyter](/docs/guides/python/jupyter)
+- [sql on arrow](/docs/guides/python/sql-on-arrow)
+- [sql on pandas](/docs/guides/python/sql-on-pandas)
 
-## Operations
-
-This section contains resources for managing Blazar instances and has dedicated
-pages for the following topics:
-
-- [Capacity planning](/docs/operations/capacity-planning) for configuring
-  server settings and system resources for common scenarios and edge cases
-- [Data retention](/docs/operations/data-retention) strategy to delete old data
-  and save disk space
-- [Health monitoring](/docs/operations/health-monitoring) endpoint for
-  determining the status of the instance
-- [Backup and restore](/docs/operations/backup) using filesystem and
-  point-in-time backup functionality. Notes for cloud providers.
-
-## Third-party tools
-
-This section describes how to integrate Blazar with third-party tools and
-utilities for collecting metrics and visualizing data:
-
-- [Prometheus](/docs/third-party-tools/prometheus) monitoring and alerting.
-- [Grafana](/docs/third-party-tools/grafana) instructions for connecting
-  Blazar as a datasource for building visualizations and dashboards
-- [Kafka](/docs/third-party-tools/kafka) guide for ingesting data from topics
-  into Blazar by means of Kafka Connect
-- [Telegraf](/docs/third-party-tools/telegraf) guide for collecting system
-  metrics, specifying Blazar as an output and visualizing the results
-
-## Concepts
-
-This section describes the architecture of Blazar, how it stores and queries
-data, and introduces features and capabilities unique to the system.
-
-- [Storage model](/docs/concept/storage-model) describes how Blazar stores
-  records and partitions within tables
-- [Designated timestamp](/docs/concept/designated-timestamp) is a core feature
-  that enables time-oriented language capabilities and partitioning
-- [SQL extensions](/docs/concept/sql-extensions) allow performant time series
-  analysis with a concise syntax
-- [JIT compiler](/docs/concept/jit-compiler) to speed up queries
-- [Partitions](/docs/concept/partitions) can be used for significant
-  performance benefits on calculations and queries
-- [Symbol](/docs/concept/symbol) type makes storing and retrieving repetitive
-  strings efficient
-- [Indexes](/docs/concept/indexes) can be used for faster read access on
-  specific columns
-- [Geospatial data](/docs/concept/geohashes) with geohashes
-- [Root directory](/docs/concept/root-directory-structure) describes the
-  directory contents of Blazar for storage and configuration
-
-## Reference
-
-This section contains the reference documentation for the following categories:
-
-### APIs
-
-- [REST](/docs/reference/api/rest)
-- [Postgres](/docs/reference/api/postgres)
-- [InfluxDB](/docs/reference/api/ilp/overview)
-- [Java (embedded)](/docs/reference/api/java-embedded)
-
-### Command-line options
-
-The following resource provides info on options that may be passed to Blazar
-when starting services:
-
-- [Command-line options](/docs/reference/command-line-options) for starting and
-  running Blazar from an executable
-
-### Configuration
-
-The [configuration](/docs/reference/configuration) page shows all the
-properties that can be used to customize Blazar.
-
-### Data Types
-
-The [data types](/docs/reference/sql/datatypes) page lists the datatypes that
-can be used in Blazar.
+### reference/api
+- [postgres](/docs/reference/api/postgres)
+- [rest](/docs/reference/api/rest)
 
 
-### SQL
+### sql
 
-- [SQL Execution order](/docs/reference/sql/datatypes)
-- [Data types](/docs/reference/sql/datatypes)
-- [ALTER TABLE ADD COLUMN](/docs/reference/sql/alter-table-add-column)
-- [ALTER TABLE ALTER COLUMN ADD INDEX](/docs/reference/sql/alter-table-alter-column-add-index)
-- [ALTER TABLE RENAME COLUMN](/docs/reference/sql/alter-table-rename-column)
-- [ALTER TABLE DROP COLUMN](/docs/reference/sql/alter-table-drop-column)
-- [ALTER TABLE ATTACH PARTITION](/docs/reference/sql/alter-table-attach-partition)
-- [ALTER TABLE DROP PARTITION](/docs/reference/sql/alter-table-drop-partition)
-- [ALTER TABLE SET PARAM](/docs/reference/sql/alter-table-set-param)
-- [BACKUP](/docs/reference/sql/backup)
-- [CASE](/docs/reference/sql/case)
-- [CAST](/docs/reference/sql/cast)
-- [COPY](/docs/reference/sql/copy)
-- [CREATE TABLE](/docs/reference/sql/create-table)
-- [DISTINCT](/docs/reference/sql/distinct)
-- [EXCEPT INTERSECT](/docs/reference/sql/except-intersect)
-- [FILL](/docs/reference/sql/fill)
-- [DROP TABLE](/docs/reference/sql/drop)
-- [GROUP BY](/docs/reference/sql/group-by)
-- [INSERT](/docs/reference/sql/insert)
-- [JOIN](/docs/reference/sql/join)
-- [LATEST ON](/docs/reference/sql/latest-on)
-- [LIMIT](/docs/reference/sql/limit)
-- [ORDER BY](/docs/reference/sql/order-by)
-- [RENAME TABLE](/docs/reference/sql/rename)
-- [SAMPLE BY](/docs/reference/sql/sample-by)
-- [SELECT](/docs/reference/sql/select)
-- [SHOW](/docs/reference/sql/show)
-- [SNAPSHOT](/docs/reference/sql/snapshot)
-- [TRUNCATE TABLE](/docs/reference/sql/truncate)
-- [UNION](/docs/reference/sql/union)
-- [VACUUM PARTITIONS](/docs/reference/sql/vacuum-partitions)
-- [WHERE](/docs/reference/sql/where)
-- [WITH](/docs/reference/sql/with)
+#### data-types
+- [overview](/docs/sql/data-types/overview)
+- [blob](/docs/sql/data-types/blob)
+- [boolean](/docs/sql/data-types/boolean)
+- [date](/docs/sql/data-types/date)
+- [enum](/docs/sql/data-types/enum)
+- [interval](/docs/sql/data-types/interval)
+- [list](/docs/sql/data-types/list)
+- [map](/docs/sql/data-types/map)
+- [numeric](/docs/sql/data-types/numeric)
+- [struct](/docs/sql/data-types/struct)
+- [text](/docs/sql/data-types/text)
+- [timestamp](/docs/sql/data-types/timestamp)
+- [timezones](/docs/sql/data-types/timezones)
 
-## Support
+#### expressions
+- [case](/docs/sql/expressions/case)
+- [cast](/docs/sql/expressions/cast)
+- [collations](/docs/sql/expressions/collations)
+- [comparison operators](/docs/sql/expressions/comparison-operators)
+- [logical operators](/docs/sql/expressions/logical-operators)
+- [subqueries](/docs/sql/expressions/subqueries)
 
-For hints on diagnosing common configuration issues, see the following
-resources:
+#### functions
+- [overview](/docs/sql/functions/overview)
+- [blob](/docs/sql/functions/blob)
+- [date](/docs/sql/functions/date)
+- [datepart](/docs/sql/functions/datepart)
+- [nested](/docs/sql/functions/nested)
+- [time](/docs/sql/functions/time)
+- [utility](/docs/sql/functions/utility)
+- [char](/docs/sql/functions/char)
+- [dateformat](/docs/sql/functions/dateformat)
+- [interval](/docs/sql/functions/interval)
+- [numeric](/docs/sql/functions/numeric)
+- [pattern matching](/docs/sql/functions/pattern-matching) 
+- [timestamp](/docs/sql/functions/timestamp)
 
-- [Troubleshooting FAQ](/docs/troubleshooting/faq) guide with solutions for
-  various HW & SW configuration issues
-- [List of OS error codes](/docs/troubleshooting/os-error-codes) page with the
-  list of Operating System error codes
+#### query syntax
+- [filter](/docs/sql/query-syntax/filter)
+- [having](/docs/sql/query-syntax/having)
+- [sample](/docs/sql/query-syntax/sample)
+- [where](/docs/sql/query-syntax/where)
+- [with](/docs/sql/query-syntax/with)
+- [from](/docs/sql/query-syntax/from)
+- [limit](/docs/sql/query-syntax/limit)
+- [select](/docs/sql/query-syntax/select)
+- [window](/docs/sql/query-syntax/window)
+- [groupby](/docs/sql/query-syntax/groupby)
+- [orderby](/docs/sql/query-syntax/orderby)
+- [unnest](/docs/sql/query-syntax/unnest)
+- [grouping sets](/docs/sql/query-syntax/grouping-sets)
+- [qualify](/docs/sql/query-syntax/qualify)
+- [values](/docs/sql/query-syntax/values)
 
-We are happy to help with any question you may have, particularly to help you
-optimize the performance of your application. Feel free to reach out using the
-following channels:
+#### source
+- [overview](/docs/sql/source/overview)
+- [source-kafka](/docs/sql/source/source-kafka
 
-- [Raise an issue on GitHub]({@githubUrl@}/issues)
-- [Join the Community Slack]({@slackUrl@})
-- [Blazar on Stack Overflow]({@stackoverflowUrl@})
-- or send us an email at [hello@timelystream.com](mailto:hello@timelystream.com)
+#### statements
+- [alter table](/docs/sql/statements/alter-table)
+- [create macro](/docs/sql/statements/create-macro)
+- [create sequence](/docs/sql/statements/create-sequence)
+- [create view](/docs/sql/statements/create-view)
+- [drop](/docs/sql/statements/drop)
+- [insert](/docs/sql/statements/insert)
+- [update](/docs/sql/statements/update)
+- [copy](/docs/sql/statements/copy)
+- [create schema](/docs/sql/statements/create-schema)
+- [create table](/docs/sql/statements/create-table)
+- [delete](/docs/sql/statements/delete)
+- [export](/docs/sql/statements/export)
+- [select](/docs/sql/statements/select)
+
+- [aggregates](/docs/sql/aggregates)
+- [information schema](/docs/sql/information-schema)
+- [pragmas](/docs/sql/pragmas)
+- [configuration](/docs/sql/configuration)
+- [introduction](/docs/sql/introduction)
+- [indexes](/docs/sql/indexes)
+- [materialized views](/docs/sql/materialized-views)
+- [samples](/docs/sql/samples)
+- [window functions](/docs/sql/window-functions)
+
+## Troubleshooting
+
+- [faq](/docs/troubleshooting/faq)
+- [os error codes](/docs/troubleshooting/os-error-codes)
+
+## Why blazar?
+- [why blazar](/docs/why-blazar)

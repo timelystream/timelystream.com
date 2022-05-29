@@ -10,7 +10,7 @@ and is compatible with most programming languages. API functions are fully keyed
 on the URL and they use query parameters as their arguments.
 
 The Web Console is the official Web client relying on the REST API. Find out
-more in the section [using the Web Console](/docs/develop/web-console).
+more in the section using the Web Console.
 
 **Available methods**
 
@@ -23,8 +23,6 @@ more in the section [using the Web Console](/docs/develop/web-console).
 We provide examples in a number of programming languages.
 See our "develop" docs for:
 
-* [Inserting](/docs/develop/insert-data#http-rest-api)
-* [Querying](/docs/develop/query-data#http-rest-api)
 
 ## /imp - Import data
 
@@ -58,17 +56,13 @@ Content-Type with following optional URL parameters which must be URL encoded:
 | Parameter            | Required | Default          | Description                                                                                                                                                                                                                                                     |
 | -------------------- | -------- | ---------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `atomicity`          | No       | `2`              | `0`, `1` or `2`. Behaviour when an error is detected in the data. `0`: the entire file will be skipped. `1`: the row is skipped. `2`: the column is skipped.                                                                                                    |
-| `commitLag`          | No       | `0`              | commit lag of the import in microsecond precision (e.g. 2 minutes is expressed as 120000000, 120 followed by 6 zeros). For context, see [the commit lag guide](/docs/guides/out-of-order-commit-lag).                                                          |
 | `delimiter`          | No       |                  | URL encoded delimiter character. When set, import will try to detect the delimiter automatically. Since automatic delimiter detection requires at least two lines (rows) to be present in the file, this parameter may be used to allow single line file import. |
 | `durable`            | No       | `false`          | `true` or `false`. When set to `true`, import will be resilient against OS errors or power losses by forcing the data to be fully persisted before sending a response back to the user.                                                                         |
 | `fmt`                | No       | `tabular`        | Can be set to `json` to get the response formatted as such.                                                                                                                                                                                                     |
 | `forceHeader`        | No       | `false`          | `true` or `false`. When `false`, Blazar will try to infer if the first line of the file is the header line. When set to `true`, Blazar will expect that line to be the header line.                                                                           |
-| `maxUncommittedRows` | No       | 0                | The maximum number of uncommitted rows to keep in memory before triggering a sort and commit operation. For context, see [the commit lag guide](/docs/guides/out-of-order-commit-lag).                                                                         |
-| `name`               | No       | Name of the file | Name of the table to create, [see below](/docs/reference/api/rest#names).                                                                                                                                                                                      |
+| `maxUncommittedRows` | No       | 0                | The maximum number of uncommitted rows to keep in memory before triggering a sort and commit operation. For context, see the commit lag guide.                                                                         |
 | `overwrite`          | No       | `false`          | `true` or `false`. When set to true, any existing data or structure will be overwritten.                                                                                                                                                                        |
-| `partitionBy`        | No       | `NONE`           | See [partitions](/docs/concept/partitions#properties).                                                                                                                                                                                                         |
-| `skipLev`            | No       | `false`          | `true` or `false`. Skip “Line Extra Values”, when set to true, the parser will ignore those extra values rather than ignoring entire line. An extra value is something in addition to what is defined by the header.                                            |
-| `timestamp`          | No       |                  | Name of the column that will be used as a [designated timestamp](/docs/concept/designated-timestamp).                                                                                                                                                          |
+| `skipLev`            | No       | `false`          | `true` or `false`. Skip “Line Extra Values”, when set to true, the parser will ignore those extra values rather than ignoring entire line. An extra value is something in addition to what is defined by the header.                                            || `timestamp`          | No       |                  | Name of the column that will be used as a [designated timestamp](/docs/concept/designated-timestamp).                                                                                                                                                          |
 
 ```shell title="Example usage"
 curl -F data=@weather.csv \
@@ -108,8 +102,7 @@ When the header row is missing, column names are generated automatically.
 
 ### Consistency guarantees
 
-`/imp` benefits from the properties of the Blazar
-[storage model](/docs/concept/storage-model#consistency-and-durability),
+`/imp` benefits from the properties of the Blazar,
 although Atomicity and Durability can be relaxed to meet convenience and
 performance demands.
 
@@ -252,7 +245,7 @@ Additionally, URL parameters are provided:
 - `timestamp=ts` to specify that the `ts` column is the designated timestamp
   column for this table
 - `partitionBy=MONTH` to set a
-  [partitioning strategy](/docs/operations/data-retention) on the table by
+  partitioning strategy on the table by
   `MONTH`
 
 ```shell title="Providing a user-defined schema"
@@ -330,7 +323,7 @@ Here is an example with column-level errors due to unsuccessful casts:
 The following example imports a file which contains out-of-order records. The
 `timestamp` and `partitionBy` parameters **must be provided** for commit lag and
 max uncommitted rows to have any effect. For more information on these
-parameters, see [the commit lag guide](/docs/guides/out-of-order-commit-lag).
+parameters, see the commit lag guide.
 
 ```shell
 curl -F data=@weather.csv \
@@ -381,7 +374,7 @@ This endpoint returns responses in the following format:
 ```
 
 You can find the exact list of types in the
-[dedicated page](/docs/reference/sql/datatypes).
+[dedicated page](/docs/sql/data-types/overview).
 
 Considering the query:
 
