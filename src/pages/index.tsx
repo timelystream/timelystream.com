@@ -407,7 +407,7 @@ const Cards = () => (
 
         <div className={feCss.feature}>
           <h3 className={feCss.feature__header}>
-            Machine learning with time-series data
+            Machine learning with real-time streaming data
           </h3>
           <p className={feCss.feature__content}>
             Use Blazar with popular Python frameworks and tools for leveraging

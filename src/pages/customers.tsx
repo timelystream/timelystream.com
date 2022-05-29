@@ -74,7 +74,7 @@ const QUOTE_WIDTH = 350
 const Customer = () => {
   const title = "Customers"
   const description =
-    "Discover how QuestDB is powering the core infrastructure of companies dealing with time-series data"
+    "Discover how Blazar is powering the core infrastructure of companies dealing with real-time streaming data"
 
   const { ref, width } = useResizeObserver<HTMLDivElement>()
   // An "item" is a quote
@@ -111,8 +111,8 @@ const Customer = () => {
               )}
             >
               Here are the most innovative stories from our users highlighting
-              how QuestDB is powering the core infrastructure of companies
-              working with time-series data.
+              how Blazar is powering the core infrastructure of companies
+              working with real-time streaming data.
             </p>
           </div>
           <div className={juCss.jumbotron__illustration}>

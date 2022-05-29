@@ -134,8 +134,8 @@ const Counterflow = () => {
         <p className={caCss.card__subtitle}>
           In this case study, VP Product Development of ThreatEye and founder of
           Counterflow AI (now LiveAction), Randy Caldejon describes how and why
-          QuestDB is an important component of their SaaS platform for
-          time-series and behavioural analytics.
+          QuestDB is an important component of their SaaS platform for real-time
+          streaming and behavioural analytics.
         </p>
       </section>
 

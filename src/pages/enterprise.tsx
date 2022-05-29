@@ -80,9 +80,9 @@ const Bullet = ({ index, onClick, page, viewportSize }: BulletProps) => {
 const QUOTE_WIDTH = 350
 
 const Enterprise = () => {
-  const title = "QuestDB Enterprise"
+  const title = "Blazar Enterprise"
   const description =
-    "The fastest open source time-series database for organizations, on premise or on the cloud."
+    "The fastest open source real-time streaming database for organizations, on premise or on the cloud."
 
   const { ref, width } = useResizeObserver<HTMLDivElement>()
   // An "item" is a quote
@@ -117,7 +117,7 @@ const Enterprise = () => {
               seCss["section__title--accent"],
             )}
           >
-            QuestDB Enterprise
+            Blazar Enterprise
           </h1>
 
           <p
@@ -127,8 +127,8 @@ const Enterprise = () => {
               "text--center",
             )}
           >
-            The fastest open source time-series database for organizations, on
-            premise or on the cloud.
+            The fastest open source real-time streaming database for
+            organizations, on premise or on the cloud.
           </p>
 
           <Subscribe
@@ -153,7 +153,7 @@ const Enterprise = () => {
               "text--center",
             )}
           >
-            QuestDB Enterprise is the best way to run QuestDB on your own
+            Blazar Enterprise is the best way to run Blazar on your own
             infrastructure at any scale. The software can be deployed on-premise
             or in the cloud on AWS, GCP or Azure.
           </p>

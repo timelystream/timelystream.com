@@ -25,7 +25,7 @@ docker run -p 9000:9000 \
  -p 9009:9009 \
  -p 8812:8812 \
  -p 9003:9003 \
- questdb/questdb
+ timelystream/blazar
 ```
 
 ### Options
@@ -56,7 +56,7 @@ import TabItem from "@theme/TabItem"
 
 
 ```shell
-/root/.questdb
+/root/.blazar
 ```
 
 </TabItem>
@@ -66,7 +66,7 @@ import TabItem from "@theme/TabItem"
 
 
 ```shell
-C:\questdb
+C:\blazar
 ```
 
 </TabItem>
@@ -86,7 +86,7 @@ docker ps
 
 ```shell title="Result"
 CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                NAMES
-dd363939f261        questdb/questdb     "/app/bin/java -m io…"   3 seconds ago       Up 2 seconds        8812/tcp, 9000/tcp   frosty_gauss
+dd363939f261        timelystream/blazar     "/app/bin/java -m io…"   3 seconds ago       Up 2 seconds        8812/tcp, 9000/tcp   frosty_gauss
 ```
 
 ## Importing data and sending queries
@@ -112,7 +112,7 @@ docker run -p 9000:9000 \
  -p 9009:9009 \
  -p 8812:8812 \
  -p 9003:9003 \
- -v "$(pwd):/root/.questdb/" questdb/questdb
+ -v "$(pwd):/root/.blazar/" timelystream/blazar
 ```
 
 The current directory will then have data persisted to disk for convenient
@@ -147,16 +147,16 @@ For example, a file with the following contents can be created:
 writers=file,stdout,http.min
 
 # file writer
-w.file.class=io.questdb.log.LogFileWriter
-w.file.location=questdb-docker.log
+w.file.class=io.blazar.log.LogFileWriter
+w.file.location=blazar-docker.log
 w.file.level=INFO,ERROR,DEBUG
 
 # stdout
-w.stdout.class=io.questdb.log.LogConsoleWriter
+w.stdout.class=io.blazar.log.LogConsoleWriter
 w.stdout.level=INFO
 
 # min http server, used monitoring
-w.http.min.class=io.questdb.log.LogConsoleWriter
+w.http.min.class=io.blazar.log.LogConsoleWriter
 w.http.min.level=ERROR
 w.http.min.scope=http-min-server
 ```
@@ -168,11 +168,11 @@ docker run -p 9000:9000 \
  -p 9009:9009 \
  -p 8812:8812 \
  -p 9003:9003 \
- -v "$(pwd):/root/.questdb/" questdb/questdb
+ -v "$(pwd):/root/.blazar/" timelystream/blazar
 ```
 
 The container logs will be written to disk using the logging level and file name
-provided in the `conf/log.conf` file, in this case in `./questdb-docker.log`:
+provided in the `conf/log.conf` file, in this case in `./blazar-docker.log`:
 
 ```shell title="Current directory tree"
 ├── conf
@@ -185,7 +185,7 @@ provided in the `conf/log.conf` file, in this case in `./questdb-docker.log`:
 │  ├── ui / assets
 │  ├── ...
 │  └── version.txt
-└── questdb-docker.log
+└── blazar-docker.log
 ```
 
 For more information on logging, see the
@@ -200,7 +200,7 @@ docker run -p 9000:9000 \
  -p 9009:9009 \
  -p 8812:8812 \
  -p 9003:9003 \
- questdb/questdb
+ timelystream/blazar
 ```
 
 By giving the container a name with `--name container_name`, we have an easy way
@@ -212,7 +212,7 @@ docker run -p 9000:9000 \
  -p 8812:8812 \
  -p 9003:9003 \
  --name docker_questdb \
- questdb/questdb
+ timelystream/blazar
 ```
 
 If we want to re-use this container and its data after it has been stopped, we
@@ -220,9 +220,9 @@ can use the following commands:
 
 ```shell
 # bring the container up
-docker start docker_questdb
+docker start docker_blazar
 # shut the container down
-docker stop docker_questdb
+docker stop docker_blazar
 ```
 
 Alternatively, users can obtain a running container's ID with 'docker ps' and
