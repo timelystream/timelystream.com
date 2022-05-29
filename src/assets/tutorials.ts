@@ -19,7 +19,7 @@ const tutorials: FlatTutorial[] = [
     date: "2020-04-20",
     content:
       "In May 2022, Blazar 0.8 was released, which is based on our product design and focuses on functionality and connectivity to external data sources.",
-    link: "https://dev.to/davidgs/a-questdb-dashboard-with-node-red-524h",
+    link: "http://localhost:3000/blog/2022/05/20/blazar-release-0-8",
     title: "Blazar 0.8 Release Highlights",
   },
 ]

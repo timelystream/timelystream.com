@@ -1,12 +1,12 @@
 ---
-title: Get started with QuestDB via Docker
+title: Get started with Blazar via Docker
 sidebar_label: Docker
 description:
-  Guide showing how to use QuestDB with Docker. This also covers how to import
+  Guide showing how to use Blazar with Docker. This also covers how to import
   data as well as persistence.
 ---
 
-QuestDB has images for both Linux/macOS and Windows on
+Blazar has images for both Linux/macOS and Windows on
 [Docker Hub]({@dockerUrl@}).
 
 ## Install Docker
@@ -14,9 +14,9 @@ QuestDB has images for both Linux/macOS and Windows on
 Before we start, you will need to install Docker. You can find guides for your
 platform on the [official documentation](https://docs.docker.com/get-docker/).
 
-## QuestDB image
+## Blazar image
 
-Once Docker is installed, you will need to pull QuestDB's image from
+Once Docker is installed, you will need to pull Blazar's image from
 [Docker Hub]({@dockerUrl@}) and create a container. You can do both in one
 command using `docker run`:
 
@@ -48,7 +48,7 @@ This parameter will publish a port to the host, you can specify:
 
 #### -v volumes
 
-The QuestDB [root_directory](/docs/concept/root-directory-structure) will be in
+The Blazar [root_directory](/docs/concept/root-directory-structure) will be in
 the following location:
 
 <!-- prettier-ignore-start -->
@@ -102,7 +102,7 @@ dd363939f261        questdb/questdb     "/app/bin/java -m io…"   3 seconds ago
 
 ## Importing data and sending queries
 
-Now that QuestDB is running, you can start interacting with it:
+Now that Blazar is running, you can start interacting with it:
 
 - If you published the port `9000`, you can follow our
   [REST](/docs/reference/api/rest) page
@@ -115,9 +115,9 @@ Now that QuestDB is running, you can start interacting with it:
 
 ### Mounting a volume
 
-Volumes can be mounted to the QuestDB Docker container so that data may be
+Volumes can be mounted to the Blazar Docker container so that data may be
 persisted or server configuration settings may be passed to an instance. The
-following example demonstrated how to mount the current directory to a QuestDB
+following example demonstrated how to mount the current directory to a Blazar
 container using the `-v` flag in a Docker `run` command:
 
 ```bash
@@ -138,7 +138,7 @@ migration or backups:
 └── public
 ```
 
-For details on passing QuestDB server settings to a Docker container, see the
+For details on passing Blazar server settings to a Docker container, see the
 [Docker section](/docs/reference/configuration#docker) of the server
 configuration documentation.
 
@@ -176,7 +176,7 @@ w.http.min.scope=http-min-server
 
 The current directory can be mounted:
 
-```shell title="Mounting the current directory to a QuestDB container"
+```shell title="Mounting the current directory to a Blazar container"
 docker run -p 9000:9000 \
  -p 9009:9009 \
  -p 8812:8812 \
@@ -206,7 +206,7 @@ For more information on logging, see the
 
 ### Restart an existing container
 
-Running the following command will create a new container for the QuestDB image:
+Running the following command will create a new container for the Blazar image:
 
 ```shell
 docker run -p 9000:9000 \

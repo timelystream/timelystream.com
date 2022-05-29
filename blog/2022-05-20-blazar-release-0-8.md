@@ -25,7 +25,7 @@ Here is an overview of the changes in the latest and greatest version.
 
 
 May 2022 brings **Blazar 0.8**, a release focused on _performance and usability_ based on the vital feedback of our
-[user community](https://slack.questdb.io/) and [customers](https://questdb.io/customers/). Here's a roundup of changes
+[user community](https://slack.timelystream.com/) and [customers](https://timelystream.com/customers/). Here's a roundup of changes
 that have just landed in the latest, greatest version yet.
 
 <!-- truncate -->

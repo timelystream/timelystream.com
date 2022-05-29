@@ -1,14 +1,14 @@
 ---
 title: Create my first dataset
 description:
-  This document shows how to work with QuestDB as a time series database by
+  This document shows how to work with Blazar as a time series database by
   generating dummy time series data, insert the data into a table, then querying
   and cleaning up the example data set.
 ---
 
-The goal of this guide is to explore QuestDB's features and to interact with
+The goal of this guide is to explore Blazar's features and to interact with
 time series data and assumes you have an instance running. You can find guides
-to setup QuestDB on the [introduction page](/docs/introduction). In this
+to setup Blazar on the [introduction page](/docs/introduction). In this
 tutorial, you will learn how to:
 
 1. [Create tables](#creating-a-table)
@@ -121,7 +121,7 @@ The generated data will look like the following:
 ## Running queries
 
 Let's select all records from the `readings` table (note that `SELECT * FROM` is
-optional in QuestDB):
+optional in Blazar):
 
 ```blazar-sql
 readings;
@@ -218,7 +218,7 @@ pages.
 ## Deleting tables
 
 We can now clean up the demo data by using `DROP TABLE` SQL. Be careful using
-this statement as QuestDB cannot recover data that is deleted in this way:
+this statement as Blazar cannot recover data that is deleted in this way:
 
 ```blazar-sql
 DROP TABLE readings;

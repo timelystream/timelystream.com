@@ -97,9 +97,9 @@ Binary.defaultProps = {
 }
 
 const GetQuestdbPage = () => {
-  const title = "Download QuestDB"
+  const title = "Download Blazar"
   const description =
-    "Download QuestDB, an open source time series SQL database for fast ingestion and queries"
+    "Download Blazar, an open real-time streaming SQL database for fast ingestion and queries"
   const { release } = usePluginData<{ release: Release }>(
     "fetch-latest-release",
   )
@@ -224,7 +224,7 @@ brew install questdb`}
               seCss["section__title--accent"],
             )}
           >
-            Download QuestDB
+            Download Blazar
           </h1>
 
           <p

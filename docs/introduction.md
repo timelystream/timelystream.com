@@ -1,32 +1,32 @@
 ---
 title: Introduction
 description:
-  QuestDB is a relational column-oriented database designed for real-time
+  Blazar is a relational column-oriented database designed for real-time
   analytics on time series data.
 ---
 
-QuestDB is a relational column-oriented database designed for time series and
+Blazar is a relational column-oriented database designed for time series and
 event data. It uses SQL with extensions for time series to assist with real-time
-analytics. These pages cover core concepts of QuestDB, including setup steps,
+analytics. These pages cover core concepts of Blazar, including setup steps,
 usage guides, and reference documentation for syntax, APIs and configuration.
 
 ## Get Started
 
-This section explains how to install and run QuestDB using one of the following
+This section explains how to install and run Blazar using one of the following
 methods:
 
 - [Docker](/docs/get-started/docker) for repeatable, portable and scalable
   installations
 - [Binaries](/docs/get-started/binaries) for direct downloads to run on Linux,
   macOS or Windows
-- [Homebrew](/docs/get-started/homebrew) for running QuestDB on macOS
+- [Homebrew](/docs/get-started/homebrew) for running Blazar on macOS
 
-Once QuestDB is running, a guide is provided to
+Once Blazar is running, a guide is provided to
 [create your first database](/docs/get-started/first-database).
 
 ## Develop
 
-This section describes how to connect to QuestDB using a variety of tools and
+This section describes how to connect to Blazar using a variety of tools and
 programming languages through our various network endpoints.
 
 - [Connect](/docs/develop/connect) to the database through our various
@@ -55,7 +55,7 @@ programming languages through our various network endpoints.
 
 ## Operations
 
-This section contains resources for managing QuestDB instances and has dedicated
+This section contains resources for managing Blazar instances and has dedicated
 pages for the following topics:
 
 - [Capacity planning](/docs/operations/capacity-planning) for configuring
@@ -69,23 +69,23 @@ pages for the following topics:
 
 ## Third-party tools
 
-This section describes how to integrate QuestDB with third-party tools and
+This section describes how to integrate Blazar with third-party tools and
 utilities for collecting metrics and visualizing data:
 
 - [Prometheus](/docs/third-party-tools/prometheus) monitoring and alerting.
 - [Grafana](/docs/third-party-tools/grafana) instructions for connecting
-  QuestDB as a datasource for building visualizations and dashboards
+  Blazar as a datasource for building visualizations and dashboards
 - [Kafka](/docs/third-party-tools/kafka) guide for ingesting data from topics
-  into QuestDB by means of Kafka Connect
+  into Blazar by means of Kafka Connect
 - [Telegraf](/docs/third-party-tools/telegraf) guide for collecting system
-  metrics, specifying QuestDB as an output and visualizing the results
+  metrics, specifying Blazar as an output and visualizing the results
 
 ## Concepts
 
-This section describes the architecture of QuestDB, how it stores and queries
+This section describes the architecture of Blazar, how it stores and queries
 data, and introduces features and capabilities unique to the system.
 
-- [Storage model](/docs/concept/storage-model) describes how QuestDB stores
+- [Storage model](/docs/concept/storage-model) describes how Blazar stores
   records and partitions within tables
 - [Designated timestamp](/docs/concept/designated-timestamp) is a core feature
   that enables time-oriented language capabilities and partitioning
@@ -100,7 +100,7 @@ data, and introduces features and capabilities unique to the system.
   specific columns
 - [Geospatial data](/docs/concept/geohashes) with geohashes
 - [Root directory](/docs/concept/root-directory-structure) describes the
-  directory contents of QuestDB for storage and configuration
+  directory contents of Blazar for storage and configuration
 
 ## Reference
 
@@ -115,21 +115,21 @@ This section contains the reference documentation for the following categories:
 
 ### Command-line options
 
-The following resource provides info on options that may be passed to QuestDB
+The following resource provides info on options that may be passed to Blazar
 when starting services:
 
 - [Command-line options](/docs/reference/command-line-options) for starting and
-  running QuestDB from an executable
+  running Blazar from an executable
 
 ### Configuration
 
 The [configuration](/docs/reference/configuration) page shows all the
-properties that can be used to customize QuestDB.
+properties that can be used to customize Blazar.
 
 ### Data Types
 
 The [data types](/docs/reference/sql/datatypes) page lists the datatypes that
-can be used in QuestDB.
+can be used in Blazar.
 
 
 ### SQL
@@ -185,5 +185,5 @@ following channels:
 
 - [Raise an issue on GitHub]({@githubUrl@}/issues)
 - [Join the Community Slack]({@slackUrl@})
-- [QuestDB on Stack Overflow]({@stackoverflowUrl@})
+- [Blazar on Stack Overflow]({@stackoverflowUrl@})
 - or send us an email at [hello@timelystream.com](mailto:hello@timelystream.com)

@@ -9,16 +9,7 @@ image: /img/tutorial/shared/og-kafka.png
 featureType: resource
 ---
 
-import Screenshot from "@theme/Screenshot"
-
-<Screenshot
-  alt="The Blazar logo"
-  height={591}
-  src="/img/tutorial/2022-03-14/banner.png"
-  width={770}
-/>
-
-This post comes from Gábor Boros, who has written an excellent tutorial that
+This post comes from xnge, who has written an excellent tutorial that
 shows how to mock timeseries data using built-in SQL functions in Blazar to
 generate dummy data for testing and rapid prototyping according to custom
 schemas. Thanks for the submission, Gábor!
@@ -47,14 +38,14 @@ frequency we receive them into two categories: regular and irregular data.
 Regular data is received per a pre-defined period, usually collected by a
 collector node or sent by an agent. Collecting metrics from a server fits into
 this category perfectly, as shown in the tutorial where we
-[connected Telegraf with Blazar](https://questdb.io/tutorial/2021/07/09/telegraf-and-questdb-for-storing-metrics-in-a-timeseries-database/).
+[connected Telegraf with Blazar](https://timelystream.com/tutorial/2021/07/09/telegraf-and-blazar-for-storing-metrics-in-a-timeseries-database/).
 The Telegraf agent running on the server collects the metrics on a pre-defined
 basis and sends them to the Blazar instance.
 
 The opposite of regular data is the irregular data which is collected
 dynamically. The main point about irregular data is that we cannot predict how
 often the data will arrive. As of examples,
-[automating ETL jobs](https://questdb.io/tutorial/2021/03/31/automating-etl-jobs-on-time-series-data-on-gcp/)
+[automating ETL jobs](https://timelystream.com/tutorial/2021/03/31/automating-etl-jobs-on-time-series-data-on-gcp/)
 could be a great example. The data comes in when automation or the user sends it
 to the pipeline, hence we cannot know beforehand the data arrives.
 
@@ -90,24 +81,24 @@ data with Blazar easily.
 
 To discover the capabilities of how Blazar can generate data for us, we need to
 run it. We will use [Docker](https://www.docker.com/) and the latest
-[questdb](https://hub.docker.com/r/questdb/questdb) Docker image for
+[blazar](https://hub.docker.com/r/blazar/blazar) Docker image for
 convenience. To start Blazar via Docker, run the following:
 
 ```bash
 docker run -p 9000:9000 \
   -p 9009:9009 \
   -p 8812:8812 \
-  questdb/questdb
+  blazar/blazar
 ```
 
 Alternatively, macOS users can use Homebrew:
 
 ```bash
-brew install questdb
-brew services start questdb
+brew install blazar
+brew services start blazar
 ```
 
-The [Blazar downloads page](https://questdb.io/get-questdb/) has downloads for
+The [Blazar downloads page](https://timelystream.com/get-blazar/) has downloads for
 binaries if you wish to run it as a standalone.
 
 ## Mocking different types of data in Blazar
@@ -116,13 +107,11 @@ After starting Blazar, the web console is available on port `9000`, so
 navigating to `http://127.0.0.1:9000` should show the UI of a locally-running
 instance which looks like the following:
 
-![webui](/img/tutorial/2022-03-14/webui.png)
-
 Mock data generation in Blazar is surprisingly easy. The DB comes with numerous
 generator functions, all with a different purpose. If you ever used PostgreSQL's
 `generate_series`, you will find Blazar's generator functions pleasant and
 relieving. To generate rows, we use the
-[`long_sequence`](https://questdb.io/docs/reference/function/row-generator/)
+[`long_sequence`](https://timelystream.com/docs/reference/function/row-generator/)
 generator function that can create billions of rows depending on our needs. Its
 syntax looks like
 
@@ -162,28 +151,28 @@ generating booleans, characters, strings, timestamps, and many more types.
 We have seen how to generate basic rows, and we mentioned random value
 generation too. It's time to see how we can generate random values with
 Blazar's built-in
-[random generator functions](https://questdb.io/docs/reference/function/random-value-generator).
+[random generator functions](https://timelystream.com/docs/reference/function/random-value-generator).
 
 Blazar supports random generator functions for several
-[data types](https://questdb.io/docs/reference/sql/datatypes):
+[data types](https://timelystream.com/docs/reference/sql/datatypes):
 
 | type      | generator function                                                                               |
 | --------- | ------------------------------------------------------------------------------------------------ |
-| binary    | [rnd_bin](https://questdb.io/docs/reference/function/random-value-generator#rnd_bin)             |
-| boolean   | [rnd_boolean](https://questdb.io/docs/reference/function/random-value-generator#rnd_boolean)     |
-| byte      | [rnd_byte](https://questdb.io/docs/reference/function/random-value-generator#rnd_byte)           |
-| char      | [rnd_char](https://questdb.io/docs/reference/function/random-value-generator#rnd_char)           |
-| date      | [rnd_date](https://questdb.io/docs/reference/function/random-value-generator#rnd_date)           |
-| double    | [rnd_double](https://questdb.io/docs/reference/function/random-value-generator#rnd_double)       |
-| float     | [rnd_float](https://questdb.io/docs/reference/function/random-value-generator#rnd_float)         |
-| geohash   | [rnd_geohash](https://questdb.io/docs/reference/function/spatial/#rnd_geohash)                   |
-| int       | [rnd_int](https://questdb.io/docs/reference/function/random-value-generator#rnd_int)             |
-| long256   | [rnd_long256](https://questdb.io/docs/reference/function/random-value-generator#rnd_long256)     |
-| long      | [rnd_long](https://questdb.io/docs/reference/function/random-value-generator#rnd_long)           |
-| short     | [rnd_short](https://questdb.io/docs/reference/function/random-value-generator#rnd_short)         |
-| string    | [rnd_str](https://questdb.io/docs/reference/function/random-value-generator#rnd_str)             |
-| symbol    | [rnd_symbol](https://questdb.io/docs/reference/function/random-value-generator#rnd_symbol)       |
-| timestamp | [rnd_timestamp](https://questdb.io/docs/reference/function/random-value-generator#rnd_timestamp) |
+| binary    | [rnd_bin](https://timelystream.com/docs/reference/function/random-value-generator#rnd_bin)             |
+| boolean   | [rnd_boolean](https://timelystream.com/docs/reference/function/random-value-generator#rnd_boolean)     |
+| byte      | [rnd_byte](https://timelystream.com/docs/reference/function/random-value-generator#rnd_byte)           |
+| char      | [rnd_char](https://timelystream.com/docs/reference/function/random-value-generator#rnd_char)           |
+| date      | [rnd_date](https://timelystream.com/docs/reference/function/random-value-generator#rnd_date)           |
+| double    | [rnd_double](https://timelystream.com/docs/reference/function/random-value-generator#rnd_double)       |
+| float     | [rnd_float](https://timelystream.com/docs/reference/function/random-value-generator#rnd_float)         |
+| geohash   | [rnd_geohash](https://timelystream.com/docs/reference/function/spatial/#rnd_geohash)                   |
+| int       | [rnd_int](https://timelystream.com/docs/reference/function/random-value-generator#rnd_int)             |
+| long256   | [rnd_long256](https://timelystream.com/docs/reference/function/random-value-generator#rnd_long256)     |
+| long      | [rnd_long](https://timelystream.com/docs/reference/function/random-value-generator#rnd_long)           |
+| short     | [rnd_short](https://timelystream.com/docs/reference/function/random-value-generator#rnd_short)         |
+| string    | [rnd_str](https://timelystream.com/docs/reference/function/random-value-generator#rnd_str)             |
+| symbol    | [rnd_symbol](https://timelystream.com/docs/reference/function/random-value-generator#rnd_symbol)       |
+| timestamp | [rnd_timestamp](https://timelystream.com/docs/reference/function/random-value-generator#rnd_timestamp) |
 
 All these functions can be parameterized with seed values to narrow the
 function's range. This is an extremely useful feature, especially if we need to
@@ -283,8 +272,6 @@ INSERT INTO 'diagnostics' SELECT * FROM (
 After the query ran successfully, ensure we have the 28 records we expect. Run
 `SELECT * FROM 'diagnostics';`
 
-![generated-rows](/img/tutorial/2022-03-14/generated-rows.png)
-
 Congratulations, we successfully generated twenty eight rows with random data.
 Although the data is in place, the timestamps seem to be odd; we have multiple
 records for the same hour. The reason behind this is how `rnd_timestamp` works.
@@ -356,7 +343,6 @@ random data we generate `10 * 365 * 24` records, which is 87600 rows. By simply
 changing the `long_sequence` parameters to `87600` and running the query one
 more time, we can generate data for the next ten years in less than a second.
 
-![final-rows](/img/tutorial/2022-03-14/final-rows.png)
 
 ## Summary
 

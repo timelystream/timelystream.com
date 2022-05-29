@@ -1,22 +1,22 @@
 ---
-title: Get started with QuestDB from the binaries
+title: Get started with Blazar from the binaries
 sidebar_label: Binaries
 description:
-  How to install and launch QuestDB from the binaries which are available on the
-  Get QuestDB page.
+  How to install and launch Blazar from the binaries which are available on the
+  Get Blazar page.
 ---
 
 import CodeBlock from "@theme/CodeBlock"
 import InterpolateReleaseData from "../../src/components/InterpolateReleaseData"
 
-This page describes how to install and use QuestDB via binaries. QuestDB comes
+This page describes how to install and use Blazar via binaries. Blazar comes
 with a script `questdb.sh` for Linux/FreeBSD and an executable `questdb.exe` for
 Windows. If you are looking for macOS, please check our
 [Homebrew](/docs/get-started/homebrew) section.
 
 ## Download
 
-You can find the latest binaries on the [Get QuestDB](/get-questdb) page. The
+You can find the latest binaries on the [Get Blazar](/get-questdb) page. The
 release notes are on our [GitHub release]({@githubUrl@}/releases) page.
 
 ## Prerequisites
@@ -133,7 +133,7 @@ import TabItem from "@theme/TabItem"
 This binary weights around 20MB, this depends on your operating system.
 
 When using this binary, you do not need anything on your machine, the Java
-runtime is packaged directly with QuestDB.
+runtime is packaged directly with Blazar.
 
 ## Extract the tarball
 
@@ -217,6 +217,6 @@ runtime is packaged directly with QuestDB.
 
 ## Next steps
 
-Once you extracted the tarball, you are ready to use QuestDB. Navigate to our
+Once you extracted the tarball, you are ready to use Blazar. Navigate to our
 [command-line options](/docs/reference/command-line-options) page to learn more
 about its usage.
