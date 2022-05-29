@@ -1,6 +1,6 @@
 ---
 name: Submit a tutorial
-about: Submit a new QuestDB tutorial or guide!
+about: Submit a new Blazar tutorial or guide!
 title: "Tutorial Topic"
 labels: "Tutorial"
 assignees: ""
@@ -8,7 +8,7 @@ assignees: ""
 
 <!--
 
-Hi 👋, thank you for submitting a tutorial to QuestDB!
+Hi 👋, thank you for submitting a tutorial to Blazar!
 
 Don't forget to replace the title of this issue with a short
 sentence that describes the topic of your tutorial!
@@ -21,7 +21,7 @@ Use this section to give a description of what your tutorial is about.
 
 Examples:
 
-> I would like to write a tutorial that shows how to use QuestDB:
+> I would like to write a tutorial that shows how to use Blazar:
 >
 > - "for storing IoT sensor data..."
 > - "for creating data visualizations..."

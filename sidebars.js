@@ -174,6 +174,15 @@ module.exports = {
         },
         {
           type: "category",
+          label: "Source",
+          items: [
+            "sql/source/overview",
+            "sql/source/source-kafka",
+          ]
+        },
+        "sql/materialized-views",
+        {
+          type: "category",
           label: "Functions",
           items: [
             "sql/functions/blob",

@@ -117,12 +117,12 @@ const config = {
     },
     algolia: {
       apiKey: "b2a69b4869a2a85284a82fb57519dcda",
-      indexName: "questdb",
+      indexName: "blazar",
     },
     navbar: {
       title: " ",
       logo: {
-        alt: "QuestDB",
+        alt: "Blazar",
         src: "/img/navbar/blazar.svg",
       },
       items: [
@@ -131,7 +131,7 @@ const config = {
           position: "left",
           items: [
             {
-              label: "QuestDB Enterprise",
+              label: "Blazar Enterprise",
               to: "/enterprise",
             },
             {
@@ -151,10 +151,6 @@ const config = {
             {
               label: "Blog",
               to: "/blog",
-            },
-            {
-              label: "Tutorials",
-              to: "/tutorial",
             },
             {
               label: "Blazar Swag",
@@ -178,7 +174,6 @@ const config = {
           className: "careers-link",
         },
         {
-          label: "Star us",
           href: "https://github.com/timelystream",
           position: "right",
           className: "header-github-link",

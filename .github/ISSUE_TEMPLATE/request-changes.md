@@ -10,7 +10,7 @@ assignees: "bsmth"
 
 <!--
 
-Hi 👋, thank you for submitting a change request to QuestDB!
+Hi 👋, thank you for submitting a change request to Blazar!
 
 Don't forget to add more details to the title that describes the issue
 

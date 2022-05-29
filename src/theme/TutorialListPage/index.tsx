@@ -50,7 +50,7 @@ function TutorialListPage(props: Props) {
     ({ content }) => content.frontMatter.featureType == null,
   )
   const description =
-    "Content from the QuestDB team and community contributors for learning about time series analytics, visualization, integrations, and example applications using QuestDB."
+  "Content from the Blazar team and community contributors for learning to use blazar's real-time data flow analysis, visualization, integration, and sample applications."
 
   return (
     <Layout
