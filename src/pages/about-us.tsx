@@ -33,22 +33,7 @@ type PressItemProps = {
 
 const usedByLogos: CustomerLogo[] = [
   {
-    ...logos.airbus,
-    width: 140,
-    height: 56,
-  },
-  {
-    ...logos.kepler,
-    width: 140,
-    height: 56,
-  },
-  {
-    ...logos["copenhagen-atomics"],
-    width: 140,
-    height: 56,
-  },
-  {
-    ...logos.yahoo,
+    ...logos["netease-game"],
     width: 140,
     height: 56,
   },
@@ -67,7 +52,7 @@ const Top = () => {
         >
           We are building the{" "}
           <em className={seCss.section__title__em}>fastest</em> open source
-          timeseries database
+          real-time streaming database
         </h1>
         <ProductMetrics />
       </div>
@@ -117,22 +102,22 @@ const Investors = () => {
       <div className={inCss.investors}>
         <div className={inCss.investors__logos}>
           <SvgImage
-            image={<Logo468Capital width="200" height="46" />}
+            image={<Logo468Capital width="200" height="0" />}
             title="468 Capital"
           />
           <SvgImage
-            image={<UncorrelatedLogo width="200" height="48" />}
+            image={<UncorrelatedLogo width="200" height="0" />}
             title="Uncorrelated Ventures"
           />
           <SvgImage
-            image={<YCombinatorLogo width="200" height="42" />}
+            image={<YCombinatorLogo width="200" height="0" />}
             title="Y Combinator"
           />
           <SvgImage
             image={
               <SeedcampLogo
                 width="180"
-                height="54"
+                height="0"
                 style={{ marginTop: "-8px" }}
               />
             }
@@ -171,41 +156,38 @@ const Team = () => {
         <h2
           className={clsx(seCss.section__title, seCss["section__title--wide"])}
         >
-          The QuestDB team
+          The Blazar team
         </h2>
         <div className={clsx(paCss.flex__section, teCss.team__people)}>
           <div className={clsx(paCss.half__section, teCss.team__people__text)}>
             <p>
-              QuestDB is a remote-first company, with regional offices in
-              London, Berlin and San Francisco.
+              Blazar is a remote-first company, with regional offices in China.
             </p>
             <p>
-              Our team is building the fastest open-source timeseries database
-              from scratch and produces all of the components in-house. We are
-              performance-obsessed and strive to create a product that
+              Our team is building the fastest open-source real-time streaming
+              database from scratch and produces all of the components in-house.
+              We are performance-obsessed and strive to create a product that
               developers want.
             </p>
-            <p>Here&apos;s what our team say about working at QuestDB:</p>
+            <p>Here&apos;s what our team say about working at Blazar:</p>
             <div className={teCss.team__articles}>
               <div className={teCss.team__article}>
                 <h4 className={teCss.team__article__title}>
-                  <a href="/blog/2021/11/09/miguel-arregui-working-at-questdb">
-                    Why I joined QuestDB as a core database engineer
+                  <a href="/blog/2021/11/09/xnge-working-at-timelystream">
+                    Why I joined Blazar as a core database engineer
                   </a>
                 </h4>
                 <div className={teCss.team__article__details}>
                   <div className={teCss.team__article__image}>
                     <img
-                      src="/img/pages/about-us/miguel.png"
-                      alt="Miguel Arregui photo"
+                      src="https://avatars.githubusercontent.com/u/84228805?v=4"
+                      alt="xnge"
                       width="50"
                       height="50"
                     />
                   </div>
                   <div className={teCss.team__article__text}>
-                    <p className={teCss.team__article__author}>
-                      Miguel Arregui
-                    </p>
+                    <p className={teCss.team__article__author}>xnge</p>
                     <p className={teCss.team__article__position}>
                       Core database engineer
                     </p>
@@ -216,8 +198,8 @@ const Team = () => {
           </div>
           <div className={clsx(paCss.half__section, teCss.team__people__photo)}>
             <img
-              src="/img/pages/about-us/team.jpg"
-              alt="QuestDB team"
+              src="/img/pages/about-us/team.png"
+              alt="Blazar team"
               width="522"
               height="300"
               className={teCss.team__people__photo__img}
@@ -227,7 +209,7 @@ const Team = () => {
         <div className={teCss.team__work}>
           <div className={teCss.team__work__text}>
             We&apos;re hiring passionate talents to join us in building the
-            fastest open source time series database!
+            fastest open source real-time streaming database!
           </div>
           <div className={teCss.team__work__cta}>
             <Button variant="primary" to="/careers">

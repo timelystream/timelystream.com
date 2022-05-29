@@ -4,7 +4,7 @@ module.exports = () => ({
   name: "fetch-repo",
   async loadContent() {
     const response = await nodeFetch(
-      `https://api.github.com/repos/questdb/questdb`,
+      `https://api.github.com/repos/timelystream/blazar-helpers`,
     )
 
     const data = await response.json()

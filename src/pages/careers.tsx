@@ -21,42 +21,17 @@ const currentOpenings: Opening[] = [
     title: "Core Database Engineers",
     location: "Remote",
   },
-
-  {
-    href: "/careers/developer-relations-engineer/",
-    title: "Developer Relations Engineers",
-    location: "Remote",
-  },
-
-  {
-    href: "/careers/senior-backend-engineer-python/",
-    title: "Backend Engineers (Python)",
-    location: "Remote",
-  },
-
-  {
-    href: "/careers/senior-cloud-engineer/",
-    title: "Cloud Engineers",
-    location: "Remote",
-  },
-
   {
     href: "/careers/technical-content-writer/",
     title: "Technical Content Writers",
     location: "Remote",
   },
-
-  {
-    href: "/careers/solution-engineer/",
-    title: "Solution Engineer",
-    location: "Remote",
-  },
 ]
 
 const CareersPage = () => {
-  const title = "Careers at QuestDB"
+  const title = "Careers at Blazar"
   const description =
-    "Join us at QuestDB to build breakthrough technology that will power the infrastructure of tomorrow."
+    "Join us at Blazar to build breakthrough technology that will power the infrastructure of tomorrow."
   const scrollAnchorRef = useRef<HTMLDivElement | null>(null)
   const onOpeningsClick = useCallback(() => {
     scrollAnchorRef.current?.scrollIntoView({ behavior: "smooth" })
@@ -73,7 +48,7 @@ const CareersPage = () => {
             <p className={caCss.card__content}>
               We help developers handle explosive amounts of data while getting
               them started in just a few minutes with the fastest and most
-              accessible time series database.
+              accessible real-time streaming database.
             </p>
             <div className={caCss.careers_cta}>
               <Button onClick={onOpeningsClick}>Openings</Button>
@@ -127,10 +102,6 @@ const CareersPage = () => {
               tomorrow
             </p>
             <ul className={liCss.list}>
-              <li className={liCss.list__item}>
-                We are a company with thousands of users; our mission is to
-                empower them
-              </li>
               <li className={liCss.list__item}>
                 We invest in a culture that promotes ownership, autonomy and
                 independent thinking

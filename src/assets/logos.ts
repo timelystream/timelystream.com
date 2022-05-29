@@ -7,6 +7,12 @@ export const logos: Record<string, CustomerLogo> = {
     width: 140,
     height: 56,
   },
+  "netease-game": {
+    src: "/img/pages/customers/logos/netease-game.png",
+    alt: "netease game.png logo",
+    width: 140,
+    height: 56,
+  },
   kepler: {
     src: "/img/pages/customers/logos/kepler.svg",
     alt: "Kepler logo",

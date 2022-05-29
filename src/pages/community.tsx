@@ -17,13 +17,13 @@ const contribution: Contribute[] = [
   {
     image: "/img/pages/community/plugin.svg",
     title: "Help build a new feature",
-    url: "https://github.com/questdb/questdb",
+    url: "https://github.com/timelystream/blazar",
     alt: "A plugin icon",
   },
   {
     image: "/img/pages/community/bug.svg",
     title: "Report an issue",
-    url: "https://github.com/questdb/questdb/issues",
+    url: "https://github.com/timelystream/blazar/issues",
     alt: "A bug icon",
   },
   {
@@ -184,7 +184,7 @@ const Community = () => {
               You have opened a valid{" "}
               <a
                 className={paCss.link_item}
-                href="https://github.com/questdb/questdb"
+                href="https://github.com/timelystream/blazar"
               >
                 GitHub issue or Pull Request
               </a>

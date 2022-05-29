@@ -52,7 +52,7 @@ const ProductMetrics = () => {
           />
           <div className={pmCss["product-metric__content__text"]}>
             <h3 className={pmCss["product-metric__content__text__header"]}>
-              {numberWithCommas(1100)}+
+              {0}+
             </h3>
             <p className={pmCss["product-metric__content__text__description"]}>
               developers
@@ -64,7 +64,7 @@ const ProductMetrics = () => {
         <div className={pmCss["product-metric__content"]}>
           <SvgImage
             image={<QuestDBLogo width="60" height="60" />}
-            title="QuestDB logo"
+            title="Blazar logo"
           />
           <div className={pmCss["product-metric__content__text"]}>
             <h3 className={pmCss["product-metric__content__text__header"]}>
@@ -87,7 +87,7 @@ const ProductMetrics = () => {
               Fastest
             </h3>
             <p className={pmCss["product-metric__content__text__description"]}>
-              growing TSDB on DB-Engines
+              Newly designed real-time database
             </p>
           </div>
         </div>
