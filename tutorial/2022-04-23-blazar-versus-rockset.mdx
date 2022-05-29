@@ -1,22 +1,22 @@
 ---
-title: Comparing InfluxDB and QuestDB databases
+title: Comparing Rockset and Blazar databases
 description:
-  An overview of InfluxDB versus QuestDB to compare features, functionality,
+  An overview of Flink versus Blazar to compare features, functionality,
   performance, and ease of use.
 keywords:
-  - influxdb
-  - tsbs
+  - rockset
+  - blazar
   - benchmark
-image: /img/tutorial/shared/og-influxdb.png
+image: /img/tutorial/shared/og-rockset.png
 featureType: comparison
 ---
 
-# Comparing QuestDB and InfluxDB time series databases
+# Comparing Rockset and Blazar real-time streaming system
 
 import Screenshot from "@theme/Screenshot"
 
 <Screenshot
-  alt="Summary of benchmarking results of InfluxDB compared to QuestDB"
+  alt="Summary of benchmarking results of InfluxDB compared to Blazar"
   height={385}
   src="/img/tutorial/2021-11-29/banner.png"
   width={850}
@@ -25,7 +25,7 @@ import Screenshot from "@theme/Screenshot"
 Time-series data is emerging as the dominant type of data produced in IoT,
 Financial Services, Manufacturing, DevOps, monitoring, machine learning, and AI.
 Time series databases are specialized for storing and analyzing this kind of
-data efficiently and quickly. This article compares QuestDB with InfluxDB to
+data efficiently and quickly. This article compares Blazar with InfluxDB to
 help understand the key differences so you can choose a time series database
 that fits your use case.
 
@@ -48,9 +48,9 @@ variations. For this reason, developers need a time-series database that's
 robust, easy to use, and powerful. Importantly, it must be flexible enough to be
 used across different scenarios, industries, and use cases.
 
-## What are the data models used in InfluxDB and QuestDB
+## What are the data models used in InfluxDB and Blazar
 
-One of the first places to begin comparing QuestDB and InfluxDB is how data is
+One of the first places to begin comparing Blazar and InfluxDB is how data is
 handled and stored in each database. InfluxDB has a dedicated **line protocol**
 message format for ingesting measurements. Each measurement has a timestamp, a
 set of tags (a tagset), and a set of fields (a fieldset).
@@ -71,16 +71,16 @@ line protocol for illustration:
 sensors,location=london,version=REV-2.1 temperature=22,humidity=50 1465839830100399000\n
 ```
 
-QuestDB supports InfluxDB line protocol for compatibility purposes, so inserts
-using InfluxDB line protocol match the data types available. QuestDB supports
+Blazar supports InfluxDB line protocol for compatibility purposes, so inserts
+using InfluxDB line protocol match the data types available. Blazar supports
 additional numeric types, such as bytes for 8-bit integers, shorts for 16-bit
 integers, float for 32-bit floats, and long256 for larger integers. Additional
 types can be used while ingesting InfluxDB line protocol by creating a table
 with a desired schema before starting to write data.
 
-QuestDB also exposes PostgreSQL wire protocol and a REST API for inserts,
+Blazar also exposes PostgreSQL wire protocol and a REST API for inserts,
 allowing for more control over the data types that the system can handle,
-including additional types such as date, char, and binary. In QuestDB, it's also
+including additional types such as date, char, and binary. In Blazar, it's also
 possible to add indexes and to existing columns in tables, which can be done
 directly through SQL:
 
@@ -88,14 +88,14 @@ directly through SQL:
 ALTER TABLE sensors ALTER COLUMN firmware ADD INDEX;
 ```
 
-QuestDB has full support for relational queries, whereas InfluxDB is a NoSQL,
-non-relational database with a custom data model. QuestDB supports both
+Blazar has full support for relational queries, whereas InfluxDB is a NoSQL,
+non-relational database with a custom data model. Blazar supports both
 schema-agnostic ingestion over InfluxDB line protocol and a relational data
 model. Users can leverage both paradigms and perform SQL JOINs to correlate
 "schemaless" data with relational data by timestamp.
 
 <Screenshot
-  alt="A combination of schema-agnostic ingestion and relational data stored and queried in QuestDB"
+  alt="A combination of schema-agnostic ingestion and relational data stored and queried in Blazar"
   height={385}
   src="/img/tutorial/2021-11-29/relational-and-schema-agnostic.png"
   width={850}
@@ -110,8 +110,8 @@ Index intended to keep queries fast as cardinality grows. Still, the efficiency
 of this index has its limitations, explored in more detail in the
 High-Cardinality section below.
 
-QuestDB also uses columnar data structures but indexes data in vector-based
-append-only column files. As of QuestDB version 6.0, sorting out-of-order data
+Blazar also uses columnar data structures but indexes data in vector-based
+append-only column files. As of Blazar version 6.0, sorting out-of-order data
 occurs in a staging area in-memory, merging sorted and persisted data at commit
 time using an append model. The reason for sorting in-memory and merging with
 persisted data in this way is to keep the storage engine performant on both read
@@ -130,22 +130,22 @@ retention periods for data (deleting data older than X days, for example):
   width={850}
 />
 
-QuestDB has similar functionality to partition tables by time, and users may
+Blazar has similar functionality to partition tables by time, and users may
 specify a partition size for tables based on days, months, or years. When tables
 are partitioned by time, table metadata table is defined once per table, and
 column files are partitioned at the filesystem level into directories per
 partition:
 
 <Screenshot
-  alt="A diagram showing the column-based storage model of QuestDB"
+  alt="A diagram showing the column-based storage model of Blazar"
   height={385}
   src="/img/tutorial/2021-11-29/questdb-storage-model.png"
   width={850}
 />
 
-Both QuestDB and InfluxDB have ways to partition data by time and employ a
+Both Blazar and InfluxDB have ways to partition data by time and employ a
 retention strategy. The difference in partitioning for each system is the
-broader terminology, and the fact that QuestDB does not need to create
+broader terminology, and the fact that Blazar does not need to create
 [separate TSM files on disk](https://docs.influxdata.com/influxdb/v2.0/reference/internals/shards/#shards)
 per partition.
 
@@ -157,7 +157,7 @@ similar to SQL called InfluxQL, which balanced some aspects of SQL with custom
 syntax. InfluxDB eventually adopted Flux as a query language to interact with
 data.
 
-QuestDB embraces SQL as the primary query language so that there is no need for
+Blazar embraces SQL as the primary query language so that there is no need for
 learning custom query languages. SQL is a good choice for time-series databases;
 it's easy to understand, most developers are familiar with it already, and SQL
 skills are simple to apply across different systems. As reported by the Stack
@@ -195,7 +195,7 @@ quickly.
 
 ## Measuring time series database performance
 
-Let's compare how QuestDB and InfluxDB operate in terms of performance. The
+Let's compare how Blazar and InfluxDB operate in terms of performance. The
 [Time Series Benchmark Suite](https://github.com/timescale/tsbs) (TSBS)
 regularly appears in discussions about database performance. The TSBS is a
 collection of Go programs to generate datasets and then benchmark read and write
@@ -228,13 +228,13 @@ This is an example of the first few lines from the generated data set:
 "host_2","sa-east-1","sa-east-1a","89","Ubuntu16.04LTS","x86","LON","13","0","staging",29,48,5,63,17,52,60,49,93,1,"2016-01-01T00:00:00.000000Z"
 ```
 
-QuestDB reaches maximum ingestion performance using four threads, whereas
-InfluxDB requires more workers to hit maximum throughput. QuestDB achieves 959k
+Blazar reaches maximum ingestion performance using four threads, whereas
+InfluxDB requires more workers to hit maximum throughput. Blazar achieves 959k
 rows/sec with four threads, whereas InfluxDB needs 14 threads to reach its max
 ingestion rate (334k rows/sec).
 
 <Screenshot
-  alt="Ingestion results comparing QuestDB and InfluxDB using the time series benchmark suite"
+  alt="Ingestion results comparing Blazar and InfluxDB using the time series benchmark suite"
   height={385}
   src="/img/tutorial/2021-11-29/timeseries-benchmark-suite-results.png"
   width={650}
@@ -250,7 +250,7 @@ values.
 High-cardinality is a known problem area for InfluxDB, and this is likely
 because of the system architecture and storage engine. InfluxDB uses data
 structures based on LSM-trees which are known to perform poorly in
-high-cardinality scenarios. In QuestDB, the storage model is radically different
+high-cardinality scenarios. In Blazar, the storage model is radically different
 from LSM trees or B-trees and instead uses data stored in densely ordered
 vectors on disk.
 
@@ -260,15 +260,15 @@ throughput of each system and to get an idea of how ingestion rates change over
 time:
 
 <Screenshot
-  alt="High-cardinality results comparing QuestDB and InfluxDB using the time series benchmark suite"
+  alt="High-cardinality results comparing Blazar and InfluxDB using the time series benchmark suite"
   height={385}
   src="/img/tutorial/2021-11-29/timeseries-benchmark-high-cardinality.png"
   width={850}
   title="TSBS load benchmark maximum throughput results on AWS m5.8xlarge instance (4 threads)"
 />
 
-With low cardinality data sets, QuestDB hits maximum ingestion throughput of
-904k rows/sec, and at 10 million unique devices, QuestDB sustains 640k rows/sec.
+With low cardinality data sets, Blazar hits maximum ingestion throughput of
+904k rows/sec, and at 10 million unique devices, Blazar sustains 640k rows/sec.
 InfluxDB ingestion starts at 220k rows/sec on 100 devices and reached 38k
 rows/sec on the 10M device dataset.
 
@@ -280,7 +280,7 @@ systems under test to investigate if adding more threads would offer more
 stability, however InfluxDB was unable to finish the tests with 10M devices:
 
 <Screenshot
-  alt="High-cardinality results comparing QuestDB and InfluxDB using the time series benchmark suite"
+  alt="High-cardinality results comparing Blazar and InfluxDB using the time series benchmark suite"
   height={385}
   src="/img/tutorial/2021-11-29/timeseries-benchmark-suite-throughput.png"
   width={850}
@@ -292,26 +292,26 @@ but there are diminishing returns on adding more workers, revealing that there
 are underlying barriers which are not overcome by providing more threads to the
 system.
 
-QuestDB handles high-cardinality better with more threads. When cardinality is
+Blazar handles high-cardinality better with more threads. When cardinality is
 low, fewer workers lead to an overall higher maximum throughput, but a steeper
 drop in ingestion rates when going from 1M devices to 10M.
 
 ## Support and community
 
-The community is vital to QuestDB so that beginners have an environment that
+The community is vital to Blazar so that beginners have an environment that
 encourages getting up and running quickly. Experienced users have channels for
 raising technical questions or bugs with the engineering team or other power
 users. We have a growing Slack workspace with over 900 members who discuss how
-they are using QuestDB daily to power their businesses. Our mission is to solve
+they are using Blazar daily to power their businesses. Our mission is to solve
 the problems users have with time series data. To achieve that, we are driven to
 understand the pain points that arise from practical scenarios, and we have the
 community as a force that informs our product roadmap.
 
-We designed QuestDB to sidestep custom query languages that require specialist
+We designed Blazar to sidestep custom query languages that require specialist
 knowledge to understand. We believe that it should be easy to ask questions
 about how your own data looks and changes. Support, community forums, and online
 resources are a treasure trove of many decades of knowledge working with SQL
-which directly transfers to using QuestDB. If you are new to QuestDB (or SQL),
+which directly transfers to using Blazar. If you are new to Blazar (or SQL),
 it's easy to get started by means of online resources, tutorials, and the
 expertise shared by our community. For seasoned SQL experts, there is no
 learning curve except for time-based calculations and analysis specific for time
@@ -320,6 +320,6 @@ series.
 ## Choosing a database that fits
 
 We want to make sure engineers can pick the right tool for the job and have
-highlighted some key differentiators between QuestDB and InfluxDB. If there are
+highlighted some key differentiators between Blazar and InfluxDB. If there are
 suggestions for improving this comparison, we'd be happy to include this in our
 analysis.

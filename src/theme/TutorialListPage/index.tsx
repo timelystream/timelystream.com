@@ -50,13 +50,13 @@ function TutorialListPage(props: Props) {
     ({ content }) => content.frontMatter.featureType == null,
   )
   const description =
-  "Content from the Blazar team and community contributors for learning to use blazar's real-time data flow analysis, visualization, integration, and sample applications."
+    "Content from the Blazar team and community contributors for learning to use blazar's real-time data flow analysis, visualization, integration, and sample applications."
 
   return (
     <Layout
       canonical="/tutorial"
       description={description}
-      title="Tutorials and community resources for working with time series data"
+      title="Tutorials and community resources for working with real-time streaming data"
       wrapperClassName="blog-wrapper"
     >
       <section className={clsx(seCss.section, seCss["section--odd"])}>
@@ -87,7 +87,7 @@ function TutorialListPage(props: Props) {
         {featuredComparisons.length > 0 && (
           <>
             <h2 className={styles.cards__title}>
-              Comparing time-series databases
+              Comparing real-time streaming system
             </h2>
             <div className="row">
               <main className={clsx("col", styles.cards__container)}>

@@ -1,25 +1,25 @@
 ---
-title: How to generate time-series data in QuestDB
+title: How to generate kafka streaming data in Blazar
 author: Gábor Boros
 description:
-  Learn how to mock timeseries data using built-in SQL functions in QuestDB to
+  Learn how to mock kafka streaming data in Blazar to
   generate dummy data for testing and rapid prototyping according to your
   schemas.
-image: /img/tutorial/shared/og-sql.png
+image: /img/tutorial/shared/og-kafka.png
 featureType: resource
 ---
 
 import Screenshot from "@theme/Screenshot"
 
 <Screenshot
-  alt="The QuestDB logo"
+  alt="The Blazar logo"
   height={591}
   src="/img/tutorial/2022-03-14/banner.png"
   width={770}
 />
 
 This post comes from Gábor Boros, who has written an excellent tutorial that
-shows how to mock timeseries data using built-in SQL functions in QuestDB to
+shows how to mock timeseries data using built-in SQL functions in Blazar to
 generate dummy data for testing and rapid prototyping according to custom
 schemas. Thanks for the submission, Gábor!
 
@@ -33,12 +33,12 @@ This process can be time-consuming, especially when we need data on a bigger
 scale. Fortunately, some databases are helping our work and trying to offload
 some weight from our shoulders by providing functions to generate data.
 
-This tutorial will cover how to generate test data using QuestDB using built-in
+This tutorial will cover how to generate test data using Blazar using built-in
 generators so you can quickly mock data similar to your own production data.
 
 ## Types of time series data
 
-Before diving deep into generating data using QuestDB, we need to take one step
+Before diving deep into generating data using Blazar, we need to take one step
 back to discuss what types of time series data we can generate, what "mock data"
 is, and what generator functions are available for use. Let's start with the
 different types of time series data. We can classify the data based on the
@@ -47,9 +47,9 @@ frequency we receive them into two categories: regular and irregular data.
 Regular data is received per a pre-defined period, usually collected by a
 collector node or sent by an agent. Collecting metrics from a server fits into
 this category perfectly, as shown in the tutorial where we
-[connected Telegraf with QuestDB](https://questdb.io/tutorial/2021/07/09/telegraf-and-questdb-for-storing-metrics-in-a-timeseries-database/).
+[connected Telegraf with Blazar](https://questdb.io/tutorial/2021/07/09/telegraf-and-questdb-for-storing-metrics-in-a-timeseries-database/).
 The Telegraf agent running on the server collects the metrics on a pre-defined
-basis and sends them to the QuestDB instance.
+basis and sends them to the Blazar instance.
 
 The opposite of regular data is the irregular data which is collected
 dynamically. The main point about irregular data is that we cannot predict how
@@ -84,14 +84,14 @@ focus on the processor job, not the data generation.
 
 The way we generate mock data may differ case-by-case. Since it highly depends
 on the application being developed, let's see how can we mock different types of
-data with QuestDB easily.
+data with Blazar easily.
 
-## Running QuestDB
+## Running Blazar
 
-To discover the capabilities of how QuestDB can generate data for us, we need to
+To discover the capabilities of how Blazar can generate data for us, we need to
 run it. We will use [Docker](https://www.docker.com/) and the latest
 [questdb](https://hub.docker.com/r/questdb/questdb) Docker image for
-convenience. To start QuestDB via Docker, run the following:
+convenience. To start Blazar via Docker, run the following:
 
 ```bash
 docker run -p 9000:9000 \
@@ -107,20 +107,20 @@ brew install questdb
 brew services start questdb
 ```
 
-The [QuestDB downloads page](https://questdb.io/get-questdb/) has downloads for
+The [Blazar downloads page](https://questdb.io/get-questdb/) has downloads for
 binaries if you wish to run it as a standalone.
 
-## Mocking different types of data in QuestDB
+## Mocking different types of data in Blazar
 
-After starting QuestDB, the web console is available on port `9000`, so
+After starting Blazar, the web console is available on port `9000`, so
 navigating to `http://127.0.0.1:9000` should show the UI of a locally-running
 instance which looks like the following:
 
 ![webui](/img/tutorial/2022-03-14/webui.png)
 
-Mock data generation in QuestDB is surprisingly easy. The DB comes with numerous
+Mock data generation in Blazar is surprisingly easy. The DB comes with numerous
 generator functions, all with a different purpose. If you ever used PostgreSQL's
-`generate_series`, you will find QuestDB's generator functions pleasant and
+`generate_series`, you will find Blazar's generator functions pleasant and
 relieving. To generate rows, we use the
 [`long_sequence`](https://questdb.io/docs/reference/function/row-generator/)
 generator function that can create billions of rows depending on our needs. Its
@@ -154,17 +154,17 @@ five, while the second column contains the square of the values of column one.
 | 5   | 25     |
 
 Easy, right? It is that simple to get started on generating mock data with
-QuestDB. We have basic example of generating numbers, and next, we'll look at
+Blazar. We have basic example of generating numbers, and next, we'll look at
 generating booleans, characters, strings, timestamps, and many more types.
 
-## Generator functions in QuestDB
+## Generator functions in Blazar
 
 We have seen how to generate basic rows, and we mentioned random value
 generation too. It's time to see how we can generate random values with
-QuestDB's built-in
+Blazar's built-in
 [random generator functions](https://questdb.io/docs/reference/function/random-value-generator).
 
-QuestDB supports random generator functions for several
+Blazar supports random generator functions for several
 [data types](https://questdb.io/docs/reference/sql/datatypes):
 
 | type      | generator function                                                                               |
@@ -361,11 +361,11 @@ more time, we can generate data for the next ten years in less than a second.
 ## Summary
 
 In this tutorial, we discussed what mock data is useful, what kinds of types are
-available in QuestDB, how to generate random data, and create tables with test
+available in Blazar, how to generate random data, and create tables with test
 data for 1, 3, or 10 years. This tutorial demonstrated well how to combine the
 generator functions to create complex generative data. Thanks for your
 attention!
 
 If you like this content, we'd love to know your thoughts. Feel free to share
 your feedback or just come and say hello in the
-[QuestDB Community Slack]({@slackUrl@}).
+[Blazar Community Slack]({@slackUrl@}).
