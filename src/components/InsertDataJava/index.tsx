@@ -10,23 +10,23 @@ const InsertDataJava = () => {
         return (
           <CodeBlock className="language-java">
             {`
-import io.questdb.cutlass.line.LineTcpSender;
-import io.questdb.network.Net;
-import io.questdb.std.Os;
+import com.timelystream.cutlass.line.LineTcpSender;
+import com.timelystream.network.Net;
+import com.timelystream.std.Os;
 
 public class LineTCPSenderMain {
 /*
     Maven:
 
             <dependency>
-                <groupId>org.questdb</groupId>
-                <artifactId>questdb</artifactId>
+                <groupId>com.timelystream</groupId>
+                <artifactId>blazar</artifactId>
                 <version>${release.name}</version>
             </dependency>
 
         Gradle:
 
-            compile group: 'org.questdb', name: 'questdb', version: '${release.name}'
+            compile group: 'com.timelystream', name: 'blazar', version: '${release.name}'
 
      */
     public static void main(String[] args) {

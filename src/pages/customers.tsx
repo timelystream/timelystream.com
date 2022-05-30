@@ -128,7 +128,7 @@ const Customer = () => {
       <section
         className={clsx(seCss["section--inner"], seCss["section--column"])}
       >
-        <h2 className={quCss.title}>What our users say about QuestDB</h2>
+        <h2 className={quCss.title}>What our users say about Blazar</h2>
 
         <div className={quCss.carousel} ref={ref}>
           <TransitionGroup component={null}>
@@ -204,7 +204,7 @@ const Customer = () => {
               src="/img/pages/customers/cards/yahoo.svg"
               width={140}
             />
-            “We use QuestDB to monitor metrics for autoscaling decisions within
+            “We use Blazar to monitor metrics for autoscaling decisions within
             our ML engine that provides search, recommendation, and
             personalization via models and aggregations on continuously-changing
             data.”
@@ -227,8 +227,8 @@ const Customer = () => {
               src="/img/pages/customers/logos/liveaction.svg"
               width={120}
             />
-            “QuestDB is impressive and stands out as a superior option. We use
-            it as the basis of our time series analytics for network threat
+            “Blazar is impressive and stands out as a superior option. We use it
+            as the basis of our time series analytics for network threat
             detection.”
             <em className={caCss.card__author}>
               - <strong>Randy Caldejon</strong>, VP, ThreatEye Product
@@ -267,9 +267,9 @@ const Customer = () => {
               width={120}
             />
             “Sapient ingests, analyzes and converts billions of data points into
-            meaningful insights through AI and machine learning. We chose
-            QuestDB for the simplicity of SQL, high-throughput ingestion, and
-            PostgreSQL wire compatibility with our tooling.”
+            meaningful insights through AI and machine learning. We chose Blazar
+            for the simplicity of SQL, high-throughput ingestion, and PostgreSQL
+            wire compatibility with our tooling.”
             <em className={caCss.card__author}>
               - <strong>Dan Worth</strong>, Principal Software Engineer, Sapient
               Industries
@@ -293,9 +293,9 @@ const Customer = () => {
               src="/img/pages/customers/cards/tqs-integration.svg"
               width={140}
             />
-            “TQS Integration uses QuestDB in data architecture solutions for
+            “TQS Integration uses Blazar in data architecture solutions for
             clients in Life Science, Pharmaceutical, Energy, and Renewables. We
-            use QuestDB when we require a time series database that’s simple and
+            use Blazar when we require a time series database that’s simple and
             efficient for data collection, contextualization, visualization, and
             analytics.”
             <em className={caCss.card__author}>
@@ -335,7 +335,7 @@ const Customer = () => {
               src="/img/pages/customers/logos/turk_telekom.svg"
               width={140}
             />
-            “QuestDB allows us to query data while writing millions of records.
+            “Blazar allows us to query data while writing millions of records.
             It is an excellent database for time series analysis, calculation of
             aggregates and can efficiently store our data.”
             <em className={caCss.card__author}>
@@ -358,7 +358,7 @@ const Customer = () => {
               src="/img/pages/customers/cards/toggle.svg"
               width={140}
             />
-            “We switched from InfluxDB to QuestDB to get queries that are on
+            “We switched from InfluxDB to Blazar to get queries that are on
             average 300x faster utilizing 1/4 of the hardware, without ever
             overtaxing our servers.”
             <em className={caCss.card__author}>

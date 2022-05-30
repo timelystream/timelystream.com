@@ -35,7 +35,7 @@ const contribution: Contribute[] = [
 ]
 
 const Community = () => {
-  const title = "QuestDB developer community"
+  const title = "Blazar developer community"
   const description =
     "Get involved with the developer community that's building the fastest open-source time series database."
 
@@ -59,7 +59,7 @@ const Community = () => {
         >
           <div className={`${paCss.half__section} ${paCss.padding_60}`}>
             <h2 className={paCss.section__title}>
-              We’re super proud of the QuestDB community and everything our
+              We’re super proud of the Blazar community and everything our
               contributors do
             </h2>
             <p
@@ -72,7 +72,7 @@ const Community = () => {
             <div className={paCss.border} />
             <div>
               <p className={paCss.default_text}>
-                Stay up to date with all things QuestDB
+                Stay up to date with all things Blazar
               </p>
 
               <Subscribe submitButtonVariant="primary" provider="newsletter" />
@@ -100,7 +100,7 @@ const Community = () => {
           <div className={`${paCss.half__section} ${paCss.section_center}`}>
             <img
               src="/img/pages/community/community-slack.png"
-              alt="A collage showing conversation from the QuestDB community Slack workspace with QuestDB stickers that participants receive"
+              alt="A collage showing conversation from the Blazar community Slack workspace with Blazar stickers that participants receive"
               className={paCss.section_image}
               width={650}
               height={500}
@@ -111,13 +111,13 @@ const Community = () => {
       <section className={clsx(seCss.section, seCss["section--odd"])}>
         <div className={paCss.section__inner}>
           <h2 className={`${paCss.section__title} ${paCss.text_center_header}`}>
-            Here’s what to do to get your hands on QuestDB swag
+            Here’s what to do to get your hands on Blazar swag
           </h2>
           <div className={paCss.flex__section}>
             <div className={paCss.half__section}>
               <img
                 src="/img/pages/community/community-mouse-pad.png"
-                alt="A mug and a pack of stickers printed with the QuestDB logo"
+                alt="A mug and a pack of stickers printed with the Blazar logo"
                 className={paCss.section_image}
                 width={500}
                 height={415}
@@ -155,7 +155,7 @@ const Community = () => {
                   What you get:
                 </p>
                 <p className={paCss.second_text}>
-                  QuestDB stickers, soft touch pen{" "}
+                  Blazar stickers, soft touch pen{" "}
                   <span className={paCss.pink__color}>(new!)</span>
                 </p>
               </div>
@@ -177,7 +177,7 @@ const Community = () => {
                 className={paCss.link_item}
                 href={customFields.stackoverflowUrl}
               >
-                with the QuestDB tag
+                with the Blazar tag
               </a>
             </p>
             <p className={paCss.property}>
@@ -228,7 +228,7 @@ const Community = () => {
           <div className={`${paCss.half__section} ${paCss.section_center}`}>
             <img
               src="/img/pages/community/community-t-shirt.png"
-              alt="A black t-shirt with the QuestDB logo printed on the front"
+              alt="A black t-shirt with the Blazar logo printed on the front"
               className={paCss.section_image}
               width={500}
               height={500}
@@ -238,7 +238,7 @@ const Community = () => {
                 What you get:
               </p>
               <p className={paCss.second_text}>
-                Stickers, high-quality QuestDB T-shirt
+                Stickers, high-quality Blazar T-shirt
               </p>
             </div>
           </div>
@@ -257,7 +257,7 @@ const Community = () => {
             <p className={paCss.property}>
               You have written an original{" "}
               <a className={paCss.link_item} href="/tutorial/">
-                tutorial or guide using QuestDB
+                tutorial or guide using Blazar
               </a>
             </p>
             <div className={paCss.card}>
@@ -280,7 +280,7 @@ const Community = () => {
           <div className={`${paCss.half__section} ${paCss.section_center}`}>
             <img
               src="/img/pages/community/community-mark-cup.png"
-              alt="A pink and black water bottle, a cellphone cover and a circular mousemat printed with the QuestDB logo"
+              alt="A pink and black water bottle, a cellphone cover and a circular mousemat printed with the Blazar logo"
               className={paCss.section_image}
               width={500}
               height={561}

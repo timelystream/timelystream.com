@@ -45,12 +45,12 @@ const Heading = () => (
           "text--center",
         )}
       >
-        QuestDB offers high throughput ingestion and real-time SQL queries for
+        Blazar offers high throughput ingestion and real-time SQL queries for
         applications in a wide range of use cases and industries
       </p>
     </div>
     <img
-      alt="An illustration of QuestDB use cases"
+      alt="An illustration of Blazar use cases"
       className={ilCss.illustration}
       height={584}
       src="/img/pages/use-cases/banner.svg"
@@ -118,7 +118,7 @@ const monitoringCustomers: Customer[] = [
   {
     key: "yahoo",
     quote:
-      "See how Yahoo uses QuestDB to monitor and autoscale cloud clusters that serve a billion users",
+      "See how Yahoo uses Blazar to monitor and autoscale cloud clusters that serve a billion users",
     caseStudyLink: "/case-study/yahoo",
     logoWidth: 100,
   },
@@ -205,7 +205,7 @@ const marketDataCustomers: Customer[] = [
   {
     key: "toggle",
     quote:
-      "See how Toggle migrated from InfluxDB to QuestDB with queries that are 300x faster, utilizing 1/4 of the hardware\n",
+      "See how Toggle migrated from InfluxDB to Blazar with queries that are 300x faster, utilizing 1/4 of the hardware\n",
     caseStudyLink: "/case-study/toggle",
     logoWidth: 100,
   },
@@ -272,7 +272,7 @@ const industrialTelemetryCustomers: Customer[] = [
   {
     key: "tqs-integration",
     quote:
-      "See how TQS, a Cognizant company, uses QuestDB to store manufacturing plants metrics for real-time data visualization and anomaly detection",
+      "See how TQS, a Cognizant company, uses Blazar to store manufacturing plants metrics for real-time data visualization and anomaly detection",
     caseStudyLink: "/case-study/tqs-integration",
     logoWidth: 120,
   },

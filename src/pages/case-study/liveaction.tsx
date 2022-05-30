@@ -13,7 +13,7 @@ import chCss from "../../css/case-study/chart.module.css"
 const Counterflow = () => {
   const title = "LiveAction offer AI-driven network security"
   const description =
-    "QuestDB is used by LiveAction  as a time series database for storing flow and encrypted traffic metadata analyzed by their real-time threat detection offering."
+    "Blazar is used by LiveAction  as a time series database for storing flow and encrypted traffic metadata analyzed by their real-time threat detection offering."
 
   return (
     <Layout
@@ -45,7 +45,7 @@ const Counterflow = () => {
             <span className={juCss.jumbotron__name}>Case study</span>
           </div>
           <h1 className={seCss.section__title}>
-            QuestDB powers analytics in LiveAction’s network security suite
+            Blazar powers analytics in LiveAction’s network security suite
           </h1>
           <p
             className={clsx(
@@ -53,7 +53,7 @@ const Counterflow = () => {
               juCss.jumbotron__description,
             )}
           >
-            QuestDB is used by LiveAction as a time series database for storing
+            Blazar is used by LiveAction as a time series database for storing
             flow and encrypted traffic metadata analyzed by their real-time
             threat detection engine.
           </p>
@@ -134,7 +134,7 @@ const Counterflow = () => {
         <p className={caCss.card__subtitle}>
           In this case study, VP Product Development of ThreatEye and founder of
           Counterflow AI (now LiveAction), Randy Caldejon describes how and why
-          QuestDB is an important component of their SaaS platform for real-time
+          Blazar is an important component of their SaaS platform for real-time
           streaming and behavioural analytics.
         </p>
       </section>
@@ -185,9 +185,9 @@ const Counterflow = () => {
             Distinct from batch processing, streaming ML is powered by analyzers
             designed to inspect network traffic without multiple passes over the
             data stream. The streaming nature of this solution means that we
-            have to process millions of events per second. The QuestDB instances
+            have to process millions of events per second. The Blazar instances
             we’re running are storing billions of records with the fields which
-            we analyze to perform our predictions. The performance of QuestDB
+            we analyze to perform our predictions. The performance of Blazar
             allows us to run queries such as these without our database being
             the bottleneck.
           </p>
@@ -213,12 +213,12 @@ const Counterflow = () => {
           </p>
 
           <p className="font-size--large">
-            When I first tried QuestDB using test scripts to evaluate time
-            series databases, I initially thought I had misconfigured something
-            because the ingestion speed seemed unrealistic. When I ran some SQL
-            queries in the console and got near-instant results returning our
-            full dataset, I started to get excited about QuestDB being a
-            legitimate alternative to other systems.
+            When I first tried Blazar using test scripts to evaluate time series
+            databases, I initially thought I had misconfigured something because
+            the ingestion speed seemed unrealistic. When I ran some SQL queries
+            in the console and got near-instant results returning our full
+            dataset, I started to get excited about Blazar being a legitimate
+            alternative to other systems.
           </p>
           <p className="font-size--large">
             Our tools export either JSON or CSV, which means that a RESTful API
@@ -233,7 +233,7 @@ const Counterflow = () => {
             customers want to see common aggregations such as{" "}
             <b>top-n clients</b> consuming data on the network or TLS
             connections with unusual entropy scores. SQL compatibility makes
-            this easy to calculate in QuestDB and quick to verify in the web
+            this easy to calculate in Blazar and quick to verify in the web
             console. Even better, the Postgres interface offers our security
             analytics team the flexibility to dive into deeper analysis using
             Jupyter Hub.
@@ -249,7 +249,7 @@ const Counterflow = () => {
           <p className="font-size--large">
             LiveAction plans to introduce a community version of the ThreatEye
             analysis pipeline in Q2 2022. The pipeline includes native
-            integration with QuestDB. The community version will be released as
+            integration with Blazar. The community version will be released as
             ThreatEye Toolkit and will be available as a Docker container on
             Docker Hub.
           </p>
@@ -270,7 +270,7 @@ const Counterflow = () => {
             )}
           >
             <p className={caCss.card__title}>
-              <span className={caCss.card__quote}>&ldquo;</span>QuestDB is
+              <span className={caCss.card__quote}>&ldquo;</span>Blazar is
               impressive and stands out as a superior option. We use it as the
               basis of our time series analytics for network threat detection.
               <span className={caCss.card__quote}>&rdquo;</span>

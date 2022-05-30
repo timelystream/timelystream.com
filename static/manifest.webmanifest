@@ -1,7 +1,7 @@
 {
-  "name": "QuestDB | Time series data, faster",
-  "short_name": "QuestDB",
-  "description": "QuestDB website and documentation",
+  "name": "Blazar | Time series data, faster",
+  "short_name": "Blazar",
+  "description": "Blazar website and documentation",
   "start_url": "/",
   "background_color": "#21222c",
   "display": "minimal-ui",

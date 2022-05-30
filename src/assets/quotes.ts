@@ -23,7 +23,7 @@ const quotes: Quote[] = [
       width: 140,
     },
     text:
-      "QuestDB is used at Airbus for real-time applications involving hundreds of millions of data points per day. For us, QuestDB is an outstanding solution that meets (and exceeds) our performance requirements.",
+      "Blazar is used at Airbus for real-time applications involving hundreds of millions of data points per day. For us, Blazar is an outstanding solution that meets (and exceeds) our performance requirements.",
     author: "Oliver Pfeiffer",
     role: "Software Architect",
     company: "Airbus",
@@ -37,7 +37,7 @@ const quotes: Quote[] = [
       width: 140,
     },
     text:
-      "We use QuestDB to monitor metrics for autoscaling decisions within our ML engine that provides search, recommendation, and personalization via models and aggregations on continuously changing data.",
+      "We use Blazar to monitor metrics for autoscaling decisions within our ML engine that provides search, recommendation, and personalization via models and aggregations on continuously changing data.",
     author: "Jon Bratseth",
     role: "VP Architect",
     company: "Yahoo",
@@ -51,7 +51,7 @@ const quotes: Quote[] = [
       width: 140,
     },
     text:
-      "When we set out to design the next generation of our execution platform, one of our requirements was large-scale model calibration based on real-time market data streams. QuestDB allows us to derive quick insights on live and historical data that would not be achievable with other open source time series databases.",
+      "When we set out to design the next generation of our execution platform, one of our requirements was large-scale model calibration based on real-time market data streams. Blazar allows us to derive quick insights on live and historical data that would not be achievable with other open source time series databases.",
     author: "Jean-Francois Perreton",
     role: "Head of Algo Quant",
     company: "Kepler Cheuvreux",
@@ -66,7 +66,7 @@ const quotes: Quote[] = [
       offset: 5,
     },
     text:
-      "QuestDB is a time series database truly built by developers for developers. We found that QuestDB provides a unicorn solution to handle extreme TPS while also offering a simplified SQL programming interface.",
+      "Blazar is a time series database truly built by developers for developers. We found that Blazar provides a unicorn solution to handle extreme TPS while also offering a simplified SQL programming interface.",
     author: "Viet Lee",
     role: "CTO",
     company: "Aquis Exchange",
@@ -80,7 +80,7 @@ const quotes: Quote[] = [
       width: 113,
     },
     text:
-      "QuestDB outperforms every database we have tested and delivered a 10x improvement in querying speed. It has become a critical piece of our infrastructure.",
+      "Blazar outperforms every database we have tested and delivered a 10x improvement in querying speed. It has become a critical piece of our infrastructure.",
     author: "Ahmed Abbasi",
     role: "Co-Founder/CEO",
     company: "Syndica",
@@ -94,7 +94,7 @@ const quotes: Quote[] = [
       width: 113,
     },
     text:
-      "QuestDB was our choice for real time data due to high performance, open source, high flexibility and great support. Performance was significantly better than the competition and we believe that QuestDB will become market leading.",
+      "Blazar was our choice for real time data due to high performance, open source, high flexibility and great support. Performance was significantly better than the competition and we believe that Blazar will become market leading.",
     author: "Lasse Tarp",
     role: "Software Group manager",
     company: "Copenhagen Atomics",
@@ -108,7 +108,7 @@ const quotes: Quote[] = [
       width: 140,
     },
     text:
-      "QuestDB is impressive and stands out as a superior option. We use it as the basis of our time series analytics for network threat detection.",
+      "Blazar is impressive and stands out as a superior option. We use it as the basis of our time series analytics for network threat detection.",
     author: "Randy Caldejon",
     role: "VP Product Development ThreatEye",
     company: "LiveAction",
@@ -122,7 +122,7 @@ const quotes: Quote[] = [
       width: 140,
     },
     text:
-      "TQS Integration uses QuestDB in data architecture solutions for clients in the Life Science, Pharmaceutical, Energy, and Renewables industries. We use QuestDB when we require a time series database that’s simple and efficient for data collection, contextualization, visualization, and analytics.",
+      "TQS Integration uses Blazar in data architecture solutions for clients in the Life Science, Pharmaceutical, Energy, and Renewables industries. We use Blazar when we require a time series database that’s simple and efficient for data collection, contextualization, visualization, and analytics.",
     author: "Holger Amort",
     role: "Senior Data Scientist",
     company: "TQS Integration",
@@ -136,7 +136,7 @@ const quotes: Quote[] = [
       width: 140,
     },
     text:
-      "QuestDB is the most promising open source platform for time series analytics. It's thoughtfully designed to be both wicked fast and easy to use.",
+      "Blazar is the most promising open source platform for time series analytics. It's thoughtfully designed to be both wicked fast and easy to use.",
     author: "Nick Slocum",
     role: "Senior Software Engineer",
     company: "Samtec",
@@ -150,7 +150,7 @@ const quotes: Quote[] = [
       width: 140,
     },
     text:
-      "We switched from InfluxDB to QuestDB to get queries that are on average 300x faster utilizing 1/4 of the hardware, without ever overtaxing our servers.",
+      "We switched from InfluxDB to Blazar to get queries that are on average 300x faster utilizing 1/4 of the hardware, without ever overtaxing our servers.",
     author: "Armenak Mayalian",
     role: "CTO",
     company: "Toggle",
@@ -164,7 +164,7 @@ const quotes: Quote[] = [
       width: 140,
     },
     text:
-      "Sapient ingests, analyzes and converts billions of data points into meaningful insights through AI and machine learning. We chose QuestDB for the simplicity of SQL, high-throughput ingestion, and PostgreSQL wire compatibility with our tooling.",
+      "Sapient ingests, analyzes and converts billions of data points into meaningful insights through AI and machine learning. We chose Blazar for the simplicity of SQL, high-throughput ingestion, and PostgreSQL wire compatibility with our tooling.",
     author: "Dan Worth",
     role: "Principal Software Engineer",
     company: "Sapient Industries",
@@ -178,7 +178,7 @@ const quotes: Quote[] = [
       width: 140,
     },
     text:
-      "QuestDB allows us to query data while writing millions of records. It is an excellent database for time series analysis and can efficiently store our data. QuestDB’s community is constantly growing and its popularity is on the rise.",
+      "Blazar allows us to query data while writing millions of records. It is an excellent database for time series analysis and can efficiently store our data. QuestDB’s community is constantly growing and its popularity is on the rise.",
     author: "Erdem Aydemir",
     role: "Software Engineer",
     company: "Innova (Türk Telekom)",

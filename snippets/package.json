@@ -2,14 +2,14 @@
   "name": "snippets",
   "version": "1.0.0",
   "license": "Apache-2.0",
-  "description": "Showcase for integrating QuestDB with your favorite programming language",
+  "description": "Showcase for integrating Blazar with your favorite programming language",
   "private": true,
   "repository": {
     "type": "git",
-    "url": "https://github.com/questdb/questdb.io.git"
+    "url": "https://github.com/timelystream/timelystream.com.git"
   },
   "author": {
-    "name": "QuestDB"
+    "name": "Blazar"
   },
   "scripts": {
     "auth:go": "go run authenticate/ilp.go",
