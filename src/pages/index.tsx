@@ -2,7 +2,7 @@ import clsx from "clsx"
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext"
 import Highlight from "../components/Highlight"
 import React, { useCallback, useEffect, useState } from "react"
-import Customers from "../components/Customers"
+// import Customers from "../components/Customers"
 import customFields from "../config/customFields"
 
 import Button from "@theme/Button"
@@ -10,18 +10,18 @@ import Chevron from "@theme/Chevron"
 import Layout from "../theme/Layout"
 import useWindowWidth from "@theme/useWindowWidth"
 import SvgImage from "../components/SvgImage"
-import ActionCard from "../components/ActionCard"
-import Subscribe from "../components/Subscribe"
+// import ActionCard from "../components/ActionCard" // Template delete for `remove customers and consol`
+// import Subscribe from "../components/Subscribe" // Template delete for `remove customers and consol`
 
 import doCss from "../css/index/docker.module.css"
 import feCss from "../css/index/feature.module.css"
-import flCss from "../css/index/flashy.module.css"
+// import flCss from "../css/index/flashy.module.css" // Template delete for `remove customers and consol`
 import inCss from "../css/index/integration.module.css"
 import juCss from "../css/index/jumbotron.module.css"
 import meCss from "../css/index/menu.module.css"
 import shCss from "../css/index/showcase.module.css"
 import usCss from "../css/index/usp.module.css"
-import footerCss from "../css/index/footer.module.css"
+// import footerCss from "../css/index/footer.module.css" // Template delete for `remove customers and consol`
 import prCss from "../css/property.module.css"
 import seCss from "../css/section.module.css"
 
@@ -33,8 +33,8 @@ import PythonLogo from "../assets/img/pages/index/integrations/python.svg"
 import PandasLogo from "../assets/img/pages/index/integrations/pandas.svg"
 import TableauLogo from "../assets/img/pages/index/integrations/tableau.svg"
 import DockerLogo from "../assets/img/pages/index/docker.svg"
-import FossIcon from "../assets/img/pages/index/foss.svg"
-import SubscribeIcon from "../assets/img/pages/index/subscribeIcon.svg"
+// import FossIcon from "../assets/img/pages/index/foss.svg" // Template delete for `remove customers and consol`
+// import SubscribeIcon from "../assets/img/pages/index/subscribeIcon.svg" // Template delete for `remove customers and consol`
 import SearchTimeIcon from "../assets/img/pages/index/searchTime.svg"
 import SliceTimeIcon from "../assets/img/pages/index/sliceTime.svg"
 import NavigateTimeIcon from "../assets/img/pages/index/navigateTime.svg"
@@ -420,80 +420,81 @@ const Cards = () => (
   </section>
 )
 
-const Console = () => {
-  return (
-    <section
-      className={clsx(
-        seCss.section,
-        seCss["section--inner"],
-        seCss["section--center"],
-      )}
-    >
-      <h2
-        className={clsx(
-          seCss.section__title,
-          seCss["section__title--wide"],
-          "text--center",
-        )}
-      >
-        Interactive Console
-      </h2>
-      <p
-        className={clsx(
-          seCss.section__subtitle,
-          seCss["section__subtitle--narrow"],
-          "text--center",
-        )}
-      >
-        Interactive console to import data (drag and drop) and start querying
-        right away. Check our{" "}
-        <a href="/docs/develop/web-console">Web Console documentation</a> to get
-        started.
-      </p>
+// Template delete for `remove customers and consol`
+// const Console = () => {
+//   return (
+//     <section
+//       className={clsx(
+//         seCss.section,
+//         seCss["section--inner"],
+//         seCss["section--center"],
+//       )}
+//     >
+//       <h2
+//         className={clsx(
+//           seCss.section__title,
+//           seCss["section__title--wide"],
+//           "text--center",
+//         )}
+//       >
+//         Interactive Console
+//       </h2>
+//       <p
+//         className={clsx(
+//           seCss.section__subtitle,
+//           seCss["section__subtitle--narrow"],
+//           "text--center",
+//         )}
+//       >
+//         Interactive console to import data (drag and drop) and start querying
+//         right away. Check our{" "}
+//         <a href="/docs/develop/web-console">Web Console documentation</a> to get
+//         started.
+//       </p>
 
-      <img
-        alt="Artistic view of Blazar's Web Console split in 3 components: the navigation tree, the SQL code editor and data displayed as a chart"
-        className={seCss.section__illustration}
-        height={467}
-        src="/img/pages/index/console.svg"
-        width={600}
-      />
+//       <img
+//         alt="Artistic view of Blazar's Web Console split in 3 components: the navigation tree, the SQL code editor and data displayed as a chart"
+//         className={seCss.section__illustration}
+//         height={467}
+//         src="/img/pages/index/console.svg"
+//         width={600}
+//       />
 
-      <div className={footerCss.cards}>
-        <ActionCard
-          icon={<FossIcon />}
-          title="Join our developer community"
-          description="Blazar is open source. Follow us on Twitter, star our GitHub repo, and join our developer community on Slack!"
-        >
-          <a
-            className={flCss.flashy__link}
-            href={customFields.githubUrl}
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            Go to GitHub&nbsp;&nbsp;&gt;
-          </a>
-          <a className={flCss.flashy__link} href={customFields.slackUrl}>
-            Join Slack&nbsp;&nbsp;&gt;
-          </a>
-        </ActionCard>
+//       <div className={footerCss.cards}>
+//         <ActionCard
+//           icon={<FossIcon />}
+//           title="Join our developer community"
+//           description="Blazar is open source. Follow us on Twitter, star our GitHub repo, and join our developer community on Slack!"
+//         >
+//           <a
+//             className={flCss.flashy__link}
+//             href={customFields.githubUrl}
+//             rel="noopener noreferrer"
+//             target="_blank"
+//           >
+//             Go to GitHub&nbsp;&nbsp;&gt;
+//           </a>
+//           <a className={flCss.flashy__link} href={customFields.slackUrl}>
+//             Join Slack&nbsp;&nbsp;&gt;
+//           </a>
+//         </ActionCard>
 
-        <ActionCard
-          title="Subscribe to our newsletter"
-          description="Stay up to date with all things Blazar"
-          icon={<SubscribeIcon />}
-          skin="primary"
-        >
-          <Subscribe
-            placeholder="Email address"
-            submitButtonVariant="tertiary"
-            provider="newsletter"
-          />
-        </ActionCard>
-      </div>
-    </section>
-  )
-}
+//         <ActionCard
+//           title="Subscribe to our newsletter"
+//           description="Stay up to date with all things Blazar"
+//           icon={<SubscribeIcon />}
+//           skin="primary"
+//         >
+//           <Subscribe
+//             placeholder="Email address"
+//             submitButtonVariant="tertiary"
+//             provider="newsletter"
+//           />
+//         </ActionCard>
+//       </div>
+//     </section>
+//   )
+// }
 
 const S = [3, 1, 6, 10]
 const M = [3, 0, 4, 8]
@@ -724,13 +725,13 @@ const Home = () => (
     replaceTitle
   >
     <Top />
-    <Customers nbElements={6} />
+    {/* <Customers nbElements={6} />  //Template delete for `remove customers and consol` */}
     <Usp />
     <Integration />
     <FeatureTabs />
     <QueryScroller />
     <Cards />
-    <Console />
+    {/* <Console />  // Template delete for `remove customers and consol` */}
   </Layout>
 )
 
