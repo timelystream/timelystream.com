@@ -5,44 +5,61 @@
 
 # timelystream.com
 
-[This website](https://timelystream.com) is built using
-[Docusaurus 2](https://v2.docusaurus.io/). Pages & components are written in
-TypeScript, the styles in vanilla CSS with variables using
-[CSS Modules](https://github.com/css-modules/css-modules).
+[This website](https://timelystream.com) is built using [Docusaurus 2](https://v2.docusaurus.io/). Pages & components are written in TypeScript, the styles in vanilla CSS with variables using [CSS Modules](https://github.com/css-modules/css-modules).
 
-<!-- prettier-ignore-start -->
-<div align="center">
-  <a href="http://timelystream.com">
-    <img src=".github/console.png" width="400" />
-  </a>
-</div>
-<div align="center">
-  <a href="http://timelystream.com">
-    timelystream.com
-  </a>
-</div>
-<!-- prettier-ignore-end -->
 
-## Installation
 
-```script
-yarn
+Each time you submit, the website will automatically store the generated static pages in both, the following two places:
+
+1. `netlify` for the main
+2. `GitHub pages` as a backup
+
+
+
+## Clone repo
+
+```bash
+clone git@github.com:timelystream/timelystream.com.git
+cd ./timelystream.com
 ```
+
+## Docker development (Recommend)
+
+```
+docker run -it -v "$(pwd)"/.:/timelystream.com -p 3000:3000 --name tm.com timelystream/website bash
+```
+
+With docker you don't need to install any software. like `yarn`, `node.js`.
+
+## Local development (Not recommend)
 
 Note. On Linux you may have to install `autoconf` package to have a successful
 installation. On Ubuntu it should be enough to run
 `sudo apt-get install autoconf` command to install the package.
 
-## Local development
+
+## Run/Test/Modify timelystream website
+
+Whether you are using docker or in native development mode, 
+you can execute the following commands to run, test and modify the site
+
+
+### Install depends
 
 ```script
-yarn start
+yarn
 ```
 
-This command starts a local development server and open up a browser window.
+### Start timelystream website
+
+```script
+yarn start --host 0.0.0.0
+```
+
+This command starts a development server, you can open up a browser window `http://localhost:3000`.
 Most changes are reflected live without having to restart the server.
 
-## Build for production
+### Build for production
 
 ```script
 yarn build
