@@ -94,7 +94,7 @@ const CareersPage = () => {
             />
           </div>
           <div className={caCss.card__side}>
-            <h2 className={caCss.card__title}>Working at QuestDB</h2>
+            <h2 className={caCss.card__title}>Working at TimelyStram</h2>
             <p className={caCss.card__content}>
               We hire talented and passionate people who share our mission to
               empower developers to solve their problems with data. We are
