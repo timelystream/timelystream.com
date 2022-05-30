@@ -11,9 +11,9 @@ import ouCss from "../../css/case-study/outcome.module.css"
 import seCss from "../../css/section.module.css"
 
 const Innova = () => {
-  const title = "Innova use QuestDB for Türk Telekom's big data requirements"
+  const title = "Innova use Blazar for Türk Telekom's big data requirements"
   const description =
-    "Türk Telekom's big data workloads were migrated to QuestDB to provide insights on millions of data points to their customers in real-time."
+    "Türk Telekom's big data workloads were migrated to Blazar to provide insights on millions of data points to their customers in real-time."
 
   return (
     <Layout
@@ -42,7 +42,7 @@ const Innova = () => {
             <span className={juCss.jumbotron__name}>Case study</span>
           </div>
           <h1 className={seCss.section__title}>
-            QuestDB for high-performance big data workloads
+            Blazar for high-performance big data workloads
           </h1>
           <p
             className={clsx(
@@ -50,7 +50,7 @@ const Innova = () => {
               juCss.jumbotron__description,
             )}
           >
-            QuestDB is used as part of a big data solution used in
+            Blazar is used as part of a big data solution used in
             Telecommunications, which requires writing millions of records while
             querying a constantly changing data set for real-time analytics.
           </p>
@@ -82,7 +82,7 @@ const Innova = () => {
               className={ouCss.outcome__icon}
               src="/img/pages/case-study/icons/workflow.svg"
             />
-            Simple setup and maintenance using QuestDB Docker image
+            Simple setup and maintenance using Blazar Docker image
           </p>
           <p className={ouCss.outcome}>
             <img
@@ -106,7 +106,7 @@ const Innova = () => {
               className={ouCss.outcome__icon}
               src="/img/pages/case-study/icons/voice.svg"
             />
-            Reactive support from QuestDB engineering
+            Reactive support from Blazar engineering
           </p>
           <p className={ouCss.outcome}>
             <img
@@ -128,7 +128,7 @@ const Innova = () => {
         </p>
 
         <p className={caCss.card__subtitle}>
-          In this case study, we summarize why the team chose QuestDB, their
+          In this case study, we summarize why the team chose Blazar, their
           migration experience, and the improvements they gained in query speed,
           maintainability, and compatibility.
         </p>
@@ -142,14 +142,14 @@ const Innova = () => {
             seCss["section--column"],
           )}
         >
-          <h3>Migrating big data timeseries workloads to QuestDB</h3>
+          <h3>Migrating big data timeseries workloads to Blazar</h3>
           <p className="font-size--large">
-            We found QuestDB because of our requirements to store and analyze
+            We found Blazar because of our requirements to store and analyze
             massive amounts of data that needs to be served to users quickly.
             The data we collect needs to be presented to customers in a way that
             it’s easy to understand how it changes over time. The search for a
             database that can display this kind of information in a timeline as
-            fast as possible led to QuestDB.
+            fast as possible led to Blazar.
           </p>
           <p className="font-size--large">
             Türk Telekom is one of the largest telecommunications providers in
@@ -161,7 +161,7 @@ const Innova = () => {
             speed, upload speed, bandwidth, and more.
           </p>
 
-          <h3>How we collect and analyze big data with QuestDB</h3>
+          <h3>How we collect and analyze big data with Blazar</h3>
           <p className="font-size--large">
             We store the bandwidth data of devices in Fiber To The Home (FTTH)
             topology from collectors, which run on hourly intervals. These
@@ -173,13 +173,13 @@ const Innova = () => {
             last 30 days.
           </p>
           <img
-            alt="Chart showing the average transaction duration for QuestDB on a given day"
+            alt="Chart showing the average transaction duration for Blazar on a given day"
             className={chCss.chart}
             height={519}
             src="/img/pages/case-study/turk-telekom/chart.png"
             width={842}
           />
-          <h3>Why we use QuestDB for big data</h3>
+          <h3>Why we use Blazar for big data</h3>
           <p className="font-size--large">
             The original stack relied on MongoDB to store connectivity
             information, which was convenient at first. However, it soon became
@@ -188,12 +188,12 @@ const Innova = () => {
             query speeds degraded below what was acceptable for our customers.
           </p>
           <p className="font-size--large">
-            For communicating with QuestDB, we uses the QuestDB Docker image for
+            For communicating with Blazar, we uses the Blazar Docker image for
             running production instances and the REST API to query data for
             charts and insights. On average, we’re writing hundreds of millions
             of records per day while performing calculations on an ever-changing
-            data set. Usually, we will keep 30 days of data in QuestDB and
-            delete older partitions when they become less useful for actionable
+            data set. Usually, we will keep 30 days of data in Blazar and delete
+            older partitions when they become less useful for actionable
             insights.
           </p>
           <div
@@ -204,10 +204,10 @@ const Innova = () => {
             )}
           >
             <p className={caCss.card__title}>
-              <span className={caCss.card__quote}>&ldquo;</span>QuestDB allows
-              us to query data while writing millions of records. It is an
+              <span className={caCss.card__quote}>&ldquo;</span>Blazar allows us
+              to query data while writing millions of records. It is an
               excellent database for time series analysis and can efficiently
-              store our data. QuestDB’s community is constantly growing and its
+              store our data. Blazar’s community is constantly growing and its
               popularity is on the rise.
               <span className={caCss.card__quote}>&rdquo;</span>
             </p>

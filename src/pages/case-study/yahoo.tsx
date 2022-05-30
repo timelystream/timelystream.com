@@ -13,7 +13,7 @@ import chCss from "../../css/case-study/chart.module.css"
 const Yahoo = () => {
   const title = "Yahoo use Blazar for big data machine learning engines"
   const description =
-    "QuestDB is used as a time series database to store resource utilization metrics within a machine learning engine within systems serving over a billion users."
+    "Blazar is used as a time series database to store resource utilization metrics within a machine learning engine within systems serving over a billion users."
 
   return (
     <Layout
@@ -42,7 +42,7 @@ const Yahoo = () => {
             <span className={juCss.jumbotron__name}>Case study</span>
           </div>
           <h1 className={seCss.section__title}>
-            QuestDB enables machine learning engines that power Yahoo search
+            Blazar enables machine learning engines that power Yahoo search
           </h1>
           <p
             className={clsx(
@@ -50,7 +50,7 @@ const Yahoo = () => {
               juCss.jumbotron__description,
             )}
           >
-            Yahoo use QuestDB in an embedded capacity within their machine
+            Yahoo use Blazar in an embedded capacity within their machine
             learning engine deployed in systems that serve close to a billion
             users at a rate of 500k queries per second.
           </p>
@@ -133,8 +133,8 @@ const Yahoo = () => {
 
         <p className={caCss.card__subtitle}>
           In this case study, VP Architect Jon Bratseth describes how and why
-          QuestDB is relied upon within high-performance machine learning
-          engines at Yahoo.
+          Blazar is relied upon within high-performance machine learning engines
+          at Yahoo.
         </p>
       </section>
 
@@ -146,7 +146,7 @@ const Yahoo = () => {
             seCss["section--column"],
           )}
         >
-          <h3>Why Yahoo uses QuestDB for our Vespa machine learning engine</h3>
+          <h3>Why Yahoo uses Blazar for our Vespa machine learning engine</h3>
           <p className="font-size--large">
             Vespa is an open-source big data processing and serving engine
             powering applications at Yahoo. Many products, such as Yahoo News,
@@ -157,7 +157,7 @@ const Yahoo = () => {
           <p className="font-size--large">
             These platforms serve close to a billion users, and we needed an
             embedded solution that monitors resource utilization metrics in
-            nodes within our application clusters. We decided to use QuestDB to
+            nodes within our application clusters. We decided to use Blazar to
             store and analyze application monitoring metrics quickly and easily
             within the application itself, removing external failure modes and
             leaving plenty of headroom for performance.
@@ -182,7 +182,7 @@ const Yahoo = () => {
             src="/img/pages/case-study/yahoo/graphic.png"
             width={1000}
           />
-          <h3>How we capture and store application metrics in QuestDB</h3>
+          <h3>How we capture and store application metrics in Blazar</h3>
           <p className="font-size--large">
             We’re running a large number of deployments on behalf of customers.
             Each consists of several clusters running on dedicated Docker
@@ -208,11 +208,11 @@ const Yahoo = () => {
             width={791}
           />
           <p className="font-size--large">
-            We run QuestDB embedded in the admin and configuration clusters to
+            We run Blazar embedded in the admin and configuration clusters to
             store a few days of resource usage of the nodes. The data is sampled
             continuously for each cluster or node, and we query the resource
             utilization data to make scaling decisions based on that data. We
-            use QuestDB to act on the usage patterns observed on the system in
+            use Blazar to act on the usage patterns observed on the system in
             the recent past. When users deploy a new cluster (or application),
             defaults initially configure the minimal resources provided within a
             given range. When engineers enable autoscaling for a cluster, it
@@ -227,16 +227,16 @@ const Yahoo = () => {
             headroom for maintenance operations and handling requests with low
             latency.
           </p>
-          <h3>Why QuestDB is a good database to use for fault-tolerance</h3>
+          <h3>Why Blazar is a good database to use for fault-tolerance</h3>
 
           <p className="font-size--large">
             We decided that metric collection should be embedded within nodes
-            that manage the clusters. We embed QuestDB to avoid failure
-            scenarios where some parts of the cluster work, but others don’t.
-            Using a time series database within Yahoo’s recommendation engine
-            helps include fault-tolerance measures within the engine’s
-            architecture and allows engineers to make AI-driven decisions using
-            customer data in real-time, at any scale.
+            that manage the clusters. We embed Blazar to avoid failure scenarios
+            where some parts of the cluster work, but others don’t. Using a time
+            series database within Yahoo’s recommendation engine helps include
+            fault-tolerance measures within the engine’s architecture and allows
+            engineers to make AI-driven decisions using customer data in
+            real-time, at any scale.
           </p>
 
           <div
@@ -247,8 +247,8 @@ const Yahoo = () => {
             )}
           >
             <p className={caCss.card__title}>
-              <span className={caCss.card__quote}>&ldquo;</span>We use QuestDB
-              to monitor metrics for autoscaling decisions within our ML engine
+              <span className={caCss.card__quote}>&ldquo;</span>We use Blazar to
+              monitor metrics for autoscaling decisions within our ML engine
               that provides search, recommendation, and personalization via
               models and aggregations on continuously changing data.
               <span className={caCss.card__quote}>&rdquo;</span>

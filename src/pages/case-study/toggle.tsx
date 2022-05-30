@@ -13,7 +13,7 @@ import seCss from "../../css/section.module.css"
 const Toggle = () => {
   const title = "Toggle AI - time series data for machine learning in FinTech"
   const description =
-    "Toggle switched from InfluxDB to QuestDB and benefited from faster queries, massive cost reduction, and performance improvements on ingestion."
+    "Toggle switched from InfluxDB to Blazar and benefited from faster queries, massive cost reduction, and performance improvements on ingestion."
 
   return (
     <Layout
@@ -44,14 +44,14 @@ const Toggle = () => {
             </Button>
             <span className={juCss.jumbotron__name}>Case study</span>
           </div>
-          <h1 className={seCss.section__title}>Toggle migration to QuestDB</h1>
+          <h1 className={seCss.section__title}>Toggle migration to Blazar</h1>
           <p
             className={clsx(
               seCss.section__subtitle,
               juCss.jumbotron__description,
             )}
           >
-            Toggle switched from InfluxDB to QuestDB, leading to massive cost
+            Toggle switched from InfluxDB to Blazar, leading to massive cost
             reduction and performance improvements.
           </p>
         </div>
@@ -127,7 +127,7 @@ const Toggle = () => {
 
         <p className={caCss.card__subtitle}>
           In this case study, we summarize Toggle’s migration experience from
-          InfluxDB to QuestDB and the improvements the migration brought.
+          InfluxDB to Blazar and the improvements the migration brought.
         </p>
       </section>
 
@@ -139,7 +139,7 @@ const Toggle = () => {
             seCss["section--column"],
           )}
         >
-          <h3>Description of Toggle use case with QuestDB</h3>
+          <h3>Description of Toggle use case with Blazar</h3>
           <p className="font-size--large">
             Toggle uses AI & Machine Learning to help investors extract insights
             on their portfolio & investments. The system distills billions of
@@ -164,7 +164,7 @@ const Toggle = () => {
             a viable option as the company scaled.
           </p>
 
-          <h3>The process to migrate data from InfluxDB to QuestDB</h3>
+          <h3>The process to migrate data from InfluxDB to Blazar</h3>
           <p className="font-size--large">
             When evaluating a new solution, Toggle knew that they had to answer
             the following questions:
@@ -184,22 +184,22 @@ const Toggle = () => {
             </li>
           </ul>
           <p className="font-size--large">
-            Of all the possible solutions evaluated, QuestDB was the only one
+            Of all the possible solutions evaluated, Blazar was the only one
             that met all of our criteria.
           </p>
 
-          <h3>A side by side comparison of QuestDB vs. InfluxDB</h3>
+          <h3>A side by side comparison of Blazar vs. InfluxDB</h3>
           <ul className="font-size--large">
             <li>
               InfluxDB on a cluster of 4 machines (m4.2xlarge with 128GiB of
               RAM) was averaging a response time of over 5 seconds.
             </li>
             <li>
-              After a few weeks with QuestDB in production (still with a single
+              After a few weeks with Blazar in production (still with a single
               machine), the performance averaged 15 milliseconds, i.e., more
               than 300x faster queries.
               <img
-                alt="Chart showing the average transaction duration for QuestDB on a given day"
+                alt="Chart showing the average transaction duration for Blazar on a given day"
                 className={chCss.chart}
                 height={433}
                 src="/img/pages/case-study/toggle/chart.png"
@@ -230,7 +230,7 @@ const Toggle = () => {
           >
             <p className={caCss.card__title}>
               <span className={caCss.card__quote}>&ldquo;</span>
-              The QuestDB team assisted us in all steps along the way. They were
+              The Blazar team assisted us in all steps along the way. They were
               proactive in supporting our changeover, helping to debug issues as
               they arose, and optimize our deployment as we moved things into
               production.

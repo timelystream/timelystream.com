@@ -12,9 +12,9 @@ import chCss from "../../css/case-study/chart.module.css"
 
 const Sapient = () => {
   const title =
-    "Sapient uses QuestDB for real-time analytics in smart infrastructure"
+    "Sapient uses Blazar for real-time analytics in smart infrastructure"
   const description =
-    "QuestDB is used as a time series database by Sapient for usage insights, anomaly detection, and predictive maintenance."
+    "Blazar is used as a time series database by Sapient for usage insights, anomaly detection, and predictive maintenance."
 
   return (
     <Layout
@@ -46,7 +46,7 @@ const Sapient = () => {
             <span className={juCss.jumbotron__name}>Case study</span>
           </div>
           <h1 className={seCss.section__title}>
-            Sapient uses QuestDB for real-time analytics in smart infrastructure
+            Sapient uses Blazar for real-time analytics in smart infrastructure
           </h1>
           <p
             className={clsx(
@@ -54,7 +54,7 @@ const Sapient = () => {
               juCss.jumbotron__description,
             )}
           >
-            QuestDB is used by Sapient Industries in their proprietary analytics
+            Blazar is used by Sapient Industries in their proprietary analytics
             platform, which modernizes building infrastructure by monitoring
             energy data from electrical equipment for usage insights that enable
             anomaly detection, energy savings, asset management, and facility
@@ -137,7 +137,7 @@ const Sapient = () => {
 
         <p className={caCss.card__subtitle}>
           In this case study, Dan Worth, Principal Software Engineer at Sapient
-          Industries describes how and why QuestDB is relied upon within
+          Industries describes how and why Blazar is relied upon within
           high-performance clusters for real-time analytics.
         </p>
       </section>
@@ -173,11 +173,11 @@ const Sapient = () => {
             src="/img/pages/case-study/sapient-industries/diagram.png"
             width={1100}
           />
-          <h3>Why we use QuestDB for real-time analytics</h3>
+          <h3>Why we use Blazar for real-time analytics</h3>
           <p className="font-size--large">
-            QuestDB facilitates actionable performance because of the speed for
+            Blazar facilitates actionable performance because of the speed for
             complex queries. Data can be pulled in real-time without having to
-            store it. One major draw for us was that QuestDB uses SQL; this
+            store it. One major draw for us was that Blazar uses SQL; this
             eliminated the learning curve for our team. We don’t have to learn a
             new custom query language and we can easily compose common queries
             as we go with our existing familiarity with SQL.
@@ -210,7 +210,7 @@ const Sapient = () => {
           </p>
           <h3>Our analytics platform is cloud-native and highly available </h3>
           <p className="font-size--large">
-            For our deployment, QuestDB is configured as a StatefulSet in a
+            For our deployment, Blazar is configured as a StatefulSet in a
             Kubernetes cluster on Google Cloud Platform. We deploy two instances
             on different node-pools and route traffic to both for High
             Availability. We back up partitions hourly to Google Cloud Storage
@@ -218,11 +218,11 @@ const Sapient = () => {
           </p>
 
           <p className="font-size--large">
-            Our deployment’s API queries QuestDB over REST API, and we’re
+            Our deployment’s API queries Blazar over REST API, and we’re
             ingesting data using InfluxDB Line Protocol for high throughput. For
             the data requirements, we’re typically ingesting 250GB worth of
-            sensor data into QuestDB per month, and we currently have about
-            1.2TB in an instance.
+            sensor data into Blazar per month, and we currently have about 1.2TB
+            in an instance.
           </p>
           <div
             className={clsx(
@@ -237,7 +237,7 @@ const Sapient = () => {
               and proactive operational decisions, which yield multiple larger
               benefits around facility planning, asset investments, and
               sustainability goals. Our proprietary software generates these
-              data insights, and we chose QuestDB for the simplicity of SQL,
+              data insights, and we chose Blazar for the simplicity of SQL,
               high-throughput ingestion, and the compatibility of our tooling
               with PostgreSQL wire.
               <span className={caCss.card__quote}>&rdquo;</span>

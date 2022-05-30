@@ -40,7 +40,7 @@ const Top = () => {
             seCss["section__title--accent"],
           )}
         >
-          QuestDB Cloud
+          Blazar Cloud
         </h1>
 
         <Subscribe
@@ -64,14 +64,14 @@ const Top = () => {
 const Highlights = () => {
   const items: HighlightItem[] = [
     {
-      title: "Managed QuestDB",
+      title: "Managed Blazar",
       description: "Hosted, managed and monitored by us",
       image: <ManagedQuestdbIcon width="90" height="90" />,
       imageTitle: "Postgres logo",
     },
     {
       title: "Elastic solution",
-      description: "Scalable QuestDB instances in a few steps",
+      description: "Scalable Blazar instances in a few steps",
       image: <ElasticSolutionIcon width="90" height="90" />,
       imageTitle: "Postgres logo",
     },
@@ -106,8 +106,8 @@ const Highlights = () => {
           "text--center",
         )}
       >
-        Enjoy all of QuestDB&apos;s core and enterprise features, first
-        available on{" "}
+        Enjoy all of Blazar&apos;s core and enterprise features, first available
+        on{" "}
         <SvgImage image={<AwsLogo width="50" height="30" />} title="AWS logo" />
       </p>
       <div className={hlCss.highlights}>
@@ -131,8 +131,8 @@ const Slack = () => {
           <div className={slCss.slack__logo}>
             <SvgImage image={<SlackLogo />} title="Slack logo" />
           </div>
-          Like to get support and ask questions about QuestDB? Join our
-          community with 1000+ developers on Slack!
+          Like to get support and ask questions about Blazar? Join our community
+          with 100+ developers on Slack!
         </div>
         <div className={slCss.slack__cta}>
           <Button variant="primary" href={customFields.slackUrl}>

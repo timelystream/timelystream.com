@@ -178,7 +178,7 @@ const quotes: Quote[] = [
       width: 140,
     },
     text:
-      "Blazar allows us to query data while writing millions of records. It is an excellent database for time series analysis and can efficiently store our data. QuestDB’s community is constantly growing and its popularity is on the rise.",
+      "Blazar allows us to query data while writing millions of records. It is an excellent database for time series analysis and can efficiently store our data. Blazar’s community is constantly growing and its popularity is on the rise.",
     author: "Erdem Aydemir",
     role: "Software Engineer",
     company: "Innova (Türk Telekom)",

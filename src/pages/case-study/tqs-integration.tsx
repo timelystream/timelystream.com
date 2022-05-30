@@ -11,9 +11,9 @@ import seCss from "../../css/section.module.css"
 import chCss from "../../css/case-study/chart.module.css"
 
 const Tqs = () => {
-  const title = "TQS uses QuestDB for industrial telemetry data"
+  const title = "TQS uses Blazar for industrial telemetry data"
   const description =
-    "QuestDB is used as a time series database to store sensor data in the cloud infrastructure of modern pharmaceutical production processing facilities."
+    "Blazar is used as a time series database to store sensor data in the cloud infrastructure of modern pharmaceutical production processing facilities."
 
   return (
     <Layout
@@ -45,7 +45,7 @@ const Tqs = () => {
             <span className={juCss.jumbotron__name}>Case study</span>
           </div>
           <h1 className={seCss.section__title}>
-            QuestDB powers time series analytics in TQS Integration cloud
+            Blazar powers time series analytics in TQS Integration cloud
             solutions
           </h1>
           <p
@@ -61,9 +61,9 @@ const Tqs = () => {
             >
               TQS Integration
             </a>{" "}
-            uses QuestDB in industrial telemetry solutions for clients in the
+            uses Blazar in industrial telemetry solutions for clients in the
             Life Science, Pharmaceutical, Energy, and Renewables industries. TQS
-            Integration uses QuestDB when they require a time series database
+            Integration uses Blazar when they require a time series database
             that’s simple and efficient for data collection, contextualization,
             visualization, analytics, and managed services for the world’s
             leading companies.
@@ -137,14 +137,14 @@ const Tqs = () => {
         <p className={caCss.card__title}>
           TQS Integration builds reference architecture for software
           applications dealing with industrial telemetry that produce and
-          process hundreds of thousands of events per second. QuestDB is used
+          process hundreds of thousands of events per second. Blazar is used
           when they require a time series database for data visualization,
           real-time analytics, anomaly detection, and predictive maintenance.
         </p>
 
         <p className={caCss.card__subtitle}>
           In this case study, Senior Data Scientist, Holger Amort, describes how
-          and why QuestDB is relied upon within high-performance reference
+          and why Blazar is relied upon within high-performance reference
           architecture built at TQS Integration.
         </p>
       </section>
@@ -158,8 +158,7 @@ const Tqs = () => {
           )}
         >
           <h3>
-            Why TQS Integration use QuestDB for cloud-native industrial
-            solutions
+            Why TQS Integration use Blazar for cloud-native industrial solutions
           </h3>
           <p className="font-size--large">
             At TQS Integration, we specialize in software solutions for
@@ -204,11 +203,11 @@ const Tqs = () => {
 
           <p className="font-size--large">
             We’re typically sending approximately 100,000 to 150,000 events per
-            second into QuestDB instances. The purpose of QuestDB in the
-            reference architecture we build for our clients is for hot data,
-            which we typically retain for 30 days. We then downsample this data
-            for lower resolution cold storage in case we need a historical
-            overview of the last 12 months’ sensor data, for instance.
+            second into Blazar instances. The purpose of Blazar in the reference
+            architecture we build for our clients is for hot data, which we
+            typically retain for 30 days. We then downsample this data for lower
+            resolution cold storage in case we need a historical overview of the
+            last 12 months’ sensor data, for instance.
           </p>
           <img
             alt="A screenshot of TQS Integration software for tracking industrial processes"
@@ -225,7 +224,7 @@ const Tqs = () => {
             analyses and longer-term predictions.
           </p>
 
-          <h3>Storing high-frequency industrial telemetry in QuestDB</h3>
+          <h3>Storing high-frequency industrial telemetry in Blazar</h3>
           <p className="font-size--large">
             We’re collecting sensor and telemetry data from all available
             sources in our client’s facilities. This produces different types of
@@ -251,7 +250,7 @@ const Tqs = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              using QuestDB to analyze historical processes
+              using Blazar to analyze historical processes
             </a>{" "}
             to control and maintain future operations. Anomaly detection is an
             exciting application that our clients are exploring for future
@@ -259,7 +258,7 @@ const Tqs = () => {
             modeling of time series data.
           </p>
 
-          <h3>The benefits of QuestDB for storing industrial telemetry</h3>
+          <h3>The benefits of Blazar for storing industrial telemetry</h3>
 
           <p className="font-size--large">
             Because of the high-throughput functionality, we’re ingesting sensor
@@ -271,7 +270,7 @@ const Tqs = () => {
             For dashboards, we make use of Grafana quite often, which is an easy
             way to have an operational overview of the state of a system at any
             given time. An additional bonus of using open source software like
-            QuestDB is that it allows us to easily test ML and multivariate
+            Blazar is that it allows us to easily test ML and multivariate
             analysis (MVA) libraries and take advantage of the very rich
             open-source ecosystem.
           </p>
@@ -299,10 +298,10 @@ const Tqs = () => {
           >
             <p className={caCss.card__title}>
               <span className={caCss.card__quote}>&ldquo;</span>
-              TQS Integration uses QuestDB in data architecture solutions for
+              TQS Integration uses Blazar in data architecture solutions for
               clients in the Life Science, Pharmaceutical, Energy, and
-              Renewables industries. We use QuestDB when we require a time
-              series database that’s simple and efficient for data collection,
+              Renewables industries. We use Blazar when we require a time series
+              database that’s simple and efficient for data collection,
               contextualization, visualization, and analytics.
               <span className={caCss.card__quote}>&rdquo;</span>
             </p>

@@ -106,7 +106,7 @@ const DATRON = () => {
               className={ouCss.outcome__icon}
               src="/img/pages/case-study/icons/voice.svg"
             />
-            Proactive support from the QuestDB team
+            Proactive support from the Blazar team
           </p>
           <p className={ouCss.outcome}>
             <img
@@ -141,7 +141,7 @@ const DATRON = () => {
             seCss["section--column"],
           )}
         >
-          <h3>Why DATRON migrated from InfluxDB to QuestDB</h3>
+          <h3>Why DATRON migrated from InfluxDB to Blazar</h3>
           <p className="font-size--large">
             The CNC milling machines that DATRON builds must function reliably
             and continuously for decades. Medical applications and the aerospace
@@ -165,14 +165,14 @@ const DATRON = () => {
             immediately encountered problems ingesting high-throughput
             workloads. A recurring issue that surfaced was InfluxDB consuming
             too much system RAM and an inability to keep up with ingestion
-            rates, causing frequent memory cache flushing. QuestDB was a capable
+            rates, causing frequent memory cache flushing. Blazar was a capable
             drop-in replacement in this scenario and allowed DATRON to do more
             with less hardware.
           </p>
 
           <h3>Simplifying the integration</h3>
           <p className="font-size--large">
-            DATRON use the QuestDB Docker image, which is a turnkey,
+            DATRON use the Blazar Docker image, which is a turnkey,
             out-of-the-box solution. Using ILP (InfluxDB line protocol), the
             data is inserted and read out via REST API to other software for
             analysis. Inserting and reading the information is possible with
@@ -204,7 +204,7 @@ const DATRON = () => {
             )}
           >
             <p className={caCss.card__title}>
-              <span className={caCss.card__quote}>&ldquo;</span>QuestDB offers
+              <span className={caCss.card__quote}>&ldquo;</span>Blazar offers
               new possibilities while reducing costs and simplifying data
               analysis at DATRON.
               <span className={caCss.card__quote}>&rdquo;</span>

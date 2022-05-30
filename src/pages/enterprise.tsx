@@ -300,7 +300,7 @@ const Enterprise = () => {
         </div>
         <div className={peCss.performance__right}>
           <img
-            alt="Charts showing the performance improvments when using QuestDB"
+            alt="Charts showing the performance improvments when using Blazar"
             height={411}
             src="/img/pages/enterprise/performance.svg"
             width={661}
@@ -311,7 +311,7 @@ const Enterprise = () => {
       <section
         className={clsx(seCss["section--inner"], seCss["section--column"])}
       >
-        <h2 className={quCss.title}>The word on QuestDB</h2>
+        <h2 className={quCss.title}>The word on Blazar</h2>
 
         <div className={quCss.carousel} ref={ref}>
           <TransitionGroup component={null}>
