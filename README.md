@@ -9,11 +9,7 @@
 
 
 
-Each time you submit, the website will automatically store the generated static pages in both, the following two places:
-
-1. `netlify` for the main
-2. `GitHub pages` as a backup
-
+Each time you submit, the website will automatically store the generated static pages to `netlify`.
 
 
 ## Clone repo
@@ -75,7 +71,9 @@ yarn serve
 
 ## Manual Deploy
 
-This command will push all files in `build` direcory to `timelystream/timelystream.com` repo `gh-pages` branch.
+This command will push all static content files in `build` direcory to `timelystream/timelystream.com` repo `gh-pages` branch. 
+
+Note: Since we now use `netlify` to store static content files, So this operation is no longer necessary.
 
 ```
 GIT_USER=<GITHUB_USERNAME> USE_SSH=true yarn deploy
