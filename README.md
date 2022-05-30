@@ -56,6 +56,14 @@ use:
 yarn serve
 ```
 
+## Manual Deploy
+
+This command will push all files in `build` direcory to `timelystream/timelystream.com` repo `gh-pages` branch.
+
+```
+GIT_USER=<GITHUB_USERNAME> USE_SSH=true yarn deploy
+```
+
 # Contributing
 
 Feel free to contribute to the project by forking the repository and submitting
