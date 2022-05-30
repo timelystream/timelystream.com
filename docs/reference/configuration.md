@@ -457,7 +457,7 @@ which contains:
   {
     "Status": "firing",
     "Labels": {
-      "alertname": "QuestDbInstanceLogs",
+      "alertname": "BlazarInstanceLogs",
       "service": "Blazar",
       "category": "application-logs",
       "severity": "critical",

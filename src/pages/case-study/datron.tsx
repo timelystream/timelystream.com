@@ -13,7 +13,7 @@ import seCss from "../../css/section.module.css"
 const DATRON = () => {
   const title = "DATRON - high-volume time series for industrial sensor data"
   const description =
-    "DATRON migrated from InfluxDB to QuestDB for high-throughput time series data workloads and benefited from reliability and massive performance improvements."
+    "DATRON migrated from InfluxDB to Blazar for high-throughput time series data workloads and benefited from reliability and massive performance improvements."
 
   return (
     <Layout
@@ -31,7 +31,7 @@ const DATRON = () => {
         <div className={juCss.jumbotron__summary}>
           <div className={juCss.jumbotron__header}>
             <Button
-              href="https://datron.com/?utm_source=questdb"
+              href="https://datron.com/?utm_source=blazar"
               variant="plain"
             >
               <img
@@ -44,14 +44,14 @@ const DATRON = () => {
             </Button>
             <span className={juCss.jumbotron__name}>Case study</span>
           </div>
-          <h1 className={seCss.section__title}>DATRON migration to QuestDB</h1>
+          <h1 className={seCss.section__title}>DATRON migration to Blazar</h1>
           <p
             className={clsx(
               seCss.section__subtitle,
               juCss.jumbotron__description,
             )}
           >
-            DATRON migrated from InfluxDB to QuestDB to handle their data
+            DATRON migrated from InfluxDB to Blazar to handle their data
             ingestion requirements and reduce costs.
           </p>
         </div>

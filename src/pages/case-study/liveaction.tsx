@@ -31,7 +31,7 @@ const Counterflow = () => {
         <div className={juCss.jumbotron__summary}>
           <div className={juCss.jumbotron__header}>
             <Button
-              href="https://www.liveaction.com/encrypted-traffic-analysis?utm_source=questdb"
+              href="https://www.liveaction.com/encrypted-traffic-analysis?utm_source=blazar"
               variant="plain"
             >
               <img
@@ -61,9 +61,9 @@ const Counterflow = () => {
 
         <div className={juCss.jumbotron__banner}>
           <img
-            alt="Visualizing data in a Jupyter notebook querying data from QuestDB"
+            alt="Visualizing data in a Jupyter notebook querying data from Blazar"
             height={170}
-            src="/img/pages/case-study/liveaction/visualization-questdb-jupyter.png"
+            src="/img/pages/case-study/liveaction/visualization-blazar-jupyter.png"
             width={800}
           />
         </div>
@@ -196,11 +196,11 @@ const Counterflow = () => {
             alt="Running ML tooling via Jupyter notebooks to detect outliers"
             className={chCss.chart}
             height={433}
-            src="/img/pages/case-study/liveaction/local-outlier-factor-questdb-jupyter.png"
+            src="/img/pages/case-study/liveaction/local-outlier-factor-blazar-jupyter.png"
             width={800}
           />
 
-          <h3>Why we chose QuestDB for time series analytics</h3>
+          <h3>Why we chose Blazar for time series analytics</h3>
           <p className="font-size--large">
             We started with InfluxDB as our central time series database, but we
             quickly started hitting performance issues with scalability in

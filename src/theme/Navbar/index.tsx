@@ -148,7 +148,7 @@ function Navbar(): JSX.Element {
           <Button
             className={clsx(styles.ctaButton, styles.getQuestdb)}
             size="xsmall"
-            to="/get-questdb/"
+            to="/get-blazar/"
             variant="secondary"
           >
             Get Blazar

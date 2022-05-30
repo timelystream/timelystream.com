@@ -142,7 +142,7 @@ const FeatureTabs = () => {
 
             <Button
               className={meCss.menu__cta}
-              to="https://github.com/timelystream/blazar#try-questdb"
+              to="https://github.com/timelystream/blazar#try-blazar"
             >
               Get Started &gt;
             </Button>

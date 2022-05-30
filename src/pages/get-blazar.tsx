@@ -7,11 +7,10 @@ import Button from "@theme/Button"
 import CodeBlock from "@theme/CodeBlock"
 import Layout from "../theme/Layout"
 
-import biCss from "../css/get-questdb/binary.module.css"
-import chCss from "../css/get-questdb/changelog.module.css"
-import ctCss from "../css/get-questdb/cta.module.css"
-import heCss from "../css/get-questdb/help.module.css"
-import ilCss from "../css/get-questdb/illustration.module.css"
+import biCss from "../css/get-blazar/binary.module.css"
+import chCss from "../css/get-blazar/changelog.module.css"
+import ctCss from "../css/get-blazar/cta.module.css"
+import heCss from "../css/get-blazar/help.module.css"
 import seCss from "../css/section.module.css"
 import { getAssets, getOs, Os, Release } from "../utils"
 
@@ -134,7 +133,7 @@ const GetQuestdbPage = () => {
             alt="Linux Logo"
             className={biCss.binary__logo}
             height={49}
-            src="/img/pages/getQuestdb/linux.svg"
+            src="/img/pages/getBlazar/linux.svg"
             width={42}
           />
         }
@@ -158,7 +157,7 @@ const GetQuestdbPage = () => {
             alt="macOS Logo"
             className={biCss.binary__logo}
             height={49}
-            src="/img/pages/getQuestdb/macos.svg"
+            src="/img/pages/getBlazar/macos.svg"
             width={41}
           />
         }
@@ -168,7 +167,7 @@ const GetQuestdbPage = () => {
 
         <CodeBlock className="language-shell">
           {`brew update
-brew install questdb`}
+brew install blazar`}
         </CodeBlock>
 
         <p className={biCss.binary__docs}>
@@ -185,7 +184,7 @@ brew install questdb`}
             alt="Windows Logo"
             className={biCss.binary__logo}
             height={49}
-            src="/img/pages/getQuestdb/windows.svg"
+            src="/img/pages/getBlazar/windows.svg"
             width={49}
           />
         }
@@ -213,7 +212,7 @@ brew install questdb`}
   }, [])
 
   return (
-    <Layout canonical="/get-questdb" description={description} title={title}>
+    <Layout canonical="/get-blazar" description={description} title={title}>
       <section
         className={clsx(seCss["section--inner"], seCss["section--accent"])}
       >
@@ -234,20 +233,12 @@ brew install questdb`}
               "text--center",
             )}
           >
-            You can find below download links for the latest version of QuestDB
-            ({release.name}). Once your download is finished, you can check our
+            You can find below download links for the latest version of Blazar (
+            {release.name}). Once your download is finished, you can check our
             documentation for <a href="/docs/get-started/docker/">Docker</a>,
             the <a href="/docs/get-started/binaries/">binaries</a> or{" "}
             <a href="/docs/get-started/homebrew/">Homebrew</a> to get started.
           </p>
-
-          <img
-            alt="Screenshot of the Web Console showing various SQL statements and the result of one as a chart"
-            className={ilCss.illustration}
-            height={375}
-            src="/img/pages/getQuestdb/console.png"
-            width={500}
-          />
 
           <div className={ctCss.cta}>
             <p
@@ -296,44 +287,17 @@ brew install questdb`}
               alt="Docker logo"
               className={biCss.binary__logo}
               height={49}
-              src="/img/pages/getQuestdb/docker.svg"
+              src="/img/pages/getBlazar/docker.svg"
               width={69}
             />
           }
           title="Docker"
         >
           <CodeBlock className="language-shell">
-            docker run -p 9000:9000 questdb/questdb
+            docker run -p 9000:9000 timescale/blazar
           </CodeBlock>
           <p className={biCss.binary__docs}>
             <a href="/docs/get-started/docker">Docs</a>
-          </p>
-        </Binary>
-        <Binary
-          grow={0.6}
-          logo={
-            <img
-              alt="Helm logo"
-              className={biCss.binary__logo}
-              height={49}
-              src="/img/pages/getQuestdb/helm.svg"
-              width={50}
-            />
-          }
-          title="Kubernetes (via Helm)"
-        >
-          <CodeBlock className="language-shell">
-            {`helm repo add questdb https://helm.${customFields.domain}/
-helm install my-questdb questdb/questdb --version ${customFields.helmVersion}`}
-          </CodeBlock>
-          <p className={biCss.binary__docs}>
-            <a
-              href={customFields.artifactHubUrl}
-              rel="noopener noreferrer"
-              target="_blank"
-            >
-              Docs
-            </a>
           </p>
         </Binary>
         {os != null ? (
@@ -341,80 +305,13 @@ helm install my-questdb questdb/questdb --version ${customFields.helmVersion}`}
             {perOs[os]}
             {os !== "linux" && perOs.linux}
             {os !== "macos" && perOs.macos}
-            {os !== "windows" && perOs.windows}
           </>
         ) : (
           <>
             {perOs.linux}
             {perOs.macos}
-            {perOs.windows}
           </>
         )}
-        <Binary
-          architecture
-          detailsGrow={3.5}
-          href={assets.noJre.href}
-          logo={
-            <img
-              alt="Planet with wings"
-              className={biCss.binary__logo}
-              height={49}
-              src="/img/pages/getQuestdb/nojre.svg"
-              width={75}
-            />
-          }
-          size={assets.noJre.size}
-          title="Any (no JVM)"
-        >
-          <p className={biCss.binary__docs}>
-            <a href="/docs/get-started/binaries#any-no-jvm-version">Docs</a>
-          </p>
-        </Binary>
-        <Binary
-          grow={0.5}
-          logo={
-            <img
-              alt="Maven logo"
-              className={biCss.binary__logo}
-              height={49}
-              src="/img/pages/getQuestdb/maven.svg"
-              width={37}
-            />
-          }
-          title="Maven"
-        >
-          <CodeBlock className="language-xml">
-            {`<dependency>
-  <groupId>org.questdb</groupId>
-  <artifactId>questdb</artifactId>
-  <version>${release.name}</version>
-</dependency>`}
-          </CodeBlock>
-          <p className={biCss.binary__docs}>
-            <a href="/docs/reference/api/java-embedded">Docs</a>
-          </p>
-        </Binary>
-        <Binary
-          grow={2}
-          logo={
-            <img
-              alt="Gradle logo"
-              className={biCss.binary__logo}
-              height={48}
-              src="/img/pages/getQuestdb/gradle.svg"
-              width={67}
-            />
-          }
-          title="Gradle"
-        >
-          <CodeBlock className="language-shell">
-            {`implementation 'org.questdb:questdb:${release.name}'`}
-          </CodeBlock>
-          <div style={{ height: "2.75rem" }} />
-          <p className={biCss.binary__docs}>
-            <a href="/docs/reference/api/java-embedded">Docs</a>
-          </p>
-        </Binary>
       </div>
 
       <div className={heCss.help}>
@@ -422,23 +319,19 @@ helm install my-questdb questdb/questdb --version ${customFields.helmVersion}`}
           alt="SQL statement in a code editor with an artistic view of the query result shown as a chart and a table"
           className={heCss.help__illustration}
           height={468}
-          src="/img/pages/getQuestdb/query.svg"
+          src="/img/pages/getBlazar/query.svg"
           width={500}
         />
 
         <div className={heCss.help__text}>
           <h2 className={heCss.help__title}>How does it work</h2>
           <p>
-            QuestDB is distributed as a single binary. You can download either:
+            Blazaris distributed as a single binary. You can download either:
           </p>
           <ul className={heCss.help__list}>
             <li className={heCss.help__bullet}>
-              The &quot;rt&quot; version, this includes a trimmed JVM so you do
-              not need anything else (~ {assets.linux.size})
-            </li>
-            <li className={heCss.help__bullet}>
-              The binary itself (~ {assets.noJre.size}), without the JVM. In
-              this case, you need Java 11 installed locally
+              The &quot;rt&quot; version, which does not require any
+              dependencies to be installed to run. (~ {assets.linux.size})
             </li>
           </ul>
           <p>

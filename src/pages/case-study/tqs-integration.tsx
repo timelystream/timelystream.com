@@ -31,7 +31,7 @@ const Tqs = () => {
         <div className={juCss.jumbotron__summary}>
           <div className={juCss.jumbotron__header}>
             <Button
-              href="https://www.tqsintegration.com/?utm_source=questdb"
+              href="https://www.tqsintegration.com/?utm_source=blazar"
               variant="plain"
             >
               <img
@@ -55,7 +55,7 @@ const Tqs = () => {
             )}
           >
             <a
-              href="https://www.tqsintegration.com/?utm_source=questdb"
+              href="https://www.tqsintegration.com/?utm_source=blazar"
               target="_blank"
               rel="noopener noreferrer"
             >

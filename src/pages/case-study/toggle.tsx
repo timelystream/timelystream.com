@@ -31,7 +31,7 @@ const Toggle = () => {
         <div className={juCss.jumbotron__summary}>
           <div className={juCss.jumbotron__header}>
             <Button
-              href="https://toggle.global/?utm_source=questdb"
+              href="https://toggle.global/?utm_source=blazar"
               variant="plain"
             >
               <img

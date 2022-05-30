@@ -10,11 +10,11 @@ import CodeBlock from "@theme/CodeBlock"
 import InterpolateReleaseData from "../../src/components/InterpolateReleaseData"
 
 This page describes how to install and use Blazar via binaries. Blazar comes
-with a script `questdb.sh` for Linux/FreeBSD.
+with a script `blazar.sh` for Linux/FreeBSD.
 
 ## Download
 
-You can find the latest binaries on the [Get Blazar](/get-questdb) page. The
+You can find the latest binaries on the [Get Blazar](/get-blazar) page. The
 release notes are on our [GitHub release]({@githubUrl@}/releases) page.
 
 ## Prerequisites
@@ -27,7 +27,7 @@ The file is named:
   renderText={(release) => {
     return (
       <CodeBlock className="language-shell">
-        {`questdb-${release.name}-no-jre-bin.tar.gz`}
+        {`blazar-${release.name}-bin.tar.gz`}
       </CodeBlock>
     )
   }}
@@ -84,7 +84,7 @@ import TabItem from "@theme/TabItem"
   renderText={(release) => {
     return (
       <CodeBlock className="language-shell">
-        {`questdb-${release.name}-rt-linux-amd64.tar.gz`}
+        {`blazar-${release.name}-rt-linux-amd64.tar.gz`}
       </CodeBlock>
     )
   }}
@@ -100,7 +100,7 @@ import TabItem from "@theme/TabItem"
   renderText={(release) => {
     return (
       <CodeBlock className="language-shell">
-        {`questdb-${release.name}-rt-freebsd-amd64.tar.gz`}
+        {`blazar-${release.name}-rt-freebsd-amd64.tar.gz`}
       </CodeBlock>
     )
   }}
@@ -116,7 +116,7 @@ import TabItem from "@theme/TabItem"
   renderText={(release) => {
     return (
       <CodeBlock className="language-shell">
-        {`questdb-${release.name}-rt-windows-amd64.tar.gz`}
+        {`blazar-${release.name}-rt-windows-amd64.tar.gz`}
       </CodeBlock>
     )
   }}
@@ -153,7 +153,7 @@ runtime is packaged directly with Blazar.
   renderText={(release) => {
     return (
       <CodeBlock className="language-shell">
-        {`tar -xvf questdb-${release.name}-no-jre-bin.tar.gz`}
+        {`tar -xvf blazar-${release.name}-bin.tar.gz`}
       </CodeBlock>
     )
   }}
@@ -169,7 +169,7 @@ runtime is packaged directly with Blazar.
   renderText={(release) => {
     return (
       <CodeBlock className="language-shell">
-        {`tar -xvf questdb-${release.name}-rt-linux-amd64.tar.gz`}
+        {`tar -xvf blazar-${release.name}-rt-linux-amd64.tar.gz`}
       </CodeBlock>
     )
   }}
@@ -185,7 +185,7 @@ runtime is packaged directly with Blazar.
   renderText={(release) => {
     return (
       <CodeBlock className="language-shell">
-        {`tar -xvf questdb-${release.name}-rt-freebsd-amd64.tar.gz`}
+        {`tar -xvf blazar-${release.name}-rt-freebsd-amd64.tar.gz`}
       </CodeBlock>
     )
   }}
@@ -201,7 +201,7 @@ runtime is packaged directly with Blazar.
   renderText={(release) => {
     return (
       <CodeBlock className="language-shell">
-        {`tar -xvf questdb-${release.name}-rt-windows-amd64.tar.gz`}
+        {`tar -xvf blazar-${release.name}-rt-windows-amd64.tar.gz`}
       </CodeBlock>
     )
   }}

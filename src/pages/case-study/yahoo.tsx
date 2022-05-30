@@ -11,7 +11,7 @@ import seCss from "../../css/section.module.css"
 import chCss from "../../css/case-study/chart.module.css"
 
 const Yahoo = () => {
-  const title = "Yahoo use QuestDB for big data machine learning engines"
+  const title = "Yahoo use Blazar for big data machine learning engines"
   const description =
     "QuestDB is used as a time series database to store resource utilization metrics within a machine learning engine within systems serving over a billion users."
 
@@ -30,10 +30,7 @@ const Yahoo = () => {
       >
         <div className={juCss.jumbotron__summary}>
           <div className={juCss.jumbotron__header}>
-            <Button
-              href="https://yahoo.com/?utm_source=questdb"
-              variant="plain"
-            >
+            <Button href="https://yahoo.com/?utm_source=blazar" variant="plain">
               <img
                 alt="Yahoo logo"
                 className={juCss.jumbotron__logo}

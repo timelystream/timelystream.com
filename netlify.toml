@@ -12,11 +12,11 @@
 
 [[redirects]]
   from = "/getstarted"
-  to = "/get-questdb"
+  to = "/get-blazar"
 
 [[redirects]]
   from = "/get-started"
-  to = "/get-questdb"
+  to = "/get-blazar"
 
 [[redirects]]
   from = "/docs/reference/web-console"
