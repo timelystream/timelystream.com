@@ -1,5 +1,5 @@
 import clsx from "clsx"
-import useDocusaurusContext from "@docusaurus/useDocusaurusContext"
+// import useDocusaurusContext from "@docusaurus/useDocusaurusContext"
 import Highlight from "../components/Highlight"
 import React, { useCallback, useEffect, useState } from "react"
 // import Customers from "../components/Customers"
@@ -10,18 +10,18 @@ import Chevron from "@theme/Chevron"
 import Layout from "../theme/Layout"
 import useWindowWidth from "@theme/useWindowWidth"
 import SvgImage from "../components/SvgImage"
-// import ActionCard from "../components/ActionCard" // Template delete for `remove customers and consol`
-// import Subscribe from "../components/Subscribe" // Template delete for `remove customers and consol`
+import ActionCard from "../components/ActionCard"
+import Subscribe from "../components/Subscribe"
 
-import doCss from "../css/index/docker.module.css"
+// import doCss from "../css/index/docker.module.css"
 import feCss from "../css/index/feature.module.css"
-// import flCss from "../css/index/flashy.module.css" // Template delete for `remove customers and consol`
+import flCss from "../css/index/flashy.module.css"
 import inCss from "../css/index/integration.module.css"
 import juCss from "../css/index/jumbotron.module.css"
 import meCss from "../css/index/menu.module.css"
 import shCss from "../css/index/showcase.module.css"
 import usCss from "../css/index/usp.module.css"
-// import footerCss from "../css/index/footer.module.css" // Template delete for `remove customers and consol`
+import footerCss from "../css/index/footer.module.css"
 import prCss from "../css/property.module.css"
 import seCss from "../css/section.module.css"
 
@@ -32,9 +32,9 @@ import KafkaLogo from "../assets/img/pages/index/integrations/kafka.svg"
 import PythonLogo from "../assets/img/pages/index/integrations/python.svg"
 import PandasLogo from "../assets/img/pages/index/integrations/pandas.svg"
 import TableauLogo from "../assets/img/pages/index/integrations/tableau.svg"
-import DockerLogo from "../assets/img/pages/index/docker.svg"
-// import FossIcon from "../assets/img/pages/index/foss.svg" // Template delete for `remove customers and consol`
-// import SubscribeIcon from "../assets/img/pages/index/subscribeIcon.svg" // Template delete for `remove customers and consol`
+// import DockerLogo from "../assets/img/pages/index/docker.svg"
+import FossIcon from "../assets/img/pages/index/foss.svg"
+import SubscribeIcon from "../assets/img/pages/index/subscribeIcon.svg"
 import SearchTimeIcon from "../assets/img/pages/index/searchTime.svg"
 import SliceTimeIcon from "../assets/img/pages/index/sliceTime.svg"
 import NavigateTimeIcon from "../assets/img/pages/index/navigateTime.svg"
@@ -64,7 +64,7 @@ const FeatureTabs = () => {
             "text--center",
           )}
         >
-          Why Blazar?
+          Why Blazar ?
         </h2>
 
         <div
@@ -198,81 +198,81 @@ const Integration = () => (
   </section>
 )
 
-const Top = () => {
-  const { siteConfig } = useDocusaurusContext()
+// const Top = () => {
+//   const { siteConfig } = useDocusaurusContext()
 
-  return (
-    <section
-      className={clsx(seCss["section--inner"], seCss["section--slim--accent"])}
-    >
-      <div className={juCss.jumbotron}>
-        <h1
-          className={clsx(
-            seCss.section__title,
-            seCss["section__title--jumbotron"],
-            seCss["section__title--accent"],
-          )}
-        >
-          Build fast and accurate data products
-        </h1>
+//   return (
+//     <section
+//       className={clsx(seCss["section--inner"], seCss["section--slim--accent"])}
+//     >
+//       <div className={juCss.jumbotron}>
+//         <h1
+//           className={clsx(
+//             seCss.section__title,
+//             seCss["section__title--jumbotron"],
+//             seCss["section__title--accent"],
+//           )}
+//         >
+//           Build fast and accurate data products
+//         </h1>
 
-        <p
-          className={clsx(
-            seCss.section__subtitle,
-            seCss["section__subtitle--jumbotron"],
-            seCss["section__subtitle--accent"],
-          )}
-        >
-          {siteConfig.tagline}
-        </p>
+//         <p
+//           className={clsx(
+//             seCss.section__subtitle,
+//             seCss["section__subtitle--jumbotron"],
+//             seCss["section__subtitle--accent"],
+//           )}
+//         >
+//           {siteConfig.tagline}
+//         </p>
 
-        <div className={juCss.jumbotron__cta}>
-          <Button className={juCss.jumbotron__link} href={customFields.demoUrl}>
-            Get Started
-          </Button>
-          <Button
-            className={clsx(
-              juCss.jumbotron__link,
-              juCss["jumbotron__cta--github"],
-            )}
-            href="/cloud"
-            icon={
-              <SvgImage
-                image={<QuestDBLogo width="32" height="32" />}
-                title="Blazar Demo"
-              />
-            }
-            variant="secondary"
-          >
-            Try a demo
-          </Button>
-        </div>
-        <p className={juCss.jumbotron__description}>
-          Understand Blazar in 5 minutes by playing!
-        </p>
-      </div>
+//         <div className={juCss.jumbotron__cta}>
+//           <Button className={juCss.jumbotron__link} href={customFields.demoUrl}>
+//             Get Started
+//           </Button>
+//           <Button
+//             className={clsx(
+//               juCss.jumbotron__link,
+//               juCss["jumbotron__cta--github"],
+//             )}
+//             href="/cloud"
+//             icon={
+//               <SvgImage
+//                 image={<QuestDBLogo width="32" height="32" />}
+//                 title="Blazar Demo"
+//               />
+//             }
+//             variant="secondary"
+//           >
+//             Try a demo
+//           </Button>
+//         </div>
+//         <p className={juCss.jumbotron__description}>
+//           Understand Blazar in 5 minutes by playing!
+//         </p>
+//       </div>
 
-      <div className={doCss.docker}>
-        <pre className={doCss.docker__inner}>
-          <code className={doCss.docker__code}>
-            {`docker pull timelystream/blazar
-docker run -p 9000:9000 timelystream/blazar`}
-          </code>
-          <a
-            href={customFields.dockerUrl}
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            <SvgImage
-              image={<DockerLogo className={doCss.docker__icon} />}
-              title="Docker"
-            />
-          </a>
-        </pre>
-      </div>
-    </section>
-  )
-}
+//       <div className={doCss.docker}>
+//         <pre className={doCss.docker__inner}>
+//           <code className={doCss.docker__code}>
+//             {`docker pull timelystream/blazar
+// docker run -p 9000:9000 timelystream/blazar`}
+//           </code>
+//           <a
+//             href={customFields.dockerUrl}
+//             rel="noopener noreferrer"
+//             target="_blank"
+//           >
+//             <SvgImage
+//               image={<DockerLogo className={doCss.docker__icon} />}
+//               title="Docker"
+//             />
+//           </a>
+//         </pre>
+//       </div>
+//     </section>
+//   )
+// }
 
 const Usp = () => (
   <section className={clsx(seCss.section, seCss["section--odd"])}>
@@ -420,81 +420,137 @@ const Cards = () => (
   </section>
 )
 
-// Template delete for `remove customers and consol`
-// const Console = () => {
-//   return (
-//     <section
-//       className={clsx(
-//         seCss.section,
-//         seCss["section--inner"],
-//         seCss["section--center"],
-//       )}
-//     >
-//       <h2
-//         className={clsx(
-//           seCss.section__title,
-//           seCss["section__title--wide"],
-//           "text--center",
-//         )}
-//       >
-//         Interactive Console
-//       </h2>
-//       <p
-//         className={clsx(
-//           seCss.section__subtitle,
-//           seCss["section__subtitle--narrow"],
-//           "text--center",
-//         )}
-//       >
-//         Interactive console to import data (drag and drop) and start querying
-//         right away. Check our{" "}
-//         <a href="/docs/develop/web-console">Web Console documentation</a> to get
-//         started.
-//       </p>
+const Console = () => {
+  return (
+    <section
+      className={clsx(
+        seCss.section,
+        seCss["section--inner"],
+        seCss["section--center"],
+      )}
+    >
+      <h2
+        className={clsx(
+          seCss.section__title,
+          seCss["section__title--wide"],
+          "text--center",
+        )}
+      >
+        The Modern Data Stack for Real-Time Analytics
+      </h2>
+      <img
+        alt="Artistic view of Blazar's Web Console split in 3 components: the navigation tree, the SQL code editor and data displayed as a chart"
+        className={seCss.section__illustration}
+        height={467}
+        src="/img/pages/index/console.svg"
+        width={600}
+      />
+      <p
+        className={clsx(
+          seCss.section__subtitle,
+          seCss["section__subtitle--narrow"],
+          "text--center",
+        )}
+      >
+        Blazar provides a single solution for fast, incremental collection of
+        data streams, processing them into tables and views and serving queries.
+        This means less infrastructure to deploy, maintain, scale and secure.
+        This allows you to focus on what really matters - innovation.
+      </p>
 
-//       <img
-//         alt="Artistic view of Blazar's Web Console split in 3 components: the navigation tree, the SQL code editor and data displayed as a chart"
-//         className={seCss.section__illustration}
-//         height={467}
-//         src="/img/pages/index/console.svg"
-//         width={600}
-//       />
+      <div className={footerCss.cards}>
+        <ActionCard
+          icon={<FossIcon />}
+          title="Join our developer community"
+          description="Blazar is open source. Follow us on Twitter, star our GitHub repo, and join our developer community on Slack!"
+        >
+          <a
+            className={flCss.flashy__link}
+            href={customFields.githubUrl}
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            Go to GitHub&nbsp;&nbsp;&gt;
+          </a>
+          <a className={flCss.flashy__link} href={customFields.slackUrl}>
+            Join Slack&nbsp;&nbsp;&gt;
+          </a>
+        </ActionCard>
 
-//       <div className={footerCss.cards}>
-//         <ActionCard
-//           icon={<FossIcon />}
-//           title="Join our developer community"
-//           description="Blazar is open source. Follow us on Twitter, star our GitHub repo, and join our developer community on Slack!"
-//         >
-//           <a
-//             className={flCss.flashy__link}
-//             href={customFields.githubUrl}
-//             rel="noopener noreferrer"
-//             target="_blank"
-//           >
-//             Go to GitHub&nbsp;&nbsp;&gt;
-//           </a>
-//           <a className={flCss.flashy__link} href={customFields.slackUrl}>
-//             Join Slack&nbsp;&nbsp;&gt;
-//           </a>
-//         </ActionCard>
+        <ActionCard
+          title="Subscribe to our newsletter"
+          description="Stay up to date with all things Blazar"
+          icon={<SubscribeIcon />}
+          skin="primary"
+        >
+          <Subscribe
+            placeholder="Email address"
+            submitButtonVariant="tertiary"
+            provider="newsletter"
+          />
+        </ActionCard>
+      </div>
+    </section>
+  )
+}
 
-//         <ActionCard
-//           title="Subscribe to our newsletter"
-//           description="Stay up to date with all things Blazar"
-//           icon={<SubscribeIcon />}
-//           skin="primary"
-//         >
-//           <Subscribe
-//             placeholder="Email address"
-//             submitButtonVariant="tertiary"
-//             provider="newsletter"
-//           />
-//         </ActionCard>
-//       </div>
-//     </section>
-//   )
-// }
+const NewTop = () => {
+  return (
+    <section
+      className={clsx(
+        seCss.section,
+        seCss["section--inner"],
+        seCss["section--center"],
+      )}
+    >
+      <h2
+        className={clsx(
+          seCss.section__title,
+          seCss["section__title--wide"],
+          "text--center",
+        )}
+      >
+        Real-Time Analytics Database
+      </h2>
+      <p
+        className={clsx(
+          seCss.section__subtitle,
+          seCss["section__subtitle--narrow"],
+          "text--center",
+        )}
+      >
+        Stream processing enables you to derive instant insights from your data
+        streams. Blazar is a database specifically designed for low-latency and
+        accurate analysis of real-time streaming data.
+      </p>
+
+      <div className={juCss.jumbotron__cta}>
+        <Button className={juCss.jumbotron__link} href={customFields.demoUrl}>
+          Get Started
+        </Button>
+        <Button
+          className={clsx(
+            juCss.jumbotron__link,
+            juCss["jumbotron__cta--github"],
+          )}
+          href="/cloud"
+          icon={
+            <SvgImage
+              image={<QuestDBLogo width="32" height="32" />}
+              title="Blazar Demo"
+            />
+          }
+          variant="secondary"
+        >
+          Try a demo
+        </Button>
+      </div>
+      <p className={juCss.jumbotron__description}>
+        Understand Blazar in 5 minutes by playing!
+      </p>
+    </section>
+  )
+}
 
 const S = [3, 1, 6, 10]
 const M = [3, 0, 4, 8]
@@ -588,7 +644,7 @@ const QueryScroller = () => {
           "text--center",
         )}
       >
-        Augmented SQL for real-time
+        How it works
       </h2>
 
       <p
@@ -598,8 +654,8 @@ const QueryScroller = () => {
           "text--center",
         )}
       >
-        Blazar enhances ANSI SQL by adding timestamp extensions to data to
-        manipulate real-time streaming data
+        Process your real-time data streams instantaneously with just a few SQL
+        statements.
       </p>
 
       <div className={shCss.showcase}>
@@ -623,10 +679,10 @@ const QueryScroller = () => {
               <Highlight code={`-- Search time\n${sourceQuery}`} />
               <Highlight code={matviewQuery} />
               <Highlight code={`-- Slice time\n${matviewQuery}`} />
-              <Highlight code={sinkQuery} />
-              <Highlight code={`-- Navigate time\n${sinkQuery}`} />
               <Highlight code={ansiQuery} />
-              <Highlight code={`-- Merge time\n${ansiQuery}`} />
+              <Highlight code={`-- Navigate time\n${ansiQuery}`} />
+              <Highlight code={sinkQuery} />
+              <Highlight code={`-- Merge time\n${sinkQuery}`} />
             </div>
           </div>
           <div
@@ -651,10 +707,11 @@ const QueryScroller = () => {
                   image={<SliceTimeIcon className={shCss.showcase__icon} />}
                   title="Magnifying glass icon"
                 />
-                Source
+                Connect your Data Sources
               </h3>
               <p className={shCss.showcase__description}>
-                Read data from message queues, files, sockets.
+                Read structured data (events) from message queues, capture of
+                change data from the database.
               </p>
             </div>
 
@@ -669,13 +726,13 @@ const QueryScroller = () => {
                   image={<MergeTimeIcon className={shCss.showcase__icon} />}
                   title="Knife icon"
                 />
-                Materialized view
+                Define your queries
               </h3>
               <p className={shCss.showcase__description}>
-                Retrieve incrementally updated results of a ”SELECT” query.
+                Receives the result of the incremental update to the
+                Materialized view.
               </p>
             </div>
-
             <div
               className={clsx(shCss.showcase__button, {
                 [shCss["showcase__button--active"]]: index === 3,
@@ -684,13 +741,14 @@ const QueryScroller = () => {
             >
               <h3 className={shCss.showcase__header}>
                 <SvgImage
-                  image={<NavigateTimeIcon className={shCss.showcase__icon} />}
-                  title="Indication arrow icon"
+                  image={<SearchTimeIcon className={shCss.showcase__icon} />}
+                  title="Two overlapping squares"
                 />
-                Sink
+                Fast and accurate analysis
               </h3>
               <p className={shCss.showcase__description}>
-                Sends data from Materialize to an external sink.
+                Materialized views can be queried using
+                PostgreSQL&apos;semantics and Redis&apos;latency.
               </p>
             </div>
             <div
@@ -701,13 +759,14 @@ const QueryScroller = () => {
             >
               <h3 className={shCss.showcase__header}>
                 <SvgImage
-                  image={<SearchTimeIcon className={shCss.showcase__icon} />}
-                  title="Two overlapping squares"
+                  image={<NavigateTimeIcon className={shCss.showcase__icon} />}
+                  title="Indication arrow icon"
                 />
-                ANSI SQL
+                Streaming out to external
               </h3>
               <p className={shCss.showcase__description}>
-                Support ”TPCH” and ”TPCDS” benchmarking.
+                Analysis results can be streamed out, either directly into the
+                application or as change events to Kafka.
               </p>
             </div>
           </div>
@@ -724,14 +783,15 @@ const Home = () => (
     title="Blazar｜ Real-time streaming data, fast & accurate"
     replaceTitle
   >
-    <Top />
+    <NewTop />
+    {/* <Top /> */}
     {/* <Customers nbElements={6} />  //Template delete for `remove customers and consol` */}
     <Usp />
-    <Integration />
-    <FeatureTabs />
     <QueryScroller />
     <Cards />
-    {/* <Console />  // Template delete for `remove customers and consol` */}
+    <Integration />
+    <FeatureTabs />
+    <Console />
   </Layout>
 )
 
