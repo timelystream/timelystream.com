@@ -10,6 +10,7 @@
   margin-top: 2.9rem;
   margin-bottom: 1rem;
   align-self: stretch;
+  justify-content: center;
 }
 
 .jumbotron__link {
@@ -24,7 +25,6 @@
 
 .jumbotron__description {
   margin: 0;
-  padding-right: 2rem;
   color: var(--palette-pink);
   font-size: var(--font-size-large);
 }
