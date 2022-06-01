@@ -453,9 +453,9 @@ const Console = () => {
         )}
       >
         Blazar provides a single solution for fast, incremental collection of
-        data streams, processing them into tables and views and serving queries.
-        This means less infrastructure to deploy, maintain, scale and secure.
-        This allows you to focus on what really matters - innovation.
+        data streams, processing them into tables and serving queries. This
+        means less infrastructure to deploy, maintain, scale and secure. This
+        allows you to focus on what really matters - innovation.
       </p>
 
       <div className={footerCss.cards}>
