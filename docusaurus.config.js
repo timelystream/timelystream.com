@@ -145,10 +145,6 @@ const config = {
           position: "left",
           items: [
             {
-              label: "Tutorial",
-              to: "/tutorial",
-            },
-            {
               label: "Blazar Swag",
               to: "/community",
             },
@@ -203,10 +199,6 @@ const config = {
             {
               label: "Docs",
               to: "/docs/introduction",
-            },
-            {
-              label: "Tutorials",
-              to: "/tutorial",
             },
             {
               label: "Blog",
