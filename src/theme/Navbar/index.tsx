@@ -145,21 +145,21 @@ function Navbar(): JSX.Element {
             handleSearchBarToggle={setIsSearchBarExpanded}
             isSearchBarExpanded={isSearchBarExpanded}
           />
-          <Button
-            className={clsx(styles.ctaButton, styles.getQuestdb)}
+          {/* <Button
+            className={clsx(styles.ctaButton, styles.benchmarkButton)}
             size="xsmall"
             to="/get-blazar/"
             variant="secondary"
           >
             Get Blazar
-          </Button>
-          {/* <Button
+          </Button> */}
+          <Button
             className={clsx(styles.ctaButton, styles.benchmarkButton)}
             size="xsmall"
-            to="/benchmark-suite/"
+            to="/get-blazar/"
           >
-            Benchmark
-          </Button> */}
+            Get Blazar
+          </Button>
         </div>
       </div>
       <div
