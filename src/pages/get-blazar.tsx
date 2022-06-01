@@ -294,7 +294,7 @@ brew install blazar`}
           title="Docker"
         >
           <CodeBlock className="language-shell">
-            docker run -p 9000:9000 timescale/blazar
+            docker run -p 9000:9000 timelystream/blazar
           </CodeBlock>
           <p className={biCss.binary__docs}>
             <a href="/docs/get-started/docker">Docs</a>

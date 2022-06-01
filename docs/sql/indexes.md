@@ -14,7 +14,7 @@ Joins on columns with an ART index can make use of the [index join algorithm](ht
 ## Persistence
 
 * Min-max indexes are persisted.
-* Currently, ART indexes are [not persisted](https://github.com/timelystream/blazar/issues/693). Unique and primary key indexes are rebuilt upon startup, while user-defined indexes are discarded.
+* Currently, ART indexes are [not persisted](https://github.com/timelystream). Unique and primary key indexes are rebuilt upon startup, while user-defined indexes are discarded.
 
 ## Create Index
 
