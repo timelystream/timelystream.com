@@ -86,7 +86,7 @@ docker ps
 
 ```shell title="Result"
 CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                NAMES
-dd363939f261        timelystream/blazar     "/app/bin/java -m io…"   3 seconds ago       Up 2 seconds        8812/tcp, 9000/tcp   frosty_gauss
+dd363939f261        timelystream/blazar     "/bin/blazar -m io…"   3 seconds ago       Up 2 seconds        8812/tcp, 9000/tcp   frosty_gauss
 ```
 
 ## Importing data and sending queries
