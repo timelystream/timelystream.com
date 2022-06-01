@@ -131,12 +131,8 @@ const config = {
           position: "left",
           items: [
             {
-              label: "Blazar Enterprise",
+              label: "Enterprise",
               to: "/enterprise",
-            },
-            {
-              label: "Customers",
-              to: "/customers",
             },
             {
               label: "Roadmap",
@@ -148,10 +144,6 @@ const config = {
           label: "Learn",
           position: "left",
           items: [
-            {
-              label: "Tutorial",
-              to: "/tutorial",
-            },
             {
               label: "Blazar Swag",
               to: "/community",
@@ -196,10 +188,6 @@ const config = {
               to: "/enterprise",
             },
             {
-              label: "Customers",
-              to: "/customers",
-            },
-            {
               label: "Roadmap",
               href: "https://github.com/orgs/timelystream/projects/2/views/1",
             },
@@ -211,10 +199,6 @@ const config = {
             {
               label: "Docs",
               to: "/docs/introduction",
-            },
-            {
-              label: "Tutorials",
-              to: "/tutorial",
             },
             {
               label: "Blog",

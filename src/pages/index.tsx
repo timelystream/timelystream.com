@@ -25,7 +25,7 @@ import footerCss from "../css/index/footer.module.css"
 import prCss from "../css/property.module.css"
 import seCss from "../css/section.module.css"
 
-import QuestDBLogo from "../assets/img/blazar.svg"
+// import QuestDBLogo from "../assets/img/blazar.svg"
 import PgLogo from "../assets/img/pages/index/integrations/pg.svg"
 import GrafanaLogo from "../assets/img/pages/index/integrations/grafana.svg"
 import KafkaLogo from "../assets/img/pages/index/integrations/kafka.svg"
@@ -142,7 +142,7 @@ const FeatureTabs = () => {
 
             <Button
               className={meCss.menu__cta}
-              to="https://github.com/timelystream/blazar#try-blazar"
+              to="https://timelystream.com/docs/get-started/first-database"
             >
               Get Started &gt;
             </Button>
@@ -525,7 +525,10 @@ const NewTop = () => {
       </p>
 
       <div className={juCss.jumbotron__cta}>
-        <Button className={juCss.jumbotron__link} href={customFields.demoUrl}>
+        <Button
+          className={juCss.jumbotron__link}
+          href="https://timelystream.com/docs/get-started/first-database"
+        >
           Get Started
         </Button>
         <Button
@@ -533,16 +536,16 @@ const NewTop = () => {
             juCss.jumbotron__link,
             juCss["jumbotron__cta--github"],
           )}
-          href="/cloud"
-          icon={
-            <SvgImage
-              image={<QuestDBLogo width="32" height="32" />}
-              title="Blazar Demo"
-            />
-          }
+          href="https://timelystream.com/docs/introduction/"
+          // icon={
+          //   <SvgImage
+          //     image={<QuestDBLogo width="32" height="32" />}
+          //     title="Blazar Demo"
+          //   />
+          // }
           variant="secondary"
         >
-          Try a demo
+          LEARN MORE
         </Button>
       </div>
       <p className={juCss.jumbotron__description}>

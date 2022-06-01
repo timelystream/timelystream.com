@@ -153,13 +153,13 @@ function Navbar(): JSX.Element {
           >
             Get Blazar
           </Button>
-          <Button
+          {/* <Button
             className={clsx(styles.ctaButton, styles.benchmarkButton)}
             size="xsmall"
             to="/benchmark-suite/"
           >
             Benchmark
-          </Button>
+          </Button> */}
         </div>
       </div>
       <div
