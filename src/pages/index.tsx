@@ -442,8 +442,8 @@ const Console = () => {
         alt="Artistic view of Blazar's Web Console split in 3 components: the navigation tree, the SQL code editor and data displayed as a chart"
         className={seCss.section__illustration}
         height={467}
-        src="/img/pages/index/console.svg"
-        width={600}
+        src="/img/pages/index/modern-data-stack.png"
+        width={900}
       />
       <p
         className={clsx(
