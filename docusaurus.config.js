@@ -131,12 +131,8 @@ const config = {
           position: "left",
           items: [
             {
-              label: "Blazar Enterprise",
+              label: "Enterprise",
               to: "/enterprise",
-            },
-            {
-              label: "Customers",
-              to: "/customers",
             },
             {
               label: "Roadmap",
@@ -194,10 +190,6 @@ const config = {
             {
               label: "Enterprise",
               to: "/enterprise",
-            },
-            {
-              label: "Customers",
-              to: "/customers",
             },
             {
               label: "Roadmap",
