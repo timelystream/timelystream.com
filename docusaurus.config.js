@@ -32,8 +32,8 @@ function variable() {
 }
 
 const config = {
-  title: "Blazar: the database for real-time streaming",
-  tagline: "Blazar is the fastest and accurate real-time streaming database.",
+  title: "Blazar: the Fastest and Accurate Real-Time Analytics Database.",
+  tagline: "Blazar is the Fastest and Accurate Real-Time Analytics Database.",
   url: `https://${consts.domain}`,
   baseUrl: "/",
   baseUrlIssueBanner: false,
